@@ -1,0 +1,1464 @@
+{
+  "獲得時間戳記": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "取得手機號碼": {
+    "is_a": {
+      "zh": "呼叫API",
+      "en": "Call API"
+    },
+    "mapped_taxonomy": "3. HTTP Requests and Integration → 3.1 Base and Single Requests → 3.1.1 Base Request",
+    "mapped_nodes": [
+      "BaseRequest.md"
+    ]
+  },
+  "查無任何手機號碼": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "手機條碼申請教學": {
+    "is_a": {
+      "zh": "切換腳本",
+      "en": "Switch Flow"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.3 Switch Flow",
+    "mapped_nodes": [
+      "SwitchFlow.md"
+    ]
+  },
+  "結束目前腳本": {
+    "is_a": {
+      "zh": "結束目前的腳本",
+      "en": "End Current Script"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "執行SQL指令(刪除)": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "執行SQL指令(更新)": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "執行SQL指令": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "是否成功": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "判斷回傳Data是否存在": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "(成功)看DBModule": {
+    "is_a": {
+      "zh": "偵錯",
+      "en": "Debugging"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "(失敗)看DBModule": {
+    "is_a": {
+      "zh": "偵錯",
+      "en": "Debugging"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "結束": {
+    "is_a": {
+      "zh": "結束目前的腳本",
+      "en": "End Current Script"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "顯示錯誤": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "組SQL": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "修改員工的手機條碼": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "手機條碼修改完成": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "新增員工的手機條碼": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "手機條碼設定完成": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "查詢員工的手機條碼": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "處理回傳結果": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "查詢結果": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "回傳結果": {
+    "is_a": {
+      "zh": "結束目前的腳本",
+      "en": "End Current Script"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "主選單": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "判斷是否為測試模式": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "設定假資料(有設定)": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "查詢員工手機條碼": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "設定假資料(未設定)": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "呼叫API發生錯誤": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "跳轉回主選單": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "結束所有腳本": {
+    "is_a": {
+      "zh": "結束所有腳本",
+      "en": "End All Scripts"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "變數初始": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "檢核員工是否有設定手機條碼": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "判斷是否已綁定手機條碼": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "手機條碼未設定": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "手機條碼已設定": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "設定表單初始值(假資料)": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "設定表單預設值": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "查詢手機條碼": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "顯示資料": {
+    "is_a": {
+      "zh": "偵錯",
+      "en": "Debugging"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "[API]取得手機條碼": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "無法辨識輸入內容": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "判斷按鈕動作": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "[API]手機條碼設定": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "[API]手機條碼修改": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "[功能]手機條碼維護": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "手機條碼修改": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "OCR變數設定": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "OCR文字辨識結果": {
+    "is_a": {
+      "zh": "結束目前的腳本",
+      "en": "End Current Script"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "台新證券小幫手主選單": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "[腳本]中文翻譯合約摘要": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "[腳本]台新腦模擬中文翻譯合約摘要": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "檔案上傳": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "附件轉圖片連結": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "上傳成功提示": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "台新證券小幫手功能選單": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "中文翻譯提示": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "內容摘要提示": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "中文翻譯": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "合約摘要": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "處理完成結果": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "結果輸出提示": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "選擇下一步": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "OCR文字辨識": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "翻譯或摘要": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "批次呼叫AOAI": {
+    "is_a": {
+      "zh": "批次呼叫API",
+      "en": "Batch Call API"
+    },
+    "mapped_taxonomy": "3. HTTP Requests and Integration → 3.2 Multi-Request Patterns → 3.2.2 Multicast Request",
+    "mapped_nodes": [
+      "MulticastRequest.md"
+    ]
+  },
+  "輸出資料整合": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "功能選單": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "API錯誤": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "API錯誤返回主選單": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "API參數設定": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "文字檔轉文字": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "Message變數設定": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "偵錯": {
+    "is_a": {
+      "zh": "偵錯",
+      "en": "Debugging"
+    },
+    "mapped_taxonomy": "unmapped",
+    "mapped_nodes": []
+  },
+  "測試輸出": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "滿意度調查": {
+    "is_a": {
+      "zh": "擴充插件",
+      "en": "Extension / Plugin"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.3 Custom and Computation Nodes → 2.3.2 Custom Dialog",
+    "mapped_nodes": [
+      "CustomDialog.md"
+    ]
+  },
+  "回迎賓": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "輸入": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "Echo": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "前往滿意度調查": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "填寫滿意度調查": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "等待user輸入QA數量": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "等待使用者上傳檔案": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "產生FAQ": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "再次檢核並輸出": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "顯示三版結果": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "發票OCR": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "顯示發票": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "送出": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "編輯": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "編輯發票": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "結果": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "送出!": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "系統處理訊息": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "支票OCR": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "檢查json": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "發票掃描結果預覽": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "回首頁": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "temp": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "API發送": {
+    "is_a": {
+      "zh": "呼叫API",
+      "en": "Call API"
+    },
+    "mapped_taxonomy": "3. HTTP Requests and Integration → 3.1 Base and Single Requests → 3.1.1 Base Request",
+    "mapped_nodes": [
+      "BaseRequest.md"
+    ]
+  },
+  "請敘述你想繪製的圖片": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "LLM製圖詠唱咒語": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "詠唱中": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "從6個prompt選一個生圖": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "生圖": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "result": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "輸入特徵": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "LLM": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "LLM結果": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "利用LLM將履歷轉為json": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "請輸入該職缺的條件要求": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "職缺條件標準化": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "根據LLM判斷履歷是否符合職缺要求": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "123": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "模擬資料": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "提示詞": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "jsonparse": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "url": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "輸入訊息": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "語音轉文字": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "檢查文法": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "取得對話及生成吉卜力圖片": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "顯示結果": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "未命名": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "把對話畫成吉卜力圖片": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "取消": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "未命名-2": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "TEMP": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "利用LLM產生問題": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "轉成特定json格式": {
+    "is_a": {
+      "zh": "資料處理",
+      "en": "Data Processing"
+    },
+    "mapped_taxonomy": "5. Rules and Expression Engine → 5.1 Expression and Evaluation Rules → 5.1.3 Inline Expression",
+    "mapped_nodes": [
+      "InlineExpression.md"
+    ]
+  },
+  "adcard": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "等待user上傳檔案": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "以表格摘要訪談記錄": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "翻譯英、韓": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "選單": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "PPT產生器": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "圖片生成小助手": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "教育訓練題目生成": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "履歷比對": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "鋼筆銷售": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "回選單": {
+    "is_a": {
+      "zh": "呼叫腳本",
+      "en": "Call Script"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.1 Begin Flow",
+    "mapped_nodes": [
+      "BeginFlow.md"
+    ]
+  },
+  "選擇難易度": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "呼叫「LLM 模組」模組": {
+    "is_a": {
+      "zh": "呼叫模組",
+      "en": "Call Module"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.2 Begin Module Flow",
+    "mapped_nodes": [
+      "BeginModuleFlow.md"
+    ]
+  },
+  "判斷有無說服成功": {
+    "is_a": {
+      "zh": "決策與變數設定",
+      "en": "Decision and Variable Assignment"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.2 Flow Control and Management → 2.2.4 Variable Decision",
+    "mapped_nodes": [
+      "VariableDecision.md"
+    ]
+  },
+  "成功提示": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  },
+  "回傳": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "再來一次": {
+    "is_a": {
+      "zh": "發送訊息",
+      "en": "Send Message"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.1 Send Message",
+    "mapped_nodes": [
+      "SendMessage.md"
+    ]
+  },
+  "繼續對話": {
+    "is_a": {
+      "zh": "文字輸入",
+      "en": "Prompt Text"
+    },
+    "mapped_taxonomy": "2. Bot Flow Nodes → 2.1 Prompt and Messaging Nodes → 2.1.5 Prompt Text",
+    "mapped_nodes": [
+      "PromptText.md"
+    ]
+  }
+}

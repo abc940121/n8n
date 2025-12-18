@@ -1,0 +1,872 @@
+{
+      "Id": "Flow_a815c931-b2ca-413e-b0d1-9c5464ed02f7",
+      "Name": "7.[廣告生成]入口",
+      "IsModuleFlow": false,
+      "Description": "",
+      "StartNodeId": "Node_3g6ms5f0uy",
+      "Nodes": [
+        {
+          "Id": "Node_oozn4a179k",
+          "Type": "flow.begin",
+          "Name": "呼叫API產生文案",
+          "Delay": 0,
+          "Actions": [
+            {
+              "_Id": "NodeAction_3hmrfk8iu04c511bm4sf",
+              "Type": "none",
+              "Rules": [],
+              "Priority": 50,
+              "NextNodeId": "Node_d6ydx5tek3"
+            }
+          ],
+          "VariableActions": [
+            {
+              "_Id": "Variable_dzr5dhisdab9ads2ybjg",
+              "Type": "variable.set",
+              "TriggerType": "before_node",
+              "Variable": "callCondition",
+              "VariableType": "global",
+              "AssignValue": "{\n    \"temperature\":1,\n    \"max_tokens\":{{$.FlowVariables.promptSetting.textToken}},\n    \"frequency_penalty\":0,\n    \"presence_penalty\":0,\n    \"messages\": [\n        {\n            \"role\": \"system\",\n            \"content\": \"你是一名廣告文案撰寫人員，請以專業、有創意的回覆廣告文案\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"請根據以下設定，明確以食物相關的有機燕麥片為廣告主體產生一個廣告文案，並回傳廣告文案的標題以及內容，廣告主題：產品展示，廣告類型：食物，受眾年齡層：年輕人(20-29)，受眾性別：不拘，回覆限制在100字內，以繁體中文回覆、不用顯示字數、禁止亂碼及其他語言，並將回覆結果以JSON格式輸出，格式如下：{'title':廣告標題,'content':廣告內容}，回覆結果不包含任何額外的符號、換行符號，回覆內容禁止含有'undefined'、性暗示、暴力字眼'\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"{'title':'健康美味的有機燕麥片','content':'享受我們的有機燕麥片，富含營養，低卡路里，是年輕人早餐和零食的最佳選擇。開始健康的一天，從一碗美味的燕麥片開始！'}\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"請根據以下設定，明確以家具相關的一個實際物品為廣告主體產生一個廣告文案，並回傳廣告文案的標題以及內容，廣告主題：品牌故事，廣告類型：家具，受眾年齡層：年輕人(20-29)，受眾性別：不拘，回覆限制在100字內，以繁體中文回覆、不用顯示字數、禁止亂碼及其他語言，並將回覆結果以JSON格式輸出，格式如下：{'title':廣告標題,'content':廣告內容}，回覆結果不包含任何額外的符號、換行符號，回覆內容禁止含有'undefined'、性暗示、暴力字眼'\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"{'title': '創意設計的多功能沙發床','content': '我們的多功能沙發床，不僅結合了現代設計與實用性，還能為你的家增添風格和便利。無論是日常休息還是意外來客，它都能輕鬆滿足你的需求。適合年輕人的現代生活方式，讓家更加舒適和溫馨。'}\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"{{$.FlowVariables.promptSetting.prompt}}\"\n        }\n    ]\n}",
+              "AssignValueType": "string.json"
+            },
+            {
+              "_Id": "Variable_43korlctvz7ejsjrpjmr",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "adText",
+              "VariableType": "flow",
+              "AssignValue": "$.NodeOutput.Data",
+              "AssignValueType": "variable"
+            }
+          ],
+          "DiagramData": {
+            "position": {
+              "x": 1393.0829150959883,
+              "y": -27.048232810256707
+            },
+            "size": {
+              "width": 197,
+              "height": 108
+            }
+          },
+          "Message": {
+            "_Id": "Content_irbb3jng6i0wvgx92mmr",
+            "Type": "text",
+            "QuickReply": [],
+            "Text": "正在生成廣告文案，約需30秒，請耐心等候..."
+          },
+          "FlowId": "Flow_686d8ae0-a122-4434-9ea3-4449bb121e5b"
+        },
+        {
+          "Id": "Node_dw1zx7ok9u",
+          "Type": "function",
+          "Name": "處理文案prompt",
+          "Delay": 0,
+          "Actions": [
+            {
+              "_Id": "NodeAction_jyeplym6t270gvpjap7e",
+              "Type": "none",
+              "Rules": [],
+              "Priority": 50,
+              "NextNodeId": "Node_oozn4a179k"
+            }
+          ],
+          "VariableActions": [
+            {
+              "_Id": "Variable_j4wkih71nrncu49ks0o8",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "promptSetting",
+              "VariableType": "flow",
+              "AssignValue": "$.NodeOutput.Data.Data",
+              "AssignValueType": "variable"
+            }
+          ],
+          "DiagramData": {
+            "position": {
+              "x": 993.6392492023017,
+              "y": -16.694083481398856
+            },
+            "size": {
+              "width": 197,
+              "height": 88
+            }
+          },
+          "ScriptType": "javascript",
+          "ScriptCode": "/**\n * 請將要執行的程式碼撰寫於下方方法中，\n * 並可使用 variables 來取得傳入的參數，如 'variables.<name>'，\n * 最後藉由 return 回傳執行結果。\n *\n * 另外也可使用「模擬執行」及「模擬輸入」來測試程式碼有無問題。\n */\n(variables) => {\n    let summarizeSetting = variables.summarizeSetting;\n    summarizeSetting.textToken = Math.floor(summarizeSetting.textLimit * 4);\n    let target = `明確以${summarizeSetting.type}相關的一個實際物品`;\n    if (summarizeSetting.hasOwnProperty(\"target\")) {\n        target = `明確以${summarizeSetting.type}的${summarizeSetting.target}`;\n    }\n    \n    let prompt = `請根據以下設定，${target}為廣告主體產生一個廣告文案，並回傳廣告的標題以及內容，`;\n\n    prompt += `廣告主題：${summarizeSetting.topic}，`;\n    prompt += `廣告類型：${summarizeSetting.type}，`;\n    prompt += `受眾年齡層：${summarizeSetting.age}，`;\n    prompt += `受眾性別：${summarizeSetting.sex}，`;\n    if (summarizeSetting.hasOwnProperty(\"info\")) {\n        prompt += `受眾特質：${summarizeSetting.info}，`;\n    }\n    prompt += `回覆限制在${summarizeSetting.textLimit}字內，並請盡量接近${summarizeSetting.textLimit}字，以繁體中文回覆、不用顯示字數、禁止亂碼及其他語言`;\n    prompt += `，並將回覆結果以JSON格式輸出，格式如下：{\"title\":廣告標題,\"content\":廣告內容}，回覆結果不包含任何額外的符號、換行符號，回覆內容禁止含有\"undefined\"、性暗示、暴力字眼`;\n    summarizeSetting.prompt = prompt;\n    return summarizeSetting;\n};\n",
+          "JavaScriptLibs": {
+            "_Id": "Others_eintpe9202xqi7hxeoac"
+          },
+          "Arguments": [
+            {
+              "_Id": "Others_83bwb65ljvsi72ud5gay",
+              "Name": "summarizeSetting",
+              "Value": "{{$.FlowVariables.summarizeSetting}}",
+              "Type": "use_expression",
+              "_MockValue": {
+                "action": "submit",
+                "topic": "產品展示",
+                "type": "食物",
+                "textLimit": "500",
+                "age": "青少年(13-19)",
+                "sex": "男",
+                "info": "健身男",
+                "style": "科幻風格",
+                "drawStyle": "natural",
+                "resolution": "1792x1024",
+                "quality": "stantdard"
+              }
+            }
+          ]
+        },
+        {
+          "Id": "Node_0fdg9be3e2",
+          "Type": "flow.begin",
+          "Name": "呼叫生成圖片API",
+          "Delay": 0,
+          "Actions": [
+            {
+              "_Id": "NodeAction_cpu0m4jn5nvex3ddc0n2",
+              "Type": "none",
+              "Rules": [],
+              "Priority": 50,
+              "NextNodeId": "Node_xhbkiln25y"
+            }
+          ],
+          "VariableActions": [
+            {
+              "_Id": "Variable_y46uvnhpj7anplgpd056",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "imageUrl",
+              "VariableType": "flow",
+              "AssignValue": "$.NodeOutput.Data",
+              "AssignValueType": "variable"
+            }
+          ],
+          "DiagramData": {
+            "position": {
+              "x": 2091.8451377646766,
+              "y": -27.462013068394807
+            },
+            "size": {
+              "width": 197,
+              "height": 108
+            }
+          },
+          "Message": {
+            "_Id": "Content_vobp5x0i3lq0m9rdu3zo",
+            "Type": "text",
+            "QuickReply": [],
+            "Text": ""
+          },
+          "FlowId": "Flow_1d4f353e-29e3-4268-9da2-df7ff4178da9"
+        },
+        {
+          "Id": "Node_xhbkiln25y",
+          "Type": "function",
+          "Name": "處理輸出",
+          "Delay": 0,
+          "Actions": [
+            {
+              "_Id": "NodeAction_6qnajdcs2bdmndzklfej",
+              "Type": "none",
+              "Rules": [],
+              "Priority": 50,
+              "NextNodeId": "Node_14l4l0ursx"
+            }
+          ],
+          "VariableActions": [
+            {
+              "_Id": "Variable_ej33kh1cnkem33oazisk",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "output",
+              "VariableType": "global",
+              "AssignValue": "$.NodeOutput.Data.Data.output",
+              "AssignValueType": "variable"
+            },
+            {
+              "_Id": "Variable_tt4vrh7pmix5orj25iu8",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "hasInput",
+              "VariableType": "global",
+              "AssignValue": "true",
+              "AssignValueType": "boolean"
+            },
+            {
+              "_Id": "Variable_pb3hk5o0gm6g84wpj56g",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "cardResource",
+              "VariableType": "flow",
+              "AssignValue": "$.NodeOutput.Data.Data",
+              "AssignValueType": "variable"
+            }
+          ],
+          "DiagramData": {
+            "position": {
+              "x": 2438.178000549241,
+              "y": -17.584372835847923
+            },
+            "size": {
+              "width": 197,
+              "height": 88
+            }
+          },
+          "ScriptType": "javascript",
+          "ScriptCode": "/**\n * 請將要執行的程式碼撰寫於下方方法中，\n * 並可使用 variables 來取得傳入的參數，如 'variables.<name>'，\n * 最後藉由 return 回傳執行結果。\n *\n * 另外也可使用「模擬執行」及「模擬輸入」來測試程式碼有無問題。\n */\n(variables) => {\n    let adText=JSON.parse(variables.adText);\n    adText.url=variables.imageUrl;\n    adText.output=`${adText.title}\\n\\n${adText.content}`;\n    return adText;\n};\n",
+          "JavaScriptLibs": {
+            "_Id": "Others_3x5pcp7pubp140e33umx"
+          },
+          "Arguments": [
+            {
+              "_Id": "Others_nn62yrpdupqn28yai2ju",
+              "Name": "adText",
+              "Value": "{{$.FlowVariables.adText}}",
+              "Type": "variable",
+              "_MockValue": [
+                {
+                  "asd": 123
+                },
+                {}
+              ]
+            },
+            {
+              "_Id": "Others_3h18t1q7pcu8gn3iug9l",
+              "Name": "imageUrl",
+              "Value": "{{$.FlowVariables.imageUrl}}",
+              "Type": "variable",
+              "_MockValue": "123123"
+            }
+          ]
+        },
+        {
+          "Id": "Node_14l4l0ursx",
+          "Type": "prompt.text",
+          "Name": "產生結果",
+          "Delay": 0,
+          "Actions": [
+            {
+              "_Id": "NodeAction_teevczsj29fhaiq4ebhh",
+              "Type": "and",
+              "Rules": [
+                {
+                  "_Id": "Rule_jozmyu2p7i35xd7nak4q",
+                  "Type": "jsonpath",
+                  "isNegative": false,
+                  "JsonPath": "$.Text",
+                  "Rule": {
+                    "_Id": "Rule_1mxi7lc1a7xrxzhg5qb9",
+                    "Type": "text",
+                    "isNegative": false,
+                    "Condition": "exactly",
+                    "IgnoreCase": false,
+                    "Value": "再次生成"
+                  }
+                }
+              ],
+              "Priority": 50,
+              "NextNodeId": "Node_oozn4a179k"
+            },
+            {
+              "_Id": "NodeAction_fq7kdun9wndvfq50s9ah",
+              "Type": "and",
+              "Rules": [
+                {
+                  "_Id": "Rule_jozmyu2p7i35xd7nak4q",
+                  "Type": "jsonpath",
+                  "isNegative": false,
+                  "JsonPath": "$.Text",
+                  "Rule": {
+                    "_Id": "Rule_1mxi7lc1a7xrxzhg5qb9",
+                    "Type": "text",
+                    "isNegative": false,
+                    "Condition": "exactly",
+                    "IgnoreCase": false,
+                    "Value": "修改條件"
+                  }
+                }
+              ],
+              "Priority": 50,
+              "NextNodeId": "Node_lmn3jn9qcv"
+            }
+          ],
+          "VariableActions": [],
+          "DiagramData": {
+            "position": {
+              "x": 1515.0775285392915,
+              "y": 282.83408315348566
+            },
+            "size": {
+              "width": 301,
+              "height": 188
+            }
+          },
+          "Prompt": {
+            "_Id": "Content_ygzddb84xfdj9wjmjcqq",
+            "Type": "hero.card",
+            "QuickReply": [
+              {
+                "_Id": "Others_eyunbyo35013ctjag9rv",
+                "Type": "imBack",
+                "Title": "再次生成",
+                "Value": "再次生成",
+                "_LinkNodeActionId": "NodeAction_eygeujq7cdcuk2fus0h2",
+                "_LinkNodeActionRuleId": "Rule_fz6gyxsx6wtpfazfixr6"
+              },
+              {
+                "_Id": "Others_s4injtienlpvhslh7zpi",
+                "Type": "imBack",
+                "Title": "修改條件",
+                "Value": "修改條件",
+                "_LinkNodeActionId": "NodeAction_71516k4lwvh54mh8vpbh",
+                "_LinkNodeActionRuleId": "Rule_lmyk4zv0hvgh99kxhu2y"
+              },
+              {
+                "_Id": "Others_al99sr4h07unudvc1etf",
+                "Type": "imBack",
+                "Title": "文章摘要",
+                "Value": "文章摘要",
+                "_LinkNodeActionId": "NodeAction_c0a0hh367u5h3sc7n6gg",
+                "_LinkNodeActionRuleId": "Rule_efjtfetbtp7mhahofq4u"
+              },
+              {
+                "_Id": "Others_waz0jx7abschfnsp3aae",
+                "Type": "imBack",
+                "Title": "多語系翻譯",
+                "Value": "多語系翻譯",
+                "_LinkNodeActionId": "NodeAction_j50hqm6rdhi69g4ydlwj",
+                "_LinkNodeActionRuleId": "Rule_zt6ehwfrep2kwjv0v44b"
+              },
+              {
+                "_Id": "Others_ssundqom6swbehyml7x1",
+                "Type": "imBack",
+                "Title": "文字轉語音",
+                "Value": "文字轉語音",
+                "_LinkNodeActionId": "NodeAction_f4cbi28j3c2jzx9msk4p",
+                "_LinkNodeActionRuleId": "Rule_8xhq2w5c0ai0zogrs5z0"
+              }
+            ],
+            "Title": "{{$.FlowVariables.cardResource.title}}",
+            "Text": "{{$.FlowVariables.cardResource.content}}  ",
+            "Subtitle": "",
+            "ImageUrl": "{{$.FlowVariables.cardResource.url}}",
+            "Buttons": []
+          },
+          "Retry": {
+            "_Id": "Content_sv9w2h85neck0xahlejp",
+            "Type": "text",
+            "QuickReply": []
+          },
+          "Validator": {
+            "_Id": "PromptValidator_n37jhfv58vo5p6nm89w7",
+            "Type": "intersection",
+            "Rules": []
+          }
+        },
+        {
+          "Id": "Node_3g6ms5f0uy",
+          "Type": "variable",
+          "Name": "設定初始值",
+          "Delay": 0,
+          "Actions": [
+            {
+              "_Id": "NodeAction_quj9mj5zoexhclwa0253",
+              "Type": "none",
+              "Rules": [],
+              "Priority": 50,
+              "NextNodeId": "Node_lmn3jn9qcv"
+            }
+          ],
+          "VariableActions": [
+            {
+              "_Id": "Variable_uxwh6rfyb17y9t446cvl",
+              "Type": "variable.set",
+              "TriggerType": "before_node",
+              "Variable": "summarizeSetting",
+              "VariableType": "flow",
+              "AssignValue": {
+                "topic": "產品展示",
+                "type": "日常用品",
+                "target": "",
+                "textLimit": 50,
+                "age": "年輕人(20-29)",
+                "sex": "不拘",
+                "info": "",
+                "style": "自然風格",
+                "drawStyle": "natural",
+                "resolution": "1024x1024",
+                "quality": "standard",
+                "isShowText": "顯示文字"
+              },
+              "AssignValueType": "string.json"
+            }
+          ],
+          "DiagramData": {
+            "position": {
+              "x": 172.33784945869144,
+              "y": -13.7088608315822
+            },
+            "size": {
+              "width": 0,
+              "height": 0
+            }
+          }
+        },
+        {
+          "Id": "Node_lmn3jn9qcv",
+          "Type": "prompt.text",
+          "Name": "文章摘要設定(ac)",
+          "Delay": 0,
+          "Actions": [
+            {
+              "_Id": "NodeAction_m6kih3qnj2bgxh714cti",
+              "Type": "none",
+              "Rules": [],
+              "Priority": 50,
+              "NextNodeId": "Node_dw1zx7ok9u"
+            }
+          ],
+          "VariableActions": [
+            {
+              "_Id": "Variable_vepwwzmjw6ln77mep390",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "summarizeSetting",
+              "VariableType": "flow",
+              "AssignValue": "$.Message.Value",
+              "AssignValueType": "variable"
+            },
+            {
+              "_Id": "Variable_2mh6sb6i1z9mayriow0w",
+              "Type": "variable.set",
+              "TriggerType": "before_node",
+              "Variable": "cardResource",
+              "VariableType": "flow",
+              "AssignValue": "{\n    \"adSetting\":{{$.Configs.adSetting}},\n    \"summarizeSetting\":{{$.FlowVariables.summarizeSetting}}\n}",
+              "AssignValueType": "string.json"
+            }
+          ],
+          "DiagramData": {
+            "position": {
+              "x": 525.304328844973,
+              "y": -372.05995083933414
+            },
+            "size": {
+              "width": 358,
+              "height": 717
+            }
+          },
+          "Prompt": {
+            "_Id": "Content_1oszfqk16ydqm9blr9ds",
+            "Type": "adaptive.card",
+            "QuickReply": [
+              {
+                "_Id": "Others_09t6oz2b7ivq2rfg4zyz",
+                "Type": "imBack",
+                "Title": "返回主選單",
+                "Value": "返回主選單",
+                "_LinkNodeActionId": "NodeAction_thk60kiz3vdhw4zb4vht",
+                "_LinkNodeActionRuleId": "Rule_87hztucjcos3eivjx9yj"
+              }
+            ],
+            "Text": "",
+            "Content": {
+              "type": "AdaptiveCard",
+              "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+              "version": "1.3",
+              "body": [
+                {
+                  "type": "Container",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "廣告生成設定",
+                      "wrap": true,
+                      "horizontalAlignment": "Center",
+                      "id": "header",
+                      "size": "Large",
+                      "weight": "Bolder",
+                      "color": "Accent"
+                    },
+                    {
+                      "type": "Container",
+                      "items": [
+                        {
+                          "type": "Container",
+                          "items": [
+                            {
+                              "type": "TextBlock",
+                              "text": "廣告文案📃",
+                              "wrap": true,
+                              "size": "Medium",
+                              "weight": "Bolder",
+                              "color": "Accent"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ColumnSet",
+                          "columns": [
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.topic}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "label": "主題：",
+                                  "id": "topic",
+                                  "value": "${summarizeSetting.topic}",
+                                  "isRequired": true,
+                                  "errorMessage": "文案主題為必填欄位"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.type}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "label": "類型：",
+                                  "id": "type",
+                                  "value": "${summarizeSetting.type}",
+                                  "isRequired": true,
+                                  "errorMessage": "文案類型為必填欄位"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ColumnSet",
+                          "columns": [
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.Text",
+                                  "placeholder": "請輸入廣告主體",
+                                  "value": "${if(exists(summarizeSetting.target),summarizeSetting.target,'')}",
+                                  "id": "target",
+                                  "label": "主體（產品）：",
+                                  "errorMessage": "文案主體為必填欄位"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.Number",
+                                  "placeholder": "請輸入字數限制",
+                                  "label": "字數限制：",
+                                  "id": "textLimit",
+                                  "errorMessage": "字數限制為必填欄位",
+                                  "value": "${summarizeSetting.textLimit}",
+                                  "max": 2000,
+                                  "min": 0,
+                                  "isRequired": true
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Container",
+                      "items": [
+                        {
+                          "type": "Container",
+                          "items": [
+                            {
+                              "type": "TextBlock",
+                              "text": "受眾😊",
+                              "wrap": true,
+                              "size": "Medium",
+                              "weight": "Bolder",
+                              "color": "Accent"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ColumnSet",
+                          "columns": [
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.age}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "label": "年齡層：",
+                                  "id": "age",
+                                  "value": "${summarizeSetting.age}",
+                                  "isRequired": true,
+                                  "errorMessage": "年齡層為必填欄位"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.sex}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "label": "性別：",
+                                  "id": "sex",
+                                  "isRequired": true,
+                                  "errorMessage": "性別為必填欄位",
+                                  "value": "${summarizeSetting.sex}"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "Input.Text",
+                          "placeholder": "請輸入受眾背景特質",
+                          "label": "背景特質：",
+                          "value": "${if(exists(summarizeSetting.info),summarizeSetting.info,'')}",
+                          "id": "info"
+                        }
+                      ],
+                      "separator": true,
+                      "spacing": "Medium"
+                    },
+                    {
+                      "type": "Container",
+                      "items": [
+                        {
+                          "type": "Container",
+                          "items": [
+                            {
+                              "type": "TextBlock",
+                              "text": "廣告圖片✨️",
+                              "wrap": true,
+                              "weight": "Bolder",
+                              "size": "Medium",
+                              "color": "Accent"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ColumnSet",
+                          "columns": [
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.style}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "label": "風格：",
+                                  "id": "style",
+                                  "value": "${summarizeSetting.style}",
+                                  "errorMessage": "風格為必填欄位",
+                                  "isRequired": true
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.drawStyle}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "id": "drawStyle",
+                                  "label": "畫風：",
+                                  "value": "${summarizeSetting.drawStyle}",
+                                  "isRequired": true,
+                                  "errorMessage": "畫風為必填欄位"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "ColumnSet",
+                          "columns": [
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.quality}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "label": "畫質：",
+                                  "id": "quality",
+                                  "value": "${summarizeSetting.quality}",
+                                  "isRequired": true,
+                                  "errorMessage": "畫質為必填欄位"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "Input.ChoiceSet",
+                                  "choices": [
+                                    {
+                                      "$data": "${adSetting.resolution}",
+                                      "title": "${name}",
+                                      "value": "${value}"
+                                    }
+                                  ],
+                                  "label": "解析度：",
+                                  "id": "resolution",
+                                  "value": "${summarizeSetting.resolution}",
+                                  "isRequired": true,
+                                  "errorMessage": "解析度為必填欄位"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "separator": true,
+                      "spacing": "Medium"
+                    },
+                    {
+                      "type": "ActionSet",
+                      "actions": [
+                        {
+                          "type": "Action.Submit",
+                          "title": "送出",
+                          "data": {
+                            "action": "submit"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "DataSource": "$.FlowVariables.cardResource"
+          },
+          "Retry": {
+            "_Id": "Content_pb70xxno5j3aueyxywwh",
+            "Type": "text",
+            "QuickReply": []
+          },
+          "Validator": {
+            "_Id": "PromptValidator_6yagqwk7tw2yf4widj5k",
+            "Type": "intersection",
+            "Rules": []
+          }
+        },
+        {
+          "Id": "Node_d6ydx5tek3",
+          "Type": "function",
+          "Name": "處理文案結果",
+          "Delay": 1000,
+          "Actions": [
+            {
+              "_Id": "NodeAction_rpi4ore4uuulgu0bh1hz",
+              "Type": "none",
+              "Rules": [],
+              "Priority": 50,
+              "NextNodeId": "Node_0fdg9be3e2"
+            }
+          ],
+          "VariableActions": [
+            {
+              "_Id": "Variable_sm2nkv1i5pa8omtg8lh4",
+              "Type": "variable.set",
+              "TriggerType": "after_node",
+              "Variable": "callCondition",
+              "VariableType": "global",
+              "AssignValue": "$.NodeOutput.Data.Data",
+              "AssignValueType": "variable"
+            }
+          ],
+          "DiagramData": {
+            "position": {
+              "x": 1706.4049599387429,
+              "y": -14.2528944535689
+            },
+            "size": {
+              "width": 197,
+              "height": 88
+            }
+          },
+          "ScriptType": "javascript",
+          "ScriptCode": "/**\n * 請將要執行的程式碼撰寫於下方方法中，\n * 並可使用 variables 來取得傳入的參數，如 'variables.<name>'，\n * 最後藉由 return 回傳執行結果。\n *\n * 另外也可使用「模擬執行」及「模擬輸入」來測試程式碼有無問題。\n */\n(variables) => {\n    let promptSetting = variables.promptSetting;\n    let adText=JSON.parse(variables.adText);\n    return {\n        prompt: `請根據以下設定產生廣告圖片，圖片上顯示清晰的文字並修正字詞的正確性，廣告風格：${promptSetting.style}，廣告標題：${adText.title}，廣告內容：${adText.content}，圖片解析度：${promptSetting.resolution}，圖片去除白邊，將內容填滿整張圖片`,\n        size: promptSetting.resolution,\n        quality: promptSetting.quality,\n        style: promptSetting.drawStyle\n    };\n};\n",
+          "JavaScriptLibs": {
+            "_Id": "Others_3x5pcp7pubp140e33umx"
+          },
+          "Arguments": [
+            {
+              "_Id": "Others_nn62yrpdupqn28yai2ju",
+              "Name": "adText",
+              "Value": "{{$.FlowVariables.adText}}",
+              "Type": "variable",
+              "_MockValue": {
+                "asd": "123"
+              }
+            },
+            {
+              "_Id": "Others_x3q8s9ajnkjf5ey3nf3e",
+              "Name": "promptSetting",
+              "Value": "{{$.FlowVariables.promptSetting}}",
+              "Type": "variable",
+              "_MockValue": "{{$.FlowVariables.summarizeSetting}}"
+            }
+          ]
+        }
+      ]
+    }

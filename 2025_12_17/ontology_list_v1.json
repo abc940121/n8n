@@ -1,0 +1,29 @@
+n8n_node_ontology = [
+    # [1. Node Identity] - 節點的基本身份資訊 (來源: Root Level)
+    "node_system_name",      # 對應: name (e.g., "n8n-nodes-base.actionNetwork")
+    "node_display_name",     # 對應: displayName (e.g., "Action Network")
+    "node_description",      # 對應: description (e.g., "Consume the Action Network API")
+    "node_category",         # 對應: properties.displayOptions.show.group 等分類資訊
+    
+    # [2. Parameter Definitions] - 使用者可設定的參數 (來源: properties.*)
+    # n8n 的參數結構很深，這裡將其扁平化為通用欄位
+    "param_name",            # 對應: properties.name, properties.options.name (變數名稱，如 "resource")
+    "param_label",           # 對應: properties.displayName (顯示名稱，如 "Resource")
+    "param_type",            # 對應: properties.type (資料型態，如 "string", "options", "boolean")
+    "param_default_value",   # 對應: properties.default (預設值)
+    "param_description",     # 對應: properties.description (參數說明)
+    "param_is_required",     # 對應: properties.required (是否必填)
+    "param_placeholder",     # 對應: properties.placeholder (提示文字)
+    "param_hint",            # 對應: properties.hint (補充提示，通常含 HTML)
+    
+    # [3. Options & Values] - 下拉選單或特定選項的值 (來源: properties.options.values.*)
+    "option_name",           # 對應: properties.options.values.name (選項的內部值，如 "primary")
+    "option_label",          # 對應: properties.options.values.displayName (選項的顯示文字，如 "Primary")
+    "option_description",    # 對應: properties.options.values.description (選項說明)
+    
+    # [4. Logic & Routing] - 節點的運作邏輯 (來源: routing.*, displayOptions.*)
+    "request_method",        # 對應: properties.routing.request.method (GET, POST 等)
+    "request_url",           # 對應: properties.routing.request.url (API Endpoint)
+    "display_condition",     # 對應: properties.displayOptions.show (顯示此欄位的條件)
+    "version_constraint"     # 對應: properties.displayOptions.show.@version (版本限制)
+]
