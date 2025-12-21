@@ -1,0 +1,106 @@
+ontology_list = [
+    # 1. System & Integration Metadata (系統與整合元數據)
+    "resource_entity",          # 操作實體 (e.g., Task, Record, Session)
+    "operation_action",         # 執行動作 (e.g., Create, Get, Scrape)
+    "connection_id",            # 連線憑證 ID
+    "external_id",              # 外部系統 ID (通用)
+    "api_endpoint_url",         # API 端點網址
+    "http_method",              # HTTP 方法
+    "execution_id",             # 執行 ID
+    "trigger_mode",             # 觸發模式 (Webhook, Polling)
+    "schedule_expression",      # 排程表達式 (Cron)
+    "execution_timeout",        # 執行超時設定
+    
+    # [NEW] Data Control & Pagination (資料控制與分頁)
+    "pagination_mode",          # 分頁模式 (Response Link, Page Number)
+    "pagination_limit",         # 回傳資料筆數上限 (Limit)
+    "batch_processing_size",    # 批次處理大小 (Batch Size)
+    "batch_interval_ms",        # 批次處理間隔 (毫秒)
+    "data_mapping_strategy",    # 資料映射策略 (Auto-map, Manual)
+
+    # 2. AI & Data Intelligence (人工智慧與數據智能)
+    "ai_model_name",            # 模型名稱
+    "ai_agent_strategy",        # 代理策略 (ReAct, Tools)
+    "ai_system_prompt",         # 系統提示詞
+    "ai_user_prompt",           # 用戶提示詞
+    "ai_tool_invocation",       # 工具調用指令
+    "ai_output_schema",         # 輸出 JSON Schema
+    "ai_temperature",           # 隨機性參數
+    "ai_token_usage",           # Token 使用量
+    "embedding_vector",         # 向量數據
+    "ai_knowledge_base_id",     # 知識庫/向量資料庫 ID
+
+    # 3. Web Automation & Browser Control (網頁自動化)
+    "browser_session_id",       # Session ID
+    "browser_window_id",        # Window ID
+    "target_url",               # 目標網址
+    "css_selector",             # CSS 選擇器
+    "ui_element_natural_language_desc", # UI 元素自然語言描述 (Airtop 專用)
+    "interaction_type",         # 互動類型 (Click, Type, Scroll)
+    "form_input_data",          # 表單填寫資料
+    "screenshot_binary",        # 截圖數據
+    "proxy_configuration",      # 代理設定
+    "captcha_solving_enabled",  # 自動解驗證碼開關
+
+    # 4. Project & Task Management (專案與任務)
+    "workspace_id",             # 工作區 ID
+    "project_id",               # 專案 ID
+    "task_id",                  # 任務 ID
+    "task_title",               # 任務標題
+    "task_status",              # 任務狀態
+    "task_priority",            # 任務優先級
+    "due_date",                 # 到期日
+    "assignee_id",              # 指派對象
+    "task_followers_list",      # 關注者列表 (Asana)
+
+    # 5. Messaging & Event Streaming (訊息與事件串流)
+    "message_queue_name",       # 佇列名稱 (Queue)
+    "message_topic_name",       # 主題名稱 (Topic)
+    "message_headers",          # 訊息標頭
+    "message_payload_body",     # 訊息內容
+    "message_container_id",     # 容器 ID (AMQP)
+    "delivery_acknowledgment",  # 投遞確認模式 (Ack/Nack)
+
+    # 6. Database & Structured Content (資料庫與結構化內容)
+    "database_base_id",         # Base ID (Airtable)
+    "database_table_name",      # 資料表名稱
+    "database_view_id",         # 視圖 ID
+    "database_record_id",       # 記錄 ID
+    "sql_dialect",              # SQL 方言
+    "filter_formula",           # 過濾公式 (Formula)
+    "sort_direction",           # 排序方向
+    "record_fields_data",       # 欄位資料集合
+
+    # 7. Content & Templating (內容與模板)
+    "template_id",              # 模板 ID (APITemplate.io)
+    "template_variable_mapping",# 模板變數對應
+    "generated_file_url",       # 生成檔案連結
+    "content_cms_type",         # CMS 內容類型
+
+    # 8. CRM & Relationship Management (客戶關係管理)
+    "contact_id",               # 聯絡人 ID
+    "organization_id",          # 組織 ID
+    "deal_id",                  # 交易 ID
+    "person_name_full",         # 全名
+    "email_address_primary",    # Email
+    "phone_number_primary",     # 電話
+    "lead_score",               # 評分
+    "tags_list",                # 標籤列表
+
+    # 9. Data Processing & Files (資料處理與檔案)
+    "binary_data_key",          # 二進制資料欄位名稱 (Binary Property)
+    "file_name",                # 檔案名稱
+    "mime_type",                # MIME 類型
+    "source_field_name",        # 來源欄位 (Aggregation)
+    "target_field_name",        # 目標欄位
+    "list_merge_strategy",      # 列表合併策略
+    "unique_item_filtering"     # 唯一值過濾
+
+    # 10. Finance & Infrastructure (財務與基礎設施 - 保留類別)
+    "transaction_id",           # 交易 ID
+    "total_amount",             # 金額
+    "currency_code",            # 貨幣
+    "cloud_provider",           # 雲端供應商
+    "cloud_region",             # 區域
+    "instance_type"             # 實例類型
+]

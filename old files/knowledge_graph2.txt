@@ -1,0 +1,146 @@
+{
+  "Taxonomy": {
+    "1. Adaptive Card Components": {
+      "1.1 Display-Oriented Cards": {
+        "1.1.1 Fact Card": {
+          "1.1.1.1": "Presents structured key–value pairs for displaying factual information",
+          "1.1.1.2": "Used in record-style summaries or profile details"
+        },
+        "1.1.2 Grid Card": {
+          "1.1.2.1": "Displays tabular data with configurable columns and rows",
+          "1.1.2.2": "Supports text, image, button, and checkbox column types"
+        },
+        "1.1.3 List Card": {
+          "1.1.3.1": "Shows itemized lists with title, subtitle, and image",
+          "1.1.3.2": "Used for summaries, navigation, or quick link lists"
+        },
+        "1.1.4 LINE Flex Grid Card": {
+          "1.1.4.1": "LINE-exclusive Flex grid layout; supports numeric and date formatting",
+          "1.1.4.2": "Columns bind to DataSource fields with templated placeholders"
+        },
+        "1.1.5 LINE Flex Carousel Template Card": {
+          "1.1.5.1": "Template-based multi-card carousel; supports up to 12 bubbles per message",
+          "1.1.5.2": "Uses TemplateId, Parameters, and DataSource for auto-population"
+        }
+      },
+      "1.2 Input and Interactive Cards": {
+        "1.2.1 Form Card": {
+          "1.2.1.1": "Collects user inputs (text, number, date, toggle, checkbox)",
+          "1.2.1.2": "Supports validation, DataSource binding, and choice lists"
+        },
+        "1.2.2 Prompt Card": {
+          "1.2.2.1": "Waits for user input via button or card interaction",
+          "1.2.2.2": "Supports Prompt/Retry and Validator (JsonPath, EvaluateExpression, Composite)"
+        },
+        "1.2.3 Prompt Text": {
+          "1.2.3.1": "Collects text input with retry behavior and validator",
+          "1.2.3.2": "Disallows Intent rules within Validator or Actions"
+        },
+        "1.2.4 WeCom Choice Card": {
+          "1.2.4.1": "Provides single or multi-select options; returns selected data via taskId or eventKey",
+          "1.2.4.2": "Supports up to 20 choices and custom submit button"
+        },
+        "1.2.5 WeCom Button Card": {
+          "1.2.5.1": "Multi-button card supporting submit and open_url types",
+          "1.2.5.2": "Supports up to six buttons with configurable color and style"
+        }
+      },
+      "1.3 Event and Action Cards": {
+        "1.3.1 Event Content": {
+          "1.3.1.1": "Represents interactive system events like event/invoke/typing/trace",
+          "1.3.1.2": "Extends MessageContent to support dynamic Data payloads"
+        },
+        "1.3.2 Custom Event": {
+          "1.3.2.1": "Defines custom triggers (EventName, FlowConditions, Priority)",
+          "1.3.2.2": "Executes EventAction when matching conditions are met"
+        },
+        "1.3.3 Line Action Content": {
+          "1.3.3.1": "Maps LINE actions (message, postback, uri, datetimepicker)",
+          "1.3.3.2": "Translates to corresponding Flex button behaviors"
+        }
+      }
+    },
+    "2. Bot Flow Nodes": {
+      "2.1 Prompt and Messaging Nodes": {
+        "2.1.1 Send Message": "Sends a single message or card without waiting for response",
+        "2.1.2 Send Carousel": "Sends multiple card attachments in list or carousel layout",
+        "2.1.3 Send Event": "Emits EventContent to trigger actions on client",
+        "2.1.4 Prompt Card": "Interactive prompt card that validates and routes based on user choice",
+        "2.1.5 Prompt Text": "Text-based prompt awaiting user input with validation and retry"
+      },
+      "2.2 Flow Control and Management": {
+        "2.2.1 Begin Flow": "Starts a subflow and returns after completion",
+        "2.2.2 Begin Module Flow": "Invokes reusable logic modules with argument binding",
+        "2.2.3 Switch Flow": "Switches to another flow permanently (non-returning)",
+        "2.2.4 Variable Decision": "Evaluates and updates variables, then branches by condition"
+      },
+      "2.3 Data Request and Integration Nodes": {
+        "2.3.1 Base Request": "Performs standard HTTP requests (GET/POST/PUT/DELETE)",
+        "2.3.2 Request Raw Data": "Sends text, HTML, or JSON data as body payload",
+        "2.3.3 Request Raw Data or Binary": "Handles binary responses and auto-uploads to file server",
+        "2.3.4 Request Raw Json": "Legacy JSON-only HTTP request format",
+        "2.3.5 Request Form Data": "Sends multipart or URL-encoded form data",
+        "2.3.6 Parallel Request": "Executes multiple HTTP requests concurrently",
+        "2.3.7 Multicast Request": "Iterates same request template across dataset entries"
+      },
+      "2.4 AI and QA Nodes": {
+        "2.4.1 GSS.AI Node": "Integrates RASA + DeepPavlov for intent and entity extraction",
+        "2.4.2 GSS.QA Node": "Connects to GSS QA knowledge base for question answering",
+        "2.4.3 QA.LUIS Node": "Uses Microsoft LUIS for intent recognition",
+        "2.4.4 QA.Regex Node": "Applies regex models for deterministic intent detection"
+      },
+      "2.5 Custom and Computation Nodes": {
+        "2.5.1 Custom Dialog Node": "Runs custom DLL dialog logic within workflow",
+        "2.5.2 Custom Function Node": "Executes user-defined C# or JavaScript scripts",
+        "2.5.3 Evaluate Expression Rule": "Evaluates conditional logic using inline C#/JS expressions",
+        "2.5.4 Integer Rule": "Validates integer input against comparison or range conditions"
+      }
+    },
+    "3. Schema, Rules, and Expression": {
+      "3.1 Validation and Rule Types": {
+        "3.1.1 Evaluate Expression Rule": "Boolean rule using C#/JS expressions referencing variables",
+        "3.1.2 Integer Rule": "Numeric comparison logic (equals, between, greater, less)",
+        "3.1.3 JsonPath Rule": "Matches values by JSONPath condition",
+        "3.1.4 Composite Rule": "Combines multiple sub-rules via logical AND/OR"
+      },
+      "3.2 Expression Engine": {
+        "3.2.1 Inline Expression": {
+          "3.2.1.1": "Syntax: {{=> C# expression ;}}",
+          "3.2.1.2": "Evaluated via CodingSeb engine; supports math, string, and date operations",
+          "3.2.1.3": "Allows variable binding and dynamic text composition"
+        },
+        "3.2.2 Variable Binding": "Links data from Variables, Message, or Flow context dynamically"
+      },
+      "3.3 Validation Framework": {
+        "3.3.1 Prompt Validation": "Applied in Prompt nodes using Validator rule types",
+        "3.3.2 Routing Validation": "Determines transition paths based on variable evaluation"
+      }
+    },
+    "4. Event and Action Framework": {
+      "4.1 Event Action Types": {
+        "4.1.1 Message Event Action": "Sends MessageContent; may include pre/post VariableActions",
+        "4.1.2 Flow Event Action": "Starts new flow and clears dialog stack",
+        "4.1.3 Module Flow Event Action": "Invokes a module flow with arguments",
+        "4.1.4 Composite Event Action": "Evaluates conditional rules and executes matched child actions"
+      },
+      "4.2 Event Workflow Logic": {
+        "4.2.1 Custom Event Schema": "Defines EventName, FlowConditions, and Priority logic",
+        "4.2.2 Action Conditions": "Uses BaseRule structure for dynamic event matching"
+      }
+    },
+    "5. Architecture and Integration": {
+      "5.1 Modularity and Reusability": {
+        "5.1.1 Flow and Module Architecture": "Supports reusable conversation structures",
+        "5.1.2 Argument System": "Plain, variable, and expression-based argument passing"
+      },
+      "5.2 Channel Adaptation": {
+        "5.2.1 Adaptive Card Transformation": "Maps AdaptiveCards to Flex (LINE) or Block Kit (Slack)",
+        "5.2.2 Channel Constraints": "Defines platform-specific style or action limitations"
+      },
+      "5.3 Extensibility": {
+        "5.3.1 Plugin Integration": "Extends bot via external DLL plugins",
+        "5.3.2 Custom Function/Dialog": "Implements modular logic extensions"
+      }
+    }
+  }
+}

@@ -188,7 +188,7 @@ def main():
     if not source_files:
         source_files = ['All_n8n_nodes.json']
         
-    output_file = 'n8n_ontology_v2_mapped.csv'
+    output_file = 'n8n_ontology_full_list3.csv'
     all_rows = []
     
     print(f"🚀 開始使用 v2.0 邏輯處理檔案...")

@@ -132,7 +132,7 @@ def map_node_smart(node):
 
 def main():
     source_file = 'All_n8n_nodes.json'
-    output_file = 'n8n_ontology_smart_mapped.csv'
+    output_file = 'n8n_ontology_full_list2.csv'
     
     try:
         with open(source_file, 'r', encoding='utf-8') as f:

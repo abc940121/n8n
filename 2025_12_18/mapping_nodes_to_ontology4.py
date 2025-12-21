@@ -203,7 +203,7 @@ def main():
     source_files = glob.glob('batch_*.json')
     if not source_files: source_files = ['All_n8n_nodes.json']
     
-    output_file = 'n8n_ontology_full_list3.csv'
+    output_file = 'n8n_ontology_full_list4.csv'
     all_rows = []
     
     print("🚀 開始執行 v3.0 Mapping (含深度推斷)...")

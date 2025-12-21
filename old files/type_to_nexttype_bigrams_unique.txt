@@ -1,0 +1,198 @@
+================================================================================
+Type → NextType Bigrams (唯一版本 - 已去重)
+================================================================================
+
+總共 83 個唯一 bigrams (從 723 個 bigrams 中去重)
+
+  1. ('custom', 'flow.begin')
+  2. ('custom', 'function')
+  3. ('custom', 'prompt.text')
+  4. ('custom', 'trace')
+  5. ('custom', 'variable')
+  6. ('flow.begin', 'flow.begin')
+  7. ('flow.begin', 'flow.end.all')
+  8. ('flow.begin', 'flow.end.current')
+  9. ('flow.begin', 'function')
+ 10. ('flow.begin', 'prompt.text')
+ 11. ('flow.begin', 'sending.message')
+ 12. ('flow.begin', 'variable')
+ 13. ('flow.module.begin', 'flow.module.begin')
+ 14. ('flow.module.begin', 'flow.module.end')
+ 15. ('flow.module.begin', 'function')
+ 16. ('flow.module.begin', 'prompt.text')
+ 17. ('flow.module.begin', 'request.raw')
+ 18. ('flow.module.begin', 'sending.message')
+ 19. ('flow.module.begin', 'trace')
+ 20. ('flow.module.begin', 'variable')
+ 21. ('function', 'custom')
+ 22. ('function', 'flow.begin')
+ 23. ('function', 'flow.end.current')
+ 24. ('function', 'flow.module.begin')
+ 25. ('function', 'flow.module.end')
+ 26. ('function', 'function')
+ 27. ('function', 'prompt.text')
+ 28. ('function', 'request.formdata')
+ 29. ('function', 'request.multicast')
+ 30. ('function', 'request.raw')
+ 31. ('function', 'sending.message')
+ 32. ('function', 'trace')
+ 33. ('function', 'variable')
+ 34. ('prompt.text', 'custom')
+ 35. ('prompt.text', 'flow.begin')
+ 36. ('prompt.text', 'flow.module.begin')
+ 37. ('prompt.text', 'flow.module.end')
+ 38. ('prompt.text', 'function')
+ 39. ('prompt.text', 'prompt.text')
+ 40. ('prompt.text', 'sending.message')
+ 41. ('prompt.text', 'trace')
+ 42. ('prompt.text', 'variable')
+ 43. ('request.formdata', 'flow.end.current')
+ 44. ('request.formdata', 'function')
+ 45. ('request.formdata', 'sending.message')
+ 46. ('request.multicast', 'function')
+ 47. ('request.multicast', 'sending.message')
+ 48. ('request.multicast', 'trace')
+ 49. ('request.raw', 'flow.module.begin')
+ 50. ('request.raw', 'flow.module.end')
+ 51. ('request.raw', 'prompt.text')
+ 52. ('request.raw', 'trace')
+ 53. ('request.raw', 'variable')
+ 54. ('sending.message', 'flow.begin')
+ 55. ('sending.message', 'flow.end.current')
+ 56. ('sending.message', 'flow.module.begin')
+ 57. ('sending.message', 'flow.module.end')
+ 58. ('sending.message', 'flow.switch')
+ 59. ('sending.message', 'function')
+ 60. ('sending.message', 'prompt.text')
+ 61. ('sending.message', 'request.formdata')
+ 62. ('sending.message', 'sending.message')
+ 63. ('trace', 'custom')
+ 64. ('trace', 'flow.begin')
+ 65. ('trace', 'flow.end.current')
+ 66. ('trace', 'flow.module.begin')
+ 67. ('trace', 'flow.module.end')
+ 68. ('trace', 'function')
+ 69. ('trace', 'request.multicast')
+ 70. ('trace', 'trace')
+ 71. ('trace', 'variable')
+ 72. ('variable', 'custom')
+ 73. ('variable', 'flow.begin')
+ 74. ('variable', 'flow.end.current')
+ 75. ('variable', 'flow.module.begin')
+ 76. ('variable', 'flow.module.end')
+ 77. ('variable', 'flow.switch')
+ 78. ('variable', 'function')
+ 79. ('variable', 'prompt.text')
+ 80. ('variable', 'request.raw')
+ 81. ('variable', 'sending.message')
+ 82. ('variable', 'trace')
+ 83. ('variable', 'variable')
+
+================================================================================
+按 Current Type 分類
+================================================================================
+
+custom → 5 種 next types:
+  → flow.begin
+  → function
+  → prompt.text
+  → trace
+  → variable
+
+flow.begin → 7 種 next types:
+  → flow.begin
+  → flow.end.all
+  → flow.end.current
+  → function
+  → prompt.text
+  → sending.message
+  → variable
+
+flow.module.begin → 8 種 next types:
+  → flow.module.begin
+  → flow.module.end
+  → function
+  → prompt.text
+  → request.raw
+  → sending.message
+  → trace
+  → variable
+
+function → 13 種 next types:
+  → custom
+  → flow.begin
+  → flow.end.current
+  → flow.module.begin
+  → flow.module.end
+  → function
+  → prompt.text
+  → request.formdata
+  → request.multicast
+  → request.raw
+  → sending.message
+  → trace
+  → variable
+
+prompt.text → 9 種 next types:
+  → custom
+  → flow.begin
+  → flow.module.begin
+  → flow.module.end
+  → function
+  → prompt.text
+  → sending.message
+  → trace
+  → variable
+
+request.formdata → 3 種 next types:
+  → flow.end.current
+  → function
+  → sending.message
+
+request.multicast → 3 種 next types:
+  → function
+  → sending.message
+  → trace
+
+request.raw → 5 種 next types:
+  → flow.module.begin
+  → flow.module.end
+  → prompt.text
+  → trace
+  → variable
+
+sending.message → 9 種 next types:
+  → flow.begin
+  → flow.end.current
+  → flow.module.begin
+  → flow.module.end
+  → flow.switch
+  → function
+  → prompt.text
+  → request.formdata
+  → sending.message
+
+trace → 9 種 next types:
+  → custom
+  → flow.begin
+  → flow.end.current
+  → flow.module.begin
+  → flow.module.end
+  → function
+  → request.multicast
+  → trace
+  → variable
+
+variable → 12 種 next types:
+  → custom
+  → flow.begin
+  → flow.end.current
+  → flow.module.begin
+  → flow.module.end
+  → flow.switch
+  → function
+  → prompt.text
+  → request.raw
+  → sending.message
+  → trace
+  → variable

@@ -1,0 +1,27 @@
+================================================================================
+Node Type to Schema Mapping (Bigram Format)
+================================================================================
+
+Format: (node_type, schema_markdown_file)
+
+('custom', 'CustomDialog.md')
+('flow.begin', 'BeginFlow.md')
+('flow.end.all', 'EndAllFlow.md')
+('flow.end.current', 'EndCurrentFlow.md')
+('flow.module.begin', 'BeginModuleFlow.md')
+('flow.module.end', 'EndModuleFlow.md')
+('flow.switch', 'SwitchFlow.md')
+('function', 'CustomFunction.md')
+('prompt.text', 'PromptText.md')
+('request.formdata', 'RequestFormData.md')
+('request.multicast', 'MulticastRequest.md')
+('request.raw', 'RequestRawData.md')
+('sending.message', 'SendMessage.md')
+('trace', 'Trace.md')
+('variable', 'VariableDecision.md')
+
+================================================================================
+Summary Statistics
+================================================================================
+Total unique node types found: 15
+
