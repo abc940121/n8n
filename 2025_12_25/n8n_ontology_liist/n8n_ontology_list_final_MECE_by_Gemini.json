@@ -1,0 +1,58 @@
+#從135欄縮減成34欄
+[
+    # --- 節點識別與基礎資訊 (Node Identity & Metadata) ---
+    "node_identity_info",         # 包含 name, display_name, short_name, aliases
+    "node_classification",        # 包含 classification, group, icon, n8n_type
+    "node_package_info",          # 包含 package_name, version_constraints
+    "node_description_data",      # 包含 description, subtitle, description_format
+    
+    # --- 節點行為與核心配置 (Node Behavior) ---
+    "node_execution_config",      # 包含 settings, execution_config, throughput_policy
+    "node_auth_config",           # 包含 auth_mechanism, credentials
+    "node_api_config",            # 包含 api_config, request_defaults, ignore_http_errors
+    "node_webhook_config",        # 包含 webhook_config, trigger_type, webhook_suffix
+    
+    # --- 節點輸入輸出與連線 (Node I/O) ---
+    "node_io_definition",         # [合併] inputs, outputs, connection_type, io_configuration
+    "node_routing_logic",         # 包含 routing, output_mapping, data_partitioning
+    
+    # --- 節點操作上下文 (Node Operation Context) ---
+    "node_resource",              # 資源目標 (Resource)
+    "node_operation",             # [更名] 原 node_action，指具體操作 (Operation/Action)
+    "node_tool_config",           # 包含 is_ai_tool, tool_contract, tooling_config
+    
+    # --- 參數識別 (Parameter Identity) ---
+    "param_name",
+    "param_display_name",
+    "param_type",
+    "param_semantic_role",        # 包含 ai_role, semantic_role
+    
+    # --- 參數內容與說明 (Parameter Content) ---
+    "param_default_value",        # [更名] default
+    "param_documentation",        # [合併] description, help_text, hint, example, url_source
+    "param_placeholder",
+    
+    # --- 參數邏輯與依賴 (Parameter Logic) ---
+    "param_required",
+    "param_dependency_logic",     # [合併] display_rules, disabled_rules, data_path_dependency
+    "param_expression_config",    # 包含 expression, no_data_expression
+    
+    # --- 參數選項與結構 (Parameter Options & Structure) ---
+    "param_options_list",         # [標準化] options, multi_options
+    "param_options_load_config",  # [合併] load_options_method, depends_on, dynamic_methods
+    "param_nested_structure",     # [標準化] fixed_collection_values, values, collection_schema
+    
+    # --- 參數 UI 與視覺 (Parameter UI & Style) ---
+    "param_ui_style_config",      # [合併] visual_config, container_class, password_type, markdown_support
+    "param_ui_widget_config",     # [合併] notice_config, callout_config, action, template_id
+    "param_ui_interaction",       # 包含 ui_action, multiple_value_button_text, sortable
+    
+    # --- 參數驗證與限制 (Parameter Validation) ---
+    "param_value_constraints",    # [合併] min/max_value, length_config, rows, range_config, number_precision
+    "param_validation_rules",     # 包含 validation_rules, regex, constraints
+    
+    # --- 其他/進階配置 (Misc) ---
+    "param_mode_config",          # 包含 modes, input_modes, mapping_mode
+    "param_search_config",        # 包含 search_config, filter_config
+    "param_raw_data"              # 保留 raw 屬性以備不時之需
+]

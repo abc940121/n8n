@@ -1,0 +1,247 @@
+#從135欄縮減成94欄
+ontology_list_mece = [
+    # ----------------------------
+    # Node-level: identity & packaging
+    # ----------------------------
+    "node_name",
+    "node_short_name",
+    "node_display_name",
+    "node_aliases",
+    "node_type_identifier",
+    "node_n8n_type",
+    "node_package_name",
+    "node_version_constraints",
+    "node_classification",
+    "node_icon",
+    "node_is_ai_tool",
+
+    # ----------------------------
+    # Node-level: descriptive/UI
+    # ----------------------------
+    "node_description",
+    "node_description_format",
+    "node_subtitle",
+    "node_ui",
+
+    # ----------------------------
+    # Node-level: lifecycle & compatibility
+    # ----------------------------
+    "node_deprecation_info",
+
+    # ----------------------------
+    # Node-level: runtime / execution / api
+    # (merge: node_execution_config + node_api_config)
+    # ----------------------------
+    "node_runtime_config",
+
+    # ----------------------------
+    # Node-level: capabilities / operations
+    # ----------------------------
+    "node_resource",
+    "node_action",
+    "node_auth_mechanism",
+
+    # ----------------------------
+    # Node-level: I/O schema
+    # (merge: node_io_configuration + node_inputs + node_outputs)
+    # ----------------------------
+    "node_io_schema",
+
+    # ----------------------------
+    # Node-level: requests & credentials
+    # ----------------------------
+    "node_request_defaults",
+    "node_credentials",
+
+    # ----------------------------
+    # Node-level: tooling contracts & policies
+    # (merge: node_tooling + node_tooling_config + node_tool_contract + node_operation_contract)
+    # ----------------------------
+    "node_tooling_spec",
+    "node_throughput_policy",
+    "node_result_pagination",
+    "node_data_partitioning_strategy",
+
+    # ----------------------------
+    # Node-level: routing / mapping / connections
+    # (merge: node_routing + node_output_mapping + node_connection_type)
+    # ----------------------------
+    "node_routing_config",
+    "node_output_mapping",
+    "node_connection_type",
+
+    # ----------------------------
+    # Node-level: trigger & webhook
+    # (merge: node_trigger_type + node_webhook_config)
+    # ----------------------------
+    "node_trigger_spec",
+    "node_webhook_spec",
+
+    # ----------------------------
+    # Node-level: raw source
+    # ----------------------------
+    "node_properties",
+    "node_settings",
+    "node_raw",
+
+    # ============================================================
+    # Parameter-level: identity & hierarchy
+    # ============================================================
+    "param_name",
+    "param_display_name",
+    "param_path",
+    "param_parent_name",
+    "param_level",
+    "param_group",
+
+    # ----------------------------
+    # Parameter-level: meaning / documentation
+    # (merge: param_description + param_hint + param_help_text)
+    # ----------------------------
+    "param_description",
+    "param_help_text",
+    "param_example",
+    "param_semantic_role",
+
+    # ----------------------------
+    # Parameter-level: type system & defaults
+    # ----------------------------
+    "param_type",
+    "param_required",
+    "param_default",
+    "param_placeholder",
+    "param_expression",
+    "param_is_node_setting",
+    "param_password_type",
+
+    # ----------------------------
+    # Parameter-level: dependencies
+    # (merge: param_data_path_dependency + param_dependency_config)
+    # ----------------------------
+    "param_dependencies",
+    "data_path_requirements",
+    "data_resolution",
+    "query_filter",
+    "conversation_context",
+
+    # ----------------------------
+    # Parameter-level: UI/UX behavior
+    # (merge: param_ui_config + param_visual_config + param_notice_config + param_container_class)
+    # ----------------------------
+    "param_ui_spec",
+    # (merge: param_display_rules + param_disabled_rules)
+    "param_visibility_rules",
+    "param_markdown_support",
+
+    # ----------------------------
+    # Parameter-level: option/selection modeling
+    # (merge: param_selection + param_options + param_multi_options + param_fixed_collection_values
+    #        + param_option_action + param_modes + param_input_modes + param_mapping_mode)
+    # ----------------------------
+    "param_choice_spec",
+
+    # ----------------------------
+    # Parameter-level: dynamic option loading
+    # (merge: param_load_options_method + param_load_options_depends_on + param_load_options_config)
+    # ----------------------------
+    "param_dynamic_options_spec",
+    "param_dynamic_methods",
+    "param_url_source",
+
+    # ----------------------------
+    # Parameter-level: structural schemas
+    # (merge: param_collection_schema + param_value_schema)
+    # ----------------------------
+    "param_schema",
+
+    # ----------------------------
+    # Parameter-level: constraints & validation
+    # (merge: param_constraints + param_validation + param_validation_type + param_validation_rules
+    #        + param_ignore_validation)
+    # include numeric/date/range/length specifics under one umbrella
+    # (merge: param_number_precision + param_min_value + param_max_value + param_range_config
+    #        + param_length_config + param_date_format)
+    # ----------------------------
+    "param_constraints",
+    "param_validation",
+    "param_numeric_constraints",
+    "param_date_format",
+
+    # ----------------------------
+    # Parameter-level: collection/table-like behavior
+    # (merge: param_rows + param_sortable + param_allow_multiple_values + param_multiple_value_button_text)
+    # ----------------------------
+    "param_collection_behavior",
+
+    # ----------------------------
+    # Parameter-level: polling/wait/webhook/response behaviors
+    # (merge: param_polling_config + param_wait_config + param_webhook_suffix + param_response_config)
+    # ----------------------------
+    "param_polling_spec",
+    "param_wait_spec",
+    "param_webhook_spec",
+    "param_response_spec",
+
+    # ----------------------------
+    # Parameter-level: search/filter/event/parts/resource binding
+    # (merge: param_filter_config + param_search_config + param_search_filter_required
+    #        + param_event_selection + param_parts_config + param_resource_binding)
+    # ----------------------------
+    "param_filter_spec",
+    "param_search_spec",
+    "param_event_spec",
+    "param_parts_spec",
+    "param_resource_binding",
+
+    # ----------------------------
+    # Parameter-level: mapping/extraction/serialization/metadata
+    # (merge: param_value_extraction + param_input_mapping + param_input_mapping + param_serialization_options
+    #        + param_metadata_config + param_value_extraction)
+    # ----------------------------
+    "param_mapping_spec",
+    "param_value_extraction",
+    "param_serialization_spec",
+    "param_metadata_spec",
+
+    # ----------------------------
+    # Parameter-level: routing transformation & send behavior / http errors
+    # (merge: param_routing_config + param_routing_transformation + param_routing_send_config
+    #        + param_routing + param_ignore_http_errors)
+    # ----------------------------
+    "param_routing_spec",
+    "param_ignore_http_errors",
+
+    # ----------------------------
+    # Parameter-level: binary handling
+    # ----------------------------
+    "param_binary_spec",
+
+    # ----------------------------
+    # Parameter-level: integration context & resource mapper
+    # (merge: param_integration_context + param_resource_mapper_config)
+    # ----------------------------
+    "param_integration_context",
+    "param_resource_mapper_spec",
+
+    # ----------------------------
+    # Parameter-level: rule config (kept distinct from validation)
+    # ----------------------------
+    "param_rule_config",
+
+    # ----------------------------
+    # Parameter-level: variants / overrides
+    # ----------------------------
+    "param_variants",
+
+    # ----------------------------
+    # Parameter-level: raw/source
+    # ----------------------------
+    "param_raw",
+    "param_config",
+
+    # ============================================================
+    # Result-level (kept separate from param/node)
+    # ============================================================
+    "result_field_name",
+    "result_representation_mode",
+]
