@@ -1,0 +1,1355 @@
+[
+  {
+    "filename": "agent.json",
+    "name": "@n8n/n8n-nodes-langchain.agent",
+    "displayName": "AI Agent",
+    "description": "Generates an action plan and executes it. Can use external tools.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for agents with our quick <a href=\"https://docs.n8n.io/advanced-ai/intro-tutorial/\" target=\"_blank\">tutorial</a> or see an <a href=\"/templates/1954\" target=\"_blank\">example</a> of how this node works",
+      "Config: Get started faster with our",
+      "Config: This node is using Agent that has been deprecated. Please switch to using 'Tools Agent' instead."
+    ]
+  },
+  {
+    "filename": "agentTool.json",
+    "name": "@n8n/n8n-nodes-langchain.agentTool",
+    "displayName": "AI Agent Tool",
+    "description": "Generates an action plan and executes it. Can use external tools.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Description",
+      "Config: Prompt (User Message)",
+      "Config: Require Specific Output Format"
+    ]
+  },
+  {
+    "filename": "anthropic.json",
+    "name": "@n8n/n8n-nodes-langchain.anthropic",
+    "displayName": "Anthropic",
+    "description": "Interact with Anthropic AI models",
+    "category_tags": [
+      "Document",
+      "Text",
+      "File",
+      "Prompt",
+      "Custom API Call",
+      "Image"
+    ],
+    "capabilities": [
+      "Analyze Document (Take in documents and answer questions about them)",
+      "Custom API Call",
+      "Upload File (Upload a file to the Anthropic API for later use)",
+      "Get File Metadata (Get metadata for a file from the Anthropic API)",
+      "List Files (List files from the Anthropic API)",
+      "Delete File (Delete a file from the Anthropic API)",
+      "Custom API Call",
+      "Analyze Image (Take in images and answer questions about them)",
+      "Custom API Call",
+      "Generate Prompt (Generate a prompt for a model)",
+      "Improve Prompt (Improve a prompt for a model)",
+      "Templatize Prompt (Templatize a prompt for a model)",
+      "Custom API Call",
+      "Message a Model (Create a completion with Anthropic model)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "anthropicTool.json",
+    "name": "@n8n/n8n-nodes-langchain.anthropicTool",
+    "displayName": "Anthropic Tool",
+    "description": "Interact with Anthropic AI models",
+    "category_tags": [
+      "Document",
+      "Text",
+      "File",
+      "Prompt",
+      "Custom API Call",
+      "Image"
+    ],
+    "capabilities": [
+      "Analyze Document (Take in documents and answer questions about them)",
+      "Custom API Call",
+      "Upload File (Upload a file to the Anthropic API for later use)",
+      "Get File Metadata (Get metadata for a file from the Anthropic API)",
+      "List Files (List files from the Anthropic API)",
+      "Delete File (Delete a file from the Anthropic API)",
+      "Custom API Call",
+      "Analyze Image (Take in images and answer questions about them)",
+      "Custom API Call",
+      "Generate Prompt (Generate a prompt for a model)",
+      "Improve Prompt (Improve a prompt for a model)",
+      "Templatize Prompt (Templatize a prompt for a model)",
+      "Custom API Call",
+      "Message a Model (Create a completion with Anthropic model)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "chainLlm.json",
+    "name": "@n8n/n8n-nodes-langchain.chainLlm",
+    "displayName": "Basic LLM Chain",
+    "description": "A simple chain to prompt a large language model",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Save time with an <a href=\"/templates/1978\" target=\"_blank\">example</a> of how this node works",
+      "Config: Prompt",
+      "Config: Prompt"
+    ]
+  },
+  {
+    "filename": "chainRetrievalQa.json",
+    "name": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+    "displayName": "Question and Answer Chain",
+    "description": "Answer questions about retrieved documents",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Save time with an <a href=\"/templates/1960\" target=\"_blank\">example</a> of how this node works",
+      "Config: Query",
+      "Config: Query"
+    ]
+  },
+  {
+    "filename": "chainSummarization.json",
+    "name": "@n8n/n8n-nodes-langchain.chainSummarization",
+    "displayName": "Summarization Chain",
+    "description": "Transforms text into a concise summary",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Save time with an <a href=\"/templates/1951\" target=\"_blank\">example</a> of how this node works",
+      "Config: Type",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "chat.json",
+    "name": "@n8n/n8n-nodes-langchain.chat",
+    "displayName": "Respond to Chat",
+    "description": "Send a message to a chat",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Verify you're using a chat trigger with the 'Response Mode' option set to 'Using Response Nodes'",
+      "Config: Message",
+      "Config: Wait for User Reply"
+    ]
+  },
+  {
+    "filename": "code.json",
+    "name": "@n8n/n8n-nodes-langchain.code",
+    "displayName": "LangChain Code",
+    "description": "LangChain Code Node",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Code",
+      "Config: You can import LangChain and use all available functionality. Debug by using <code>console.log()</code> statements and viewing their output in the browser console.",
+      "Config: Inputs"
+    ]
+  },
+  {
+    "filename": "documentBinaryInputLoader.json",
+    "name": "@n8n/n8n-nodes-langchain.documentBinaryInputLoader",
+    "displayName": "Binary Input Loader",
+    "description": "Use binary data from a previous step in the workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Loader Type",
+      "Config: Binary Data Key"
+    ]
+  },
+  {
+    "filename": "documentDefaultDataLoader.json",
+    "name": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+    "displayName": "Default Data Loader",
+    "description": "Load data from previous step in the workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This will load data from a previous step in the workflow. <a href=\"/templates/1962\" target=\"_blank\">Example</a>",
+      "Config: Type of Data",
+      "Config: Mode"
+    ]
+  },
+  {
+    "filename": "documentGithubLoader.json",
+    "name": "@n8n/n8n-nodes-langchain.documentGithubLoader",
+    "displayName": "GitHub Document Loader",
+    "description": "Use GitHub data as input to this chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Repository Link",
+      "Config: Branch"
+    ]
+  },
+  {
+    "filename": "documentJsonInputLoader.json",
+    "name": "@n8n/n8n-nodes-langchain.documentJsonInputLoader",
+    "displayName": "JSON Input Loader",
+    "description": "Use JSON data from a previous step in the workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Pointers",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "embeddingsAwsBedrock.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsAwsBedrock",
+    "displayName": "Embeddings AWS Bedrock",
+    "description": "Use Embeddings AWS Bedrock",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "embeddingsAzureOpenAi.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsAzureOpenAi",
+    "displayName": "Embeddings Azure OpenAI",
+    "description": "Use Embeddings Azure OpenAI",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Model (Deployment) Name",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "embeddingsCohere.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+    "displayName": "Embeddings Cohere",
+    "description": "Use Cohere Embeddings",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Each model is using different dimensional density for embeddings. Please make sure to use the same dimensionality for your vector store. The default model is using 768-dimensional embeddings.",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "embeddingsGoogleGemini.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+    "displayName": "Embeddings Google Gemini",
+    "description": "Use Google Gemini Embeddings",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Each model is using different dimensional density for embeddings. Please make sure to use the same dimensionality for your vector store. The default model is using 768-dimensional embeddings.",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "embeddingsGoogleVertex.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsGoogleVertex",
+    "displayName": "Embeddings Google Vertex",
+    "description": "Use Google Vertex Embeddings",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Each model is using different dimensional density for embeddings. Please make sure to use the same dimensionality for your vector store. The default model is using 768-dimensional embeddings. You can find available models <a href=\"https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api\">here</a>.",
+      "Config: Project ID"
+    ]
+  },
+  {
+    "filename": "embeddingsHuggingFaceInference.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+    "displayName": "Embeddings Hugging Face Inference",
+    "description": "Use HuggingFace Inference Embeddings",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Each model is using different dimensional density for embeddings. Please make sure to use the same dimensionality for your vector store. The default model is using 768-dimensional embeddings.",
+      "Config: Model Name"
+    ]
+  },
+  {
+    "filename": "embeddingsMistralCloud.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+    "displayName": "Embeddings Mistral Cloud",
+    "description": "Use Embeddings Mistral Cloud",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "embeddingsOllama.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsOllama",
+    "displayName": "Embeddings Ollama",
+    "description": "Use Ollama Embeddings",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "embeddingsOpenAi.json",
+    "name": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+    "displayName": "Embeddings OpenAI",
+    "description": "Use Embeddings OpenAI",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a vector store. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_vectorStore'>Insert one</a>",
+      "Config: Model",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "googleChat.json",
+    "name": "n8n-nodes-base.googleChat",
+    "displayName": "Google Chat",
+    "description": "Consume Google Chat API",
+    "category_tags": [
+      "Custom API Call",
+      "Member",
+      "Space",
+      "Message"
+    ],
+    "capabilities": [
+      "Get (Get a membership)",
+      "Get Many (Get many memberships in a space)",
+      "Custom API Call",
+      "Create (Create a message)",
+      "Delete (Delete a message)",
+      "Get (Get a message)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Update (Update a message)",
+      "Custom API Call",
+      "Get (Get a space)",
+      "Get Many (Get many spaces the caller is a member of)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleChatTool.json",
+    "name": "n8n-nodes-base.googleChatTool",
+    "displayName": "Google Chat Tool",
+    "description": "Consume Google Chat API",
+    "category_tags": [
+      "Custom API Call",
+      "Member",
+      "Space",
+      "Message"
+    ],
+    "capabilities": [
+      "Get (Get a membership)",
+      "Get Many (Get many memberships in a space)",
+      "Custom API Call",
+      "Create (Create a message)",
+      "Delete (Delete a message)",
+      "Get (Get a message)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Update (Update a message)",
+      "Custom API Call",
+      "Get (Get a space)",
+      "Get Many (Get many spaces the caller is a member of)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleGemini.json",
+    "name": "@n8n/n8n-nodes-langchain.googleGemini",
+    "displayName": "Google Gemini",
+    "description": "Interact with Google Gemini AI models",
+    "category_tags": [
+      "Document",
+      "Text",
+      "Video",
+      "Audio",
+      "File",
+      "Custom API Call",
+      "Image"
+    ],
+    "capabilities": [
+      "Analyze Audio (Take in audio and answer questions about it)",
+      "Transcribe a Recording (Transcribes audio into the text)",
+      "Custom API Call",
+      "Analyze Document (Take in documents and answer questions about them)",
+      "Custom API Call",
+      "Upload File (Upload a file to the Google Gemini API for later use)",
+      "Custom API Call",
+      "Analyze Image (Take in images and answer questions about them)",
+      "Generate an Image (Creates an image from a text prompt)",
+      "Custom API Call",
+      "Message a Model (Create a completion with Google Gemini model)",
+      "Custom API Call",
+      "Analyze Video (Take in videos and answer questions about them)",
+      "Generate a Video (Creates a video from a text prompt)",
+      "Download Video (Download a generated video from the Google Gemini API using a URL)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleGeminiTool.json",
+    "name": "@n8n/n8n-nodes-langchain.googleGeminiTool",
+    "displayName": "Google Gemini Tool",
+    "description": "Interact with Google Gemini AI models",
+    "category_tags": [
+      "Document",
+      "Text",
+      "Video",
+      "Audio",
+      "File",
+      "Custom API Call",
+      "Image"
+    ],
+    "capabilities": [
+      "Analyze Audio (Take in audio and answer questions about it)",
+      "Transcribe a Recording (Transcribes audio into the text)",
+      "Custom API Call",
+      "Analyze Document (Take in documents and answer questions about them)",
+      "Custom API Call",
+      "Upload File (Upload a file to the Google Gemini API for later use)",
+      "Custom API Call",
+      "Analyze Image (Take in images and answer questions about them)",
+      "Generate an Image (Creates an image from a text prompt)",
+      "Custom API Call",
+      "Message a Model (Create a completion with Google Gemini model)",
+      "Custom API Call",
+      "Analyze Video (Take in videos and answer questions about them)",
+      "Generate a Video (Creates a video from a text prompt)",
+      "Download Video (Download a generated video from the Google Gemini API using a URL)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "informationExtractor.json",
+    "name": "@n8n/n8n-nodes-langchain.informationExtractor",
+    "displayName": "Information Extractor",
+    "description": "Extract information from text in a structured format",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Text",
+      "Config: Schema Type",
+      "Config: JSON Example"
+    ]
+  },
+  {
+    "filename": "lmChatAnthropic.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+    "displayName": "Anthropic Chat Model",
+    "description": "Language Model Anthropic",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "lmChatAwsBedrock.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatAwsBedrock",
+    "displayName": "AWS Bedrock Chat Model",
+    "description": "Language Model AWS Bedrock",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model Source",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "lmChatAzureOpenAi.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+    "displayName": "Azure OpenAI Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: If using JSON response format, you must include word \"json\" in the prompt in your chain or agent. Also, make sure to select latest models released post November 2023."
+    ]
+  },
+  {
+    "filename": "lmChatCohere.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatCohere",
+    "displayName": "Cohere Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lmChatDeepSeek.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+    "displayName": "DeepSeek Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: If using JSON response format, you must include word \"json\" in the prompt in your chain or agent. Also, make sure to select latest models released post November 2023.",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "lmChatGoogleGemini.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+    "displayName": "Google Gemini Chat Model",
+    "description": "Chat Model Google Gemini",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lmChatGoogleVertex.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatGoogleVertex",
+    "displayName": "Google Vertex Chat Model",
+    "description": "Chat Model Google Vertex",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Project ID",
+      "Config: Model Name"
+    ]
+  },
+  {
+    "filename": "lmChatGroq.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatGroq",
+    "displayName": "Groq Chat Model",
+    "description": "Language Model Groq",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lmChatMistralCloud.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+    "displayName": "Mistral Cloud Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lmChatOllama.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatOllama",
+    "displayName": "Ollama Chat Model",
+    "description": "Language Model Ollama",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lmChatOpenAi.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+    "displayName": "OpenAI Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: If using JSON response format, you must include word \"json\" in the prompt in your chain or agent. Also, make sure to select latest models released post November 2023.",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "lmChatOpenRouter.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+    "displayName": "OpenRouter Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: If using JSON response format, you must include word \"json\" in the prompt in your chain or agent. Also, make sure to select latest models released post November 2023.",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "lmChatVercelAiGateway.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatVercelAiGateway",
+    "displayName": "Vercel AI Gateway Chat Model",
+    "description": "For advanced usage with an AI chain via Vercel AI Gateway",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: If using JSON response format, you must include word \"json\" in the prompt in your chain or agent. Also, make sure to select latest models released post November 2023.",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "lmChatXAiGrok.json",
+    "name": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+    "displayName": "xAI Grok Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: If using JSON response format, you must include word \"json\" in the prompt in your chain or agent. Also, make sure to select latest models released post November 2023.",
+      "Config: Model"
+    ]
+  },
+  {
+    "filename": "lmCohere.json",
+    "name": "@n8n/n8n-nodes-langchain.lmCohere",
+    "displayName": "Cohere Model",
+    "description": "Language Model Cohere",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lmOllama.json",
+    "name": "@n8n/n8n-nodes-langchain.lmOllama",
+    "displayName": "Ollama Model",
+    "description": "Language Model Ollama",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lmOpenAi.json",
+    "name": "@n8n/n8n-nodes-langchain.lmOpenAi",
+    "displayName": "OpenAI Model",
+    "description": "For advanced usage with an AI chain",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node is using OpenAI completions which are now deprecated. Please use the OpenAI Chat Model node instead.",
+      "Config: Model",
+      "Config: When using non OpenAI models via Base URL override, not all models might be chat-compatible or support other features, like tools calling or JSON response format."
+    ]
+  },
+  {
+    "filename": "lmOpenHuggingFaceInference.json",
+    "name": "@n8n/n8n-nodes-langchain.lmOpenHuggingFaceInference",
+    "displayName": "Hugging Face Inference Model",
+    "description": "Language Model HuggingFaceInference",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Model",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "mcpClientTool.json",
+    "name": "@n8n/n8n-nodes-langchain.mcpClientTool",
+    "displayName": "MCP Client Tool",
+    "description": "Connect tools from an MCP Server",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: SSE Endpoint",
+      "Config: Endpoint"
+    ]
+  },
+  {
+    "filename": "memoryBufferWindow.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+    "displayName": "Simple Memory",
+    "description": "Stores in n8n memory, so no credentials required",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Session Key",
+      "Config: Session ID"
+    ]
+  },
+  {
+    "filename": "memoryChatRetriever.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryChatRetriever",
+    "displayName": "Chat Messages Retriever",
+    "description": "Retrieve chat messages from memory and use them in the workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node is deprecated. Use 'Chat Memory Manager' node instead.",
+      "Config: Simplify Output"
+    ]
+  },
+  {
+    "filename": "memoryManager.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryManager",
+    "displayName": "Chat Memory Manager",
+    "description": "Manage chat messages memory and use it in the workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Operation Mode",
+      "Config: Insert Mode",
+      "Config: Delete Mode"
+    ]
+  },
+  {
+    "filename": "memoryMongoDbChat.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryMongoDbChat",
+    "displayName": "MongoDB Chat Memory",
+    "description": "Stores the chat history in MongoDB collection.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Session ID",
+      "Config: Session Key From Previous Node"
+    ]
+  },
+  {
+    "filename": "memoryMotorhead.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryMotorhead",
+    "displayName": "Motorhead",
+    "description": "Use Motorhead Memory",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Session ID",
+      "Config: Session ID"
+    ]
+  },
+  {
+    "filename": "memoryPostgresChat.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+    "displayName": "Postgres Chat Memory",
+    "description": "Stores the chat history in Postgres table.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Session ID",
+      "Config: Session Key From Previous Node"
+    ]
+  },
+  {
+    "filename": "memoryRedisChat.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+    "displayName": "Redis Chat Memory",
+    "description": "Stores the chat history in Redis.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Session Key",
+      "Config: Session ID"
+    ]
+  },
+  {
+    "filename": "memoryXata.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryXata",
+    "displayName": "Xata",
+    "description": "Use Xata Memory",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Session ID",
+      "Config: Session ID"
+    ]
+  },
+  {
+    "filename": "memoryZep.json",
+    "name": "@n8n/n8n-nodes-langchain.memoryZep",
+    "displayName": "Zep",
+    "description": "Use Zep Memory",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This Zep integration is deprecated and will be removed in a future version.",
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Only works with Zep Cloud and Community edition <= v0.27.2"
+    ]
+  },
+  {
+    "filename": "mistralAi.json",
+    "name": "n8n-nodes-base.mistralAi",
+    "displayName": "Mistral AI",
+    "description": "Consume Mistral AI API",
+    "category_tags": [
+      "Custom API Call",
+      "Document"
+    ],
+    "capabilities": [
+      "Extract Text (Extract text from document using OCR)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "mistralAiTool.json",
+    "name": "n8n-nodes-base.mistralAiTool",
+    "displayName": "Mistral AI Tool",
+    "description": "Consume Mistral AI API",
+    "category_tags": [
+      "Custom API Call",
+      "Document"
+    ],
+    "capabilities": [
+      "Extract Text (Extract text from document using OCR)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "modelSelector.json",
+    "name": "@n8n/n8n-nodes-langchain.modelSelector",
+    "displayName": "Model Selector",
+    "description": "Use this node to select one of the connected models to this node based on workflow data",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Number of Inputs",
+      "Config: Rules"
+    ]
+  },
+  {
+    "filename": "openAi.json",
+    "name": "@n8n/n8n-nodes-langchain.openAi",
+    "displayName": "OpenAI",
+    "description": "Message an assistant or GPT, analyze images, generate audio, etc.",
+    "category_tags": [
+      "Text",
+      "Audio",
+      "File",
+      "Custom API Call",
+      "Image",
+      "Assistant"
+    ],
+    "capabilities": [
+      "Create an Assistant (Create a new assistant)",
+      "Delete an Assistant (Delete an assistant from the account)",
+      "List Assistants (List assistants in the organization)",
+      "Message an Assistant (Send messages to an assistant)",
+      "Update an Assistant (Update an existing assistant)",
+      "Custom API Call",
+      "Generate Audio (Creates audio from a text prompt)",
+      "Transcribe a Recording (Transcribes audio into the text)",
+      "Translate a Recording (Translate audio into the text in the english language)",
+      "Custom API Call",
+      "Delete a File (Delete a file from the server)",
+      "List Files (Returns a list of files that belong to the user's organization)",
+      "Upload a File (Upload a file that can be used across various endpoints)",
+      "Custom API Call",
+      "Analyze Image (Take in images and answer questions about them)",
+      "Generate an Image (Creates an image from a text prompt)",
+      "Custom API Call",
+      "Message a Model (Create a completion with GPT 3, 4, etc.)",
+      "Classify Text for Violations (Check whether content complies with usage policies)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "openAiAssistant.json",
+    "name": "@n8n/n8n-nodes-langchain.openAiAssistant",
+    "displayName": "OpenAI Assistant",
+    "description": "Utilizes Assistant API from Open AI.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Operation",
+      "Config: Name",
+      "Config: Instructions"
+    ]
+  },
+  {
+    "filename": "outputParserAutofixing.json",
+    "name": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+    "displayName": "Auto-fixing Output Parser",
+    "description": "Deprecated, use structured output parser",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node wraps another output parser. If the first one fails it calls an LLM to fix the format",
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "outputParserItemList.json",
+    "name": "@n8n/n8n-nodes-langchain.outputParserItemList",
+    "displayName": "Item List Output Parser",
+    "description": "Return the results as separate items",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "outputParserStructured.json",
+    "name": "@n8n/n8n-nodes-langchain.outputParserStructured",
+    "displayName": "Structured Output Parser",
+    "description": "Return data in a defined JSON format",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI chain. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Schema Type",
+      "Config: JSON Example"
+    ]
+  },
+  {
+    "filename": "rerankerCohere.json",
+    "name": "@n8n/n8n-nodes-langchain.rerankerCohere",
+    "displayName": "Reranker Cohere",
+    "description": "Use Cohere Reranker to reorder documents after retrieval from a vector store by relevance to the given query.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Model",
+      "Config: Top N"
+    ]
+  },
+  {
+    "filename": "retrieverMultiQuery.json",
+    "name": "@n8n/n8n-nodes-langchain.retrieverMultiQuery",
+    "displayName": "MultiQuery Retriever",
+    "description": "Automates prompt tuning, generates diverse queries and expands document pool for enhanced retrieval.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "retrieverVectorStore.json",
+    "name": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+    "displayName": "Vector Store Retriever",
+    "description": "Use a Vector Store as Retriever",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Limit"
+    ]
+  },
+  {
+    "filename": "rocketchat.json",
+    "name": "n8n-nodes-base.rocketchat",
+    "displayName": "RocketChat",
+    "description": "Consume RocketChat API",
+    "category_tags": [
+      "Custom API Call",
+      "Chat"
+    ],
+    "capabilities": [
+      "Post Message (Post a message to a channel or a direct message)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "rocketchatTool.json",
+    "name": "n8n-nodes-base.rocketchatTool",
+    "displayName": "RocketChat Tool",
+    "description": "Consume RocketChat API",
+    "category_tags": [
+      "Custom API Call",
+      "Chat"
+    ],
+    "capabilities": [
+      "Post Message (Post a message to a channel or a direct message)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "sentimentAnalysis.json",
+    "name": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+    "displayName": "Sentiment Analysis",
+    "description": "Analyze the sentiment of your text",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Text to Analyze",
+      "Config: Sentiment scores are LLM-generated estimates, not statistically rigorous measurements. They may be inconsistent across runs and should be used as rough indicators only.",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "supabase.json",
+    "name": "n8n-nodes-base.supabase",
+    "displayName": "Supabase",
+    "description": "Add, get, delete and update data in a table",
+    "category_tags": [
+      "Custom API Call",
+      "Row"
+    ],
+    "capabilities": [
+      "Create (Create a new row)",
+      "Delete (Delete a row)",
+      "Get (Get a row)",
+      "Get Many (Get many rows)",
+      "Update (Update a row)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "supabaseTool.json",
+    "name": "n8n-nodes-base.supabaseTool",
+    "displayName": "Supabase Tool",
+    "description": "Add, get, delete and update data in a table",
+    "category_tags": [
+      "Custom API Call",
+      "Row"
+    ],
+    "capabilities": [
+      "Create (Create a new row)",
+      "Delete (Delete a row)",
+      "Get (Get a row)",
+      "Get Many (Get many rows)",
+      "Update (Update a row)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "textClassifier.json",
+    "name": "@n8n/n8n-nodes-langchain.textClassifier",
+    "displayName": "Text Classifier",
+    "description": "Classify your text into distinct categories",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Text to Classify",
+      "Config: Categories",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "textSplitterCharacterTextSplitter.json",
+    "name": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+    "displayName": "Character Text Splitter",
+    "description": "Split text into chunks by characters",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a document loader. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_document'>Insert one</a>",
+      "Config: Separator",
+      "Config: Chunk Size"
+    ]
+  },
+  {
+    "filename": "textSplitterRecursiveCharacterTextSplitter.json",
+    "name": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+    "displayName": "Recursive Character Text Splitter",
+    "description": "Split text into chunks by characters recursively, recommended for most use cases",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a document loader. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_document'>Insert one</a>",
+      "Config: Chunk Size",
+      "Config: Chunk Overlap"
+    ]
+  },
+  {
+    "filename": "textSplitterTokenSplitter.json",
+    "name": "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter",
+    "displayName": "Token Splitter",
+    "description": "Split text into chunks by tokens",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to a document loader. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_document'>Insert one</a>",
+      "Config: Chunk Size",
+      "Config: Chunk Overlap"
+    ]
+  },
+  {
+    "filename": "toolCalculator.json",
+    "name": "@n8n/n8n-nodes-langchain.toolCalculator",
+    "displayName": "Calculator",
+    "description": "Make it easier for AI agents to perform arithmetic",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "toolCode.json",
+    "name": "@n8n/n8n-nodes-langchain.toolCode",
+    "displayName": "Code Tool",
+    "description": "Write a tool in JS or Python",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: See an example of a conversational agent with custom tool written in JavaScript <a href=\"/templates/1963\" target=\"_blank\">here</a>.",
+      "Config: Name"
+    ]
+  },
+  {
+    "filename": "toolExecutor.json",
+    "name": "@n8n/n8n-nodes-langchain.toolExecutor",
+    "displayName": "Tool Executor",
+    "description": "Node to execute tools without an AI Agent",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Query",
+      "Config: Tool Name"
+    ]
+  },
+  {
+    "filename": "toolHttpRequest.json",
+    "name": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+    "displayName": "HTTP Request Tool",
+    "description": "Makes an HTTP request and returns the response data",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Description",
+      "Config: Method"
+    ]
+  },
+  {
+    "filename": "toolSearXng.json",
+    "name": "@n8n/n8n-nodes-langchain.toolSearXng",
+    "displayName": "SearXNG",
+    "description": "Search in SearXNG",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "toolSerpApi.json",
+    "name": "@n8n/n8n-nodes-langchain.toolSerpApi",
+    "displayName": "SerpApi (Google Search)",
+    "description": "Search in Google using SerpAPI",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "toolThink.json",
+    "name": "@n8n/n8n-nodes-langchain.toolThink",
+    "displayName": "Think Tool",
+    "description": "Invite the AI agent to do some thinking",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Think Tool Description"
+    ]
+  },
+  {
+    "filename": "toolVectorStore.json",
+    "name": "@n8n/n8n-nodes-langchain.toolVectorStore",
+    "displayName": "Vector Store Question Answer Tool",
+    "description": "Answer questions with a vector store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: Data Name",
+      "Config: Description of Data"
+    ]
+  },
+  {
+    "filename": "toolWikipedia.json",
+    "name": "@n8n/n8n-nodes-langchain.toolWikipedia",
+    "displayName": "Wikipedia",
+    "description": "Search in Wikipedia",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "toolWolframAlpha.json",
+    "name": "@n8n/n8n-nodes-langchain.toolWolframAlpha",
+    "displayName": "Wolfram|Alpha",
+    "description": "Connects to WolframAlpha's computational intelligence engine.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStoreInMemory.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+    "displayName": "Simple Vector Store",
+    "description": "The easiest way to experiment with vector stores, without external setup.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStoreInMemoryInsert.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreInMemoryInsert",
+    "displayName": "In Memory Vector Store Insert",
+    "description": "Insert data into an in-memory vector store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: The embbded data are stored in the server memory, so they will be lost when the server is restarted. Additionally, if the amount of data is too large, it may cause the server to crash due to insufficient memory.",
+      "Config: Clear Store",
+      "Config: Memory Key"
+    ]
+  },
+  {
+    "filename": "vectorStoreInMemoryLoad.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreInMemoryLoad",
+    "displayName": "In Memory Vector Store Load",
+    "description": "Load embedded data from an in-memory vector store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Memory Key"
+    ]
+  },
+  {
+    "filename": "vectorStoreMilvus.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreMilvus",
+    "displayName": "Milvus Vector Store",
+    "description": "Work with your data in Milvus Vector Store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStoreMongoDBAtlas.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreMongoDBAtlas",
+    "displayName": "MongoDB Atlas Vector Store",
+    "description": "Work with your data in MongoDB Atlas Vector Store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStorePGVector.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+    "displayName": "Postgres PGVector Store",
+    "description": "Work with your data in Postgresql with the PGVector extension",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStorePinecone.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+    "displayName": "Pinecone Vector Store",
+    "description": "Work with your data in Pinecone Vector Store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStorePineconeInsert.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePineconeInsert",
+    "displayName": "Pinecone: Insert",
+    "description": "Insert data into Pinecone Vector Store index",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Pinecone Index",
+      "Config: Pinecone Namespace",
+      "Config: Specify the document to load in the document loader sub-node"
+    ]
+  },
+  {
+    "filename": "vectorStorePineconeLoad.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePineconeLoad",
+    "displayName": "Pinecone: Load",
+    "description": "Load data from Pinecone Vector Store index",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Pinecone Index",
+      "Config: Pinecone Namespace",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "vectorStoreQdrant.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+    "displayName": "Qdrant Vector Store",
+    "description": "Work with your data in a Qdrant collection",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStoreSupabase.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+    "displayName": "Supabase Vector Store",
+    "description": "Work with your data in Supabase Vector Store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStoreSupabaseInsert.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreSupabaseInsert",
+    "displayName": "Supabase: Insert",
+    "description": "Insert data into Supabase Vector Store index [https://supabase.com/docs/guides/ai/langchain]",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Please refer to the <a href=\"https://supabase.com/docs/guides/ai/langchain\" target=\"_blank\">Supabase documentation</a> for more information on how to setup your database as a Vector Store.",
+      "Config: Table Name",
+      "Config: Query Name"
+    ]
+  },
+  {
+    "filename": "vectorStoreSupabaseLoad.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreSupabaseLoad",
+    "displayName": "Supabase: Load",
+    "description": "Load data from Supabase Vector Store index",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Table Name",
+      "Config: Query Name",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "vectorStoreWeaviate.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreWeaviate",
+    "displayName": "Weaviate Vector Store",
+    "description": "Work with your data in a Weaviate Cluster",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStoreZep.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreZep",
+    "displayName": "Zep Vector Store",
+    "description": "Work with your data in Zep Vector Store",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Tip: Get a feel for vector stores in n8n with our",
+      "Config: Operation Mode",
+      "Config: This node must be connected to a vector store retriever. <a data-action='openSelectiveNodeCreator' data-action-parameter-connectiontype='ai_retriever'>Insert one</a>"
+    ]
+  },
+  {
+    "filename": "vectorStoreZepInsert.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreZepInsert",
+    "displayName": "Zep Vector Store: Insert",
+    "description": "Insert data into Zep Vector Store index",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This Zep integration is deprecated and will be removed in a future version.",
+      "Config: Collection Name",
+      "Config: Specify the document to load in the document loader sub-node"
+    ]
+  },
+  {
+    "filename": "vectorStoreZepLoad.json",
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreZepLoad",
+    "displayName": "Zep Vector Store: Load",
+    "description": "Load data from Zep Vector Store index",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This Zep integration is deprecated and will be removed in a future version.",
+      "Config: Collection Name",
+      "Config: Options"
+    ]
+  }
+]

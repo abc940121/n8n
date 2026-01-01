@@ -1,0 +1,1003 @@
+{
+  "Taxonomy": {
+    "1. Core Logic & Flow Control": {
+      "1.1 Workflow Logic & Control": {
+        "1.1.1 Conditional Routing": {
+          "1.1.1.1": {
+            "name": "If (Boolean Logic)",
+            "mapped_nodes": ["n8n-nodes-base.if"],
+            "description": "判斷 True/False 條件並分流資料"
+          },
+          "1.1.1.2": {
+            "name": "Switch (Multi-path)",
+            "mapped_nodes": ["n8n-nodes-base.switch"],
+            "description": "根據數值匹配多個輸出路徑"
+          },
+          "1.1.1.3": {
+            "name": "Merge (Join Streams)",
+            "mapped_nodes": ["n8n-nodes-base.merge"],
+            "description": "合併多個分支的資料流"
+          }
+        },
+        "1.1.2 Loop & Execution Control": {
+          "1.1.2.1": {
+            "name": "Split In Batches (Loop)",
+            "mapped_nodes": ["n8n-nodes-base.splitInBatches"],
+            "description": "將資料分批處理以建立迴圈"
+          },
+          "1.1.2.2": {
+            "name": "Wait (Time/Webhook)",
+            "mapped_nodes": ["n8n-nodes-base.wait"],
+            "description": "暫停工作流直到時間到達或訊號觸發"
+          },
+          "1.1.2.3": {
+            "name": "NoOp (Pass-through)",
+            "mapped_nodes": ["n8n-nodes-base.noOp"],
+            "description": "無操作節點，用於註解或對齊"
+          },
+          "1.1.2.4": {
+            "name": "Stop and Error",
+            "mapped_nodes": ["n8n-nodes-base.stopAndError"],
+            "description": "強制停止工作流並報錯"
+          }
+        },
+        "1.1.3 Sub-Workflow Management": {
+          "1.1.3.1": {
+            "name": "Execute Workflow",
+            "mapped_nodes": ["n8n-nodes-base.executeWorkflow"],
+            "description": "呼叫並執行另一個工作流"
+          },
+          "1.1.3.2": {
+            "name": "Workflow Trigger",
+            "mapped_nodes": ["n8n-nodes-base.executeWorkflowTrigger"],
+            "description": "作為子工作流的接收起點"
+          }
+        }
+      },
+      "1.2 Data Transformation": {
+        "1.2.1 Structure Manipulation": {
+          "1.2.1.1": {
+            "name": "Set / Edit Fields",
+            "mapped_nodes": ["n8n-nodes-base.set"],
+            "description": "設定變數與重命名欄位"
+          },
+          "1.2.1.2": {
+            "name": "Item Lists",
+            "mapped_nodes": ["n8n-nodes-base.itemLists"],
+            "description": "陣列的排序、聚合與去重"
+          },
+          "1.2.1.3": {
+            "name": "Rename Keys",
+            "mapped_nodes": ["n8n-nodes-base.renameKeys"],
+            "description": "批次修改 JSON 鍵值名稱"
+          }
+        },
+        "1.2.2 Code & Functions": {
+          "1.2.2.1": {
+            "name": "Code (JS/Python)",
+            "mapped_nodes": ["n8n-nodes-base.code"],
+            "description": "執行自定義程式碼進行複雜運算"
+          },
+          "1.2.2.2": {
+            "name": "Function (Legacy)",
+            "mapped_nodes": ["n8n-nodes-base.function", "n8n-nodes-base.functionItem"],
+            "description": "舊版單一項目處理函數"
+          }
+        },
+        "1.2.3 Utilities": {
+          "1.2.3.1": {
+            "name": "Date & Time",
+            "mapped_nodes": ["n8n-nodes-base.dateTime"],
+            "description": "時間格式轉換與計算"
+          },
+          "1.2.3.2": {
+            "name": "Crypto",
+            "mapped_nodes": ["n8n-nodes-base.crypto"],
+            "description": "加密、解密與雜湊運算"
+          },
+          "1.2.3.3": {
+            "name": "Compare Datasets",
+            "mapped_nodes": ["n8n-nodes-base.compareDatasets"],
+            "description": "比對兩組資料的差異"
+          }
+        },
+        "1.2.4 File & Format Handling": {
+          "1.2.4.1": {
+            "name": "Spreadsheet File",
+            "mapped_nodes": ["n8n-nodes-base.spreadsheetFile"],
+            "description": "讀寫 Excel/CSV 檔案內容"
+          },
+          "1.2.4.2": {
+            "name": "Format Parsers",
+            "mapped_nodes": ["n8n-nodes-base.xml", "n8n-nodes-base.html", "n8n-nodes-base.markdown"],
+            "description": "解析 XML, HTML 與 Markdown 格式"
+          },
+          "1.2.4.3": {
+            "name": "Compression",
+            "mapped_nodes": ["n8n-nodes-base.compression"],
+            "description": "壓縮或解壓縮檔案 (Zip)"
+          }
+        }
+      },
+      "1.3 Connectivity (Network)": {
+        "1.3.1 HTTP & API": {
+          "1.3.1.1": {
+            "name": "HTTP Request",
+            "mapped_nodes": ["n8n-nodes-base.httpRequest"],
+            "description": "發送 REST API 請求"
+          },
+          "1.3.1.2": {
+            "name": "GraphQL",
+            "mapped_nodes": ["n8n-nodes-base.graphql"],
+            "description": "執行 GraphQL 查詢"
+          }
+        },
+        "1.3.2 Server Protocols": {
+          "1.3.2.1": {
+            "name": "FTP / SFTP",
+            "mapped_nodes": ["n8n-nodes-base.ftp"],
+            "description": "檔案傳輸協定操作"
+          },
+          "1.3.2.2": {
+            "name": "SSH",
+            "mapped_nodes": ["n8n-nodes-base.ssh"],
+            "description": "遠端伺服器指令執行"
+          }
+        }
+      },
+      "1.4 Core Triggers (Generic)": {
+        "1.4.1 Time-Based": {
+          "1.4.1.1": {
+            "name": "Schedule / Cron",
+            "mapped_nodes": ["n8n-nodes-base.cron", "n8n-nodes-base.scheduleTrigger"],
+            "description": "定時或週期性觸發工作流"
+          },
+          "1.4.1.2": {
+            "name": "Interval",
+            "mapped_nodes": ["n8n-nodes-base.interval"],
+            "description": "以固定秒數間隔循環觸發"
+          }
+        },
+        "1.4.2 Event-Based": {
+          "1.4.2.1": {
+            "name": "Webhook",
+            "mapped_nodes": ["n8n-nodes-base.webhook"],
+            "description": "接收外部 HTTP 請求觸發"
+          },
+          "1.4.2.2": {
+            "name": "Error Trigger",
+            "mapped_nodes": ["n8n-nodes-base.errorTrigger"],
+            "description": "當工作流發生錯誤時觸發"
+          },
+          "1.4.2.3": {
+            "name": "Manual / Start",
+            "mapped_nodes": ["n8n-nodes-base.start", "n8n-nodes-base.manualTrigger"],
+            "description": "手動點擊或預設起點"
+          }
+        }
+      },
+      "1.5 Application Triggers (Integrations)": {
+        "1.5.1 Productivity Triggers": {
+          "1.5.1.1": {
+            "name": "Google Workspace Triggers",
+            "mapped_nodes": ["n8n-nodes-base.googleCalendarTrigger", "n8n-nodes-base.googleDriveTrigger", "n8n-nodes-base.googleSheetsTrigger", "n8n-nodes-base.gmailTrigger"],
+            "description": "當 Google 日曆、雲端硬碟或郵件發生變更時觸發"
+          },
+          "1.5.1.2": {
+            "name": "Communication Triggers",
+            "mapped_nodes": ["n8n-nodes-base.slackTrigger", "n8n-nodes-base.telegramTrigger", "n8n-nodes-base.discordTrigger", "n8n-nodes-base.microsoftTeamsTrigger"],
+            "description": "當通訊軟體接收到訊息或指令時觸發"
+          },
+          "1.5.1.3": {
+            "name": "Project Management Triggers",
+            "mapped_nodes": ["n8n-nodes-base.notionTrigger", "n8n-nodes-base.airtableTrigger", "n8n-nodes-base.asanaTrigger", "n8n-nodes-base.trelloTrigger", "n8n-nodes-base.clickUpTrigger"],
+            "description": "當專案管理工具中的任務或資料庫變更時觸發"
+          }
+        },
+        "1.5.2 Development & Cloud Triggers": {
+          "1.5.2.1": {
+            "name": "Code Repository Triggers",
+            "mapped_nodes": ["n8n-nodes-base.githubTrigger", "n8n-nodes-base.gitlabTrigger", "n8n-nodes-base.bitbucketTrigger"],
+            "description": "當程式碼倉庫發生 Push, PR 或 Issue 事件時觸發"
+          },
+          "1.5.2.2": {
+            "name": "Cloud Infrastructure Triggers",
+            "mapped_nodes": ["n8n-nodes-base.awsS3Trigger", "n8n-nodes-base.awsSnsTrigger", "n8n-nodes-base.awsSqsTrigger"],
+            "description": "當 AWS 服務 (S3 上傳, SNS 訊息) 發生事件時觸發"
+          }
+        },
+        "1.5.3 Marketing & Commerce Triggers": {
+          "1.5.3.1": {
+            "name": "Form & Survey Triggers",
+            "mapped_nodes": ["n8n-nodes-base.typeformTrigger", "n8n-nodes-base.jotFormTrigger", "n8n-nodes-base.googleFormsTrigger", "n8n-nodes-base.n8nFormTrigger"],
+            "description": "當使用者提交外部表單時觸發"
+          },
+          "1.5.3.2": {
+            "name": "CRM & Payment Triggers",
+            "mapped_nodes": ["n8n-nodes-base.stripeTrigger", "n8n-nodes-base.paypalTrigger", "n8n-nodes-base.shopifyTrigger", "n8n-nodes-base.hubspotTrigger", "n8n-nodes-base.salesforceTrigger", "n8n-nodes-base.activeCampaignTrigger"],
+            "description": "當發生付款、訂單建立或 CRM 客戶資料變更時觸發"
+          }
+        }
+      }
+    },
+    "2. AI & Data Intelligence": {
+      "2.1 AI Orchestration (Agents & Chains)": {
+        "2.1.1 AI Agents": {
+          "2.1.1.1": {
+            "name": "AI Agent",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.agent"],
+            "description": "Autonomous agent that generates action plans and executes them using tools."
+          },
+          "2.1.1.2": {
+            "name": "Tool Definitions",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.agentTool", "@n8n/n8n-nodes-langchain.mcpClientTool"],
+            "description": "Definitions for tools or MCP clients that agents can utilize."
+          }
+        },
+        "2.1.2 Chains": {
+          "2.1.2.1": {
+            "name": "Basic Chains",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.chainLlm", "@n8n/n8n-nodes-langchain.chainSummarization"],
+            "description": "Linear sequences for basic prompting or summarization tasks."
+          },
+          "2.1.2.2": {
+            "name": "QA & Retrieval Chains",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.chainRetrievalQa"],
+            "description": "Chains specialized in answering questions based on retrieved documents."
+          }
+        },
+        "2.1.3 Interaction & Response": {
+          "2.1.3.1": {
+            "name": "Chat Response",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.chat"],
+            "description": "Sends a response back to the chat interface (used with Chat Trigger)."
+          }
+        }
+      },
+      "2.2 Model Providers (LLMs & Embeddings)": {
+        "2.2.1 Chat Models (LLMs)": {
+          "2.2.1.1": {
+            "name": "Proprietary Models",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.lmChatOpenAi", "@n8n/n8n-nodes-langchain.lmChatAnthropic", "@n8n/n8n-nodes-langchain.lmChatGoogleGemini", "@n8n/n8n-nodes-langchain.lmChatGoogleVertex", "@n8n/n8n-nodes-langchain.lmChatAwsBedrock", "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi", "@n8n/n8n-nodes-langchain.lmChatCohere", "@n8n/n8n-nodes-langchain.lmChatMistralCloud", "@n8n/n8n-nodes-langchain.lmChatXAiGrok"],
+            "description": "Hosted chat models from major providers like OpenAI, Anthropic, Google, etc."
+          },
+          "2.2.1.2": {
+            "name": "Open Source / Self-Hosted Models",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.lmChatOllama", "@n8n/n8n-nodes-langchain.lmOllama", "@n8n/n8n-nodes-langchain.lmChatDeepSeek", "@n8n/n8n-nodes-langchain.lmOpenHuggingFaceInference"],
+            "description": "Models run locally (Ollama) or via open inference APIs."
+          },
+          "2.2.1.3": {
+            "name": "Model Gateways",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.lmChatOpenRouter", "@n8n/n8n-nodes-langchain.lmChatVercelAiGateway", "@n8n/n8n-nodes-langchain.lmChatGroq", "@n8n/n8n-nodes-langchain.modelSelector"],
+            "description": "Routers and gateways to access multiple underlying models."
+          },
+          "2.2.1.4": {
+            "name": "Legacy / Completion Models",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.lmOpenAi", "@n8n/n8n-nodes-langchain.lmCohere"],
+            "description": "Legacy completion-based models (non-chat)."
+          }
+        },
+        "2.2.2 Embeddings Models": {
+          "2.2.2.1": {
+            "name": "Text Embeddings",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.embeddingsOpenAi", "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini", "@n8n/n8n-nodes-langchain.embeddingsGoogleVertex", "@n8n/n8n-nodes-langchain.embeddingsAwsBedrock", "@n8n/n8n-nodes-langchain.embeddingsCohere", "@n8n/n8n-nodes-langchain.embeddingsAzureOpenAi", "@n8n/n8n-nodes-langchain.embeddingsMistralCloud", "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference", "@n8n/n8n-nodes-langchain.embeddingsOllama"],
+            "description": "Models that convert text into vector representations for RAG."
+          }
+        },
+        "2.2.3 Direct API Integrations": {
+          "2.2.3.1": {
+            "name": "Provider APIs",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.openAi", "@n8n/n8n-nodes-langchain.openAiAssistant", "@n8n/n8n-nodes-langchain.anthropic", "@n8n/n8n-nodes-langchain.googleGemini", "n8n-nodes-base.mistralAi"],
+            "description": "Direct interaction with provider APIs for tasks beyond simple chat (e.g., Assistants API, file management)."
+          }
+        }
+      },
+      "2.3 RAG Infrastructure (Vector Stores & Data)": {
+        "2.3.1 Vector Stores": {
+          "2.3.1.1": {
+            "name": "Cloud Vector Databases",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.vectorStorePinecone", "@n8n/n8n-nodes-langchain.vectorStorePineconeInsert", "@n8n/n8n-nodes-langchain.vectorStorePineconeLoad", "@n8n/n8n-nodes-langchain.vectorStoreSupabase", "@n8n/n8n-nodes-langchain.vectorStoreSupabaseInsert", "@n8n/n8n-nodes-langchain.vectorStoreSupabaseLoad", "@n8n/n8n-nodes-langchain.vectorStoreQdrant", "@n8n/n8n-nodes-langchain.vectorStoreWeaviate", "@n8n/n8n-nodes-langchain.vectorStoreMongoDBAtlas", "@n8n/n8n-nodes-langchain.vectorStoreMilvus", "@n8n/n8n-nodes-langchain.vectorStoreZep", "@n8n/n8n-nodes-langchain.vectorStoreZepInsert", "@n8n/n8n-nodes-langchain.vectorStoreZepLoad"],
+            "description": "Connectors to external vector database services."
+          },
+          "2.3.1.2": {
+            "name": "Self-Hosted / In-Memory",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.vectorStorePGVector", "@n8n/n8n-nodes-langchain.vectorStoreInMemory", "@n8n/n8n-nodes-langchain.vectorStoreInMemoryInsert", "@n8n/n8n-nodes-langchain.vectorStoreInMemoryLoad"],
+            "description": "Local or Postgres-based vector storage solutions."
+          }
+        },
+        "2.3.2 Retrieval & Reranking": {
+          "2.3.2.1": {
+            "name": "Retrievers",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.retrieverVectorStore", "@n8n/n8n-nodes-langchain.retrieverMultiQuery", "@n8n/n8n-nodes-langchain.rerankerCohere"],
+            "description": "Logic for querying vector stores and ranking results."
+          }
+        },
+        "2.3.3 Document Processing": {
+          "2.3.3.1": {
+            "name": "Document Loaders",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.documentDefaultDataLoader", "@n8n/n8n-nodes-langchain.documentJsonInputLoader", "@n8n/n8n-nodes-langchain.documentBinaryInputLoader", "@n8n/n8n-nodes-langchain.documentGithubLoader"],
+            "description": "Ingest data from files, JSON, or repositories into the chain."
+          },
+          "2.3.3.2": {
+            "name": "Text Splitters",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter", "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter", "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter"],
+            "description": "Break down large documents into manageable chunks for embeddings."
+          }
+        }
+      },
+      "2.4 Agent Capabilities (Tools)": {
+        "2.4.1 Knowledge & Calculation Tools": {
+          "2.4.1.1": {
+            "name": "Information Lookup",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.toolWikipedia", "@n8n/n8n-nodes-langchain.toolSerpApi", "@n8n/n8n-nodes-langchain.toolSearXng", "@n8n/n8n-nodes-langchain.toolWolframAlpha"],
+            "description": "Tools for retrieving external knowledge or performing calculations."
+          },
+          "2.4.1.2": {
+            "name": "Computation",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.toolCalculator"],
+            "description": "Basic mathematical operations for agents."
+          }
+        },
+        "2.4.2 System & Custom Tools": {
+          "2.4.2.1": {
+            "name": "Custom Functionality",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.toolCode", "@n8n/n8n-nodes-langchain.toolHttpRequest", "@n8n/n8n-nodes-langchain.toolExecutor", "@n8n/n8n-nodes-langchain.toolThink", "@n8n/n8n-nodes-langchain.toolVectorStore"],
+            "description": "Custom logic, HTTP requests, or vector lookups packaged as tools."
+          },
+          "2.4.2.2": {
+            "name": "Custom Chain Logic",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.code"],
+            "description": "Custom code execution within LangChain chains (non-tool)."
+          }
+        },
+        "2.4.3 Application Integration Tools": {
+          "2.4.3.1": {
+            "name": "App Actions as Tools",
+            "mapped_nodes": ["n8n-nodes-base.googleChatTool", "n8n-nodes-base.rocketchatTool", "n8n-nodes-base.supabaseTool", "n8n-nodes-base.mistralAiTool", "@n8n/n8n-nodes-langchain.anthropicTool", "@n8n/n8n-nodes-langchain.googleGeminiTool"],
+            "description": "Specific application actions wrapped for use by AI agents."
+          }
+        },
+        "2.4.4 Standard App Integrations": {
+          "2.4.4.1": {
+            "name": "Standard Nodes (Non-Tool)",
+            "mapped_nodes": ["n8n-nodes-base.googleChat", "n8n-nodes-base.rocketchat", "n8n-nodes-base.supabase"],
+            "description": "Standard n8n nodes for these services (not wrapped as AI Tools)."
+          }
+        }
+      },
+      "2.5 Memory & Context Management": {
+        "2.5.1 Chat Memory": {
+          "2.5.1.1": {
+            "name": "Memory Stores",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.memoryBufferWindow", "@n8n/n8n-nodes-langchain.memoryRedisChat", "@n8n/n8n-nodes-langchain.memoryPostgresChat", "@n8n/n8n-nodes-langchain.memoryMongoDbChat", "@n8n/n8n-nodes-langchain.memoryMotorhead", "@n8n/n8n-nodes-langchain.memoryXata", "@n8n/n8n-nodes-langchain.memoryZep"],
+            "description": "Storage backends for maintaining conversation history."
+          },
+          "2.5.1.2": {
+            "name": "Memory Management",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.memoryManager", "@n8n/n8n-nodes-langchain.memoryChatRetriever"],
+            "description": "Utilities to retrieve and manage context window."
+          }
+        }
+      },
+      "2.6 Data Structuring & Analysis": {
+        "2.6.1 Output Parsing": {
+          "2.6.1.1": {
+            "name": "Format Enforcers",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.outputParserStructured", "@n8n/n8n-nodes-langchain.outputParserItemList", "@n8n/n8n-nodes-langchain.outputParserAutofixing"],
+            "description": "Ensures LLM output adheres to specific JSON schemas or list formats."
+          }
+        },
+        "2.6.2 Text Analysis": {
+          "2.6.2.1": {
+            "name": "NLP Utilities",
+            "mapped_nodes": ["@n8n/n8n-nodes-langchain.sentimentAnalysis", "@n8n/n8n-nodes-langchain.textClassifier", "@n8n/n8n-nodes-langchain.informationExtractor"],
+            "description": "Specialized nodes for classifying or extracting data from text."
+          }
+        }
+      }
+    },
+    "3. Development & Cloud Infrastructure": {
+      "3.1 Databases & Data Management": {
+        "3.1.1 Relational Databases (SQL)": {
+          "3.1.1.1": {
+            "name": "SQL Databases",
+            "mapped_nodes": ["n8n-nodes-base.mySql", "n8n-nodes-base.mySqlTool", "n8n-nodes-base.postgres", "n8n-nodes-base.postgresTool", "n8n-nodes-base.snowflake", "n8n-nodes-base.snowflakeTool"],
+            "description": "Store and query structured data using SQL (MySQL, PostgreSQL, Snowflake)."
+          }
+        },
+        "3.1.2 NoSQL & Document Stores": {
+          "3.1.2.1": {
+            "name": "NoSQL Databases",
+            "mapped_nodes": ["n8n-nodes-base.mongoDb", "n8n-nodes-base.mongoDbTool", "n8n-nodes-base.awsDynamoDb", "n8n-nodes-base.googleFirebaseCloudFirestore", "n8n-nodes-base.googleFirebaseCloudFirestoreTool", "n8n-nodes-base.azureCosmosDb"],
+            "description": "Manage unstructured or semi-structured data (documents, collections)."
+          }
+        },
+        "3.1.3 Realtime & In-Memory Stores": {
+          "3.1.3.1": {
+            "name": "Realtime & Key-Value Stores",
+            "mapped_nodes": ["n8n-nodes-base.redis", "n8n-nodes-base.redisTool", "n8n-nodes-base.googleFirebaseRealtimeDatabase", "n8n-nodes-base.googleFirebaseRealtimeDatabaseTool"],
+            "description": "High-performance data storage for caching and realtime syncing."
+          }
+        },
+        "3.1.4 Search & Analytics": {
+          "3.1.4.1": {
+            "name": "Search Engines",
+            "mapped_nodes": ["n8n-nodes-base.elasticsearch", "n8n-nodes-base.elasticsearchTool"],
+            "description": "Index, search, and analyze large volumes of data."
+          }
+        }
+      },
+      "3.2 Cloud Storage & Transfer": {
+        "3.2.1 Object Storage": {
+          "3.2.1.1": {
+            "name": "Cloud Object Storage",
+            "mapped_nodes": ["n8n-nodes-base.awsS3", "n8n-nodes-base.awsS3Tool", "n8n-nodes-base.googleCloudStorage", "n8n-nodes-base.googleCloudStorageTool", "n8n-nodes-base.azureStorage", "n8n-nodes-base.s3", "n8n-nodes-base.s3Tool"],
+            "description": "Store and retrieve files/objects in the cloud (S3, GCS, Azure Blob)."
+          }
+        },
+        "3.2.2 File Transfer Protocols": {
+          "3.2.2.1": {
+            "name": "FTP & SSH",
+            "mapped_nodes": ["n8n-nodes-base.ftp", "n8n-nodes-base.ssh"],
+            "description": "Transfer files and execute commands on remote servers."
+          }
+        }
+      },
+      "3.3 DevOps & Version Control": {
+        "3.3.1 Source Code Management": {
+          "3.3.1.1": {
+            "name": "Git & Repositories",
+            "mapped_nodes": ["n8n-nodes-base.git", "n8n-nodes-base.gitTool", "n8n-nodes-base.github", "n8n-nodes-base.githubTool", "n8n-nodes-base.gitlab", "n8n-nodes-base.gitlabTool"],
+            "description": "Manage code versioning, issues, and CI/CD pipelines."
+          }
+        },
+        "3.3.2 Infrastructure & Security": {
+          "3.3.2.1": {
+            "name": "Identity & Infrastructure",
+            "mapped_nodes": ["n8n-nodes-base.awsIam", "n8n-nodes-base.awsCognito", "n8n-nodes-base.awsCertificateManager", "n8n-nodes-base.awsElb"],
+            "description": "Manage user identities, SSL certificates, and load balancers."
+          }
+        },
+        "3.3.3 Serverless Compute": {
+          "3.3.3.1": {
+            "name": "FaaS (Serverless)",
+            "mapped_nodes": ["n8n-nodes-base.awsLambda", "n8n-nodes-base.awsLambdaTool"],
+            "description": "Execute code without provisioning servers."
+          }
+        }
+      },
+      "3.4 Messaging & Event Streaming": {
+        "3.4.1 Message Queues": {
+          "3.4.1.1": {
+            "name": "Queues",
+            "mapped_nodes": ["n8n-nodes-base.awsSqs", "n8n-nodes-base.rabbitmq", "n8n-nodes-base.rabbitmqTool"],
+            "description": "Decouple services using message queues."
+          }
+        },
+        "3.4.2 Pub/Sub & Streaming": {
+          "3.4.2.1": {
+            "name": "Pub/Sub",
+            "mapped_nodes": ["n8n-nodes-base.awsSns", "n8n-nodes-base.awsSnsTool", "n8n-nodes-base.kafka", "n8n-nodes-base.kafkaTool", "n8n-nodes-base.mqtt", "n8n-nodes-base.mqttTool"],
+            "description": "Publish and subscribe to event streams."
+          }
+        },
+        "3.4.3 Email Infrastructure": {
+          "3.4.3.1": {
+            "name": "Transactional Email",
+            "mapped_nodes": ["n8n-nodes-base.awsSes", "n8n-nodes-base.awsSesTool"],
+            "description": "Send high-volume transactional emails (AWS SES)."
+          }
+        }
+      },
+      "3.5 AI & Machine Learning Services": {
+        "3.5.1 Natural Language Processing": {
+          "3.5.1.1": {
+            "name": "NLP Services",
+            "mapped_nodes": ["n8n-nodes-base.awsComprehend", "n8n-nodes-base.googleCloudNaturalLanguage", "n8n-nodes-base.googleCloudNaturalLanguageTool"],
+            "description": "Analyze text for sentiment, entities, and language."
+          }
+        },
+        "3.5.2 Vision & Document AI": {
+          "3.5.2.1": {
+            "name": "Vision & OCR",
+            "mapped_nodes": ["n8n-nodes-base.awsRekognition", "n8n-nodes-base.awsTextract", "n8n-nodes-base.awsTextractTool"],
+            "description": "Analyze images and extract text from documents."
+          }
+        },
+        "3.5.3 Audio Processing": {
+          "3.5.3.1": {
+            "name": "Speech-to-Text",
+            "mapped_nodes": ["n8n-nodes-base.awsTranscribe", "n8n-nodes-base.awsTranscribeTool"],
+            "description": "Convert speech into text."
+          }
+        }
+      },
+      "3.6 API Utilities": {
+        "3.6.1 API Protocols": {
+          "3.6.1.1": {
+            "name": "GraphQL",
+            "mapped_nodes": ["n8n-nodes-base.graphql", "n8n-nodes-base.graphqlTool"],
+            "description": "Query APIs using the GraphQL query language."
+          }
+        }
+      }
+    },
+    "4. Sales & Marketing": {
+      "4.1 Sales & Customer Relationship Management (CRM)": {
+        "4.1.1 Comprehensive CRM Platforms": {
+          "4.1.1.1": {
+            "name": "Enterprise CRM Suites",
+            "mapped_nodes": ["n8n-nodes-base.salesforce", "n8n-nodes-base.salesforceTool", "n8n-nodes-base.hubspot", "n8n-nodes-base.hubspotTool", "n8n-nodes-base.zohoCrm", "n8n-nodes-base.zohoCrmTool"],
+            "description": "Manages the entire customer lifecycle, including leads, deals, contacts, and accounts."
+          },
+          "4.1.1.2": {
+            "name": "Pipeline & Deal Management",
+            "mapped_nodes": ["n8n-nodes-base.pipedrive", "n8n-nodes-base.pipedriveTool"],
+            "description": "Focuses specifically on sales pipeline visualization and deal tracking."
+          }
+        },
+        "4.1.2 Commerce, Finance & ERP": {
+          "4.1.2.1": {
+            "name": "E-Commerce Platforms",
+            "mapped_nodes": ["n8n-nodes-base.shopify", "n8n-nodes-base.shopifyTool", "n8n-nodes-base.wooCommerce", "n8n-nodes-base.wooCommerceTool"],
+            "description": "Manages online stores, products, and orders."
+          },
+          "4.1.2.2": {
+            "name": "Payment Processing",
+            "mapped_nodes": ["n8n-nodes-base.stripe", "n8n-nodes-base.stripeTool", "n8n-nodes-base.payPal"],
+            "description": "Handles payment transactions, invoicing, and customer billing."
+          },
+          "4.1.2.3": {
+            "name": "Accounting & ERP Systems",
+            "mapped_nodes": ["n8n-nodes-base.xero", "n8n-nodes-base.xeroTool", "n8n-nodes-base.erpNext", "n8n-nodes-base.erpNextTool"],
+            "description": "Manages business finances, bookkeeping, and enterprise resource planning."
+          }
+        }
+      },
+      "4.2 Marketing & Content Strategy": {
+        "4.2.1 Marketing Automation": {
+          "4.2.1.1": {
+            "name": "Email Marketing & Engagement",
+            "mapped_nodes": ["n8n-nodes-base.mailchimp", "n8n-nodes-base.mailchimpTool", "n8n-nodes-base.sendGrid", "n8n-nodes-base.sendGridTool", "n8n-nodes-base.activeCampaign", "n8n-nodes-base.activeCampaignTool"],
+            "description": "Automates email campaigns, newsletters, and customer engagement flows."
+          }
+        },
+        "4.2.2 Social Media & Content Distribution": {
+          "4.2.2.1": {
+            "name": "Social Networks",
+            "mapped_nodes": ["n8n-nodes-base.twitter", "n8n-nodes-base.twitterTool", "n8n-nodes-base.linkedIn", "n8n-nodes-base.linkedInTool", "n8n-nodes-base.facebookGraphApi", "n8n-nodes-base.facebookGraphApiTool"],
+            "description": "Publishes posts and interacts with audiences on social platforms."
+          },
+          "4.2.2.2": {
+            "name": "Video & Media",
+            "mapped_nodes": ["n8n-nodes-base.youTube", "n8n-nodes-base.youTubeTool"],
+            "description": "Manages video content, channels, and playlists."
+          },
+          "4.2.2.3": {
+            "name": "Content Management Systems (CMS)",
+            "mapped_nodes": ["n8n-nodes-base.wordpress", "n8n-nodes-base.wordpressTool"],
+            "description": "Manages website content, posts, and pages."
+          }
+        }
+      },
+      "4.3 Business Operations & Communication": {
+        "4.3.1 Communication Channels": {
+          "4.3.1.1": {
+            "name": "Messaging & VoIP",
+            "mapped_nodes": ["n8n-nodes-base.twilio", "n8n-nodes-base.twilioTool", "n8n-nodes-base.ciscoWebex", "n8n-nodes-base.ciscoWebexTool", "n8n-nodes-base.matrix", "n8n-nodes-base.matrixTool"],
+            "description": "Handles SMS, voice calls, and team chat messaging."
+          }
+        },
+        "4.3.2 File & Data Management": {
+          "4.3.2.1": {
+            "name": "Cloud Storage",
+            "mapped_nodes": ["n8n-nodes-base.box", "n8n-nodes-base.dropbox", "n8n-nodes-base.dropboxTool", "n8n-nodes-base.nextCloud", "n8n-nodes-base.nextCloudTool"],
+            "description": "Stores, organizes, and shares files in the cloud."
+          },
+          "4.3.2.2": {
+            "name": "Data Analysis & Spreadsheets",
+            "mapped_nodes": ["n8n-nodes-base.microsoftExcel", "n8n-nodes-base.microsoftExcelTool", "n8n-nodes-base.googleAnalytics", "n8n-nodes-base.googleAnalyticsTool"],
+            "description": "Analyzes business data and manages spreadsheet records."
+          },
+          "4.3.2.3": {
+            "name": "Data Collection & Forms",
+            "mapped_nodes": ["n8n-nodes-base.koBoToolbox", "n8n-nodes-base.koBoToolboxTool"],
+            "description": "Collects survey data and manages field submissions."
+          }
+        },
+        "4.3.3 Operational Utilities": {
+          "4.3.3.1": {
+            "name": "AI & Translation Services",
+            "mapped_nodes": ["n8n-nodes-base.perplexity", "n8n-nodes-base.perplexityTool", "n8n-nodes-base.lingvaNex", "n8n-nodes-base.lingvaNexTool"],
+            "description": "Provides AI-driven answers and language translation services."
+          },
+          "4.3.3.2": {
+            "name": "Format Extraction & Conversion",
+            "mapped_nodes": ["n8n-nodes-base.extractFromFile", "n8n-nodes-base.htmlExtract", "n8n-nodes-base.xml"],
+            "description": "Extracts and converts data from various file formats."
+          },
+          "4.3.3.3": {
+            "name": "System & Execution Utilities",
+            "mapped_nodes": ["n8n-nodes-base.executeCommand", "n8n-nodes-base.executeCommandTool", "n8n-nodes-base.executionData", "n8n-nodes-base.citrixAdc", "n8n-nodes-base.cortex"],
+            "description": "Executes system commands, manages execution data, and handles network/security infrastructure."
+          }
+        }
+      }
+    },
+    "5. Productivity & Operations": {
+      "5.1 Communication & Collaboration": {
+        "5.1.1 Instant Messaging (ChatOps)": {
+          "5.1.1.1": {
+            "name": "Instant Messaging (ChatOps)",
+            "mapped_nodes": ["n8n-nodes-base.discord", "n8n-nodes-base.discordTool", "n8n-nodes-base.mattermost", "n8n-nodes-base.mattermostTool", "n8n-nodes-base.slack", "n8n-nodes-base.slackTool", "n8n-nodes-base.telegram", "n8n-nodes-base.telegramTool", "n8n-nodes-base.microsoftTeams", "n8n-nodes-base.microsoftTeamsTool"],
+            "description": "Integration with chat platforms for messaging, channel management, and bot interactions."
+          }
+        },
+        "5.1.2 Email Management": {
+          "5.1.2.1": {
+            "name": "Email Management",
+            "mapped_nodes": ["n8n-nodes-base.gmail", "n8n-nodes-base.gmailTool", "n8n-nodes-base.microsoftOutlook", "n8n-nodes-base.microsoftOutlookTool"],
+            "description": "Sending, receiving, and organizing emails, drafts, and attachments."
+          }
+        },
+        "5.1.3 Video Conferencing": {
+          "5.1.3.1": {
+            "name": "Video Conferencing",
+            "mapped_nodes": ["n8n-nodes-base.zoom", "n8n-nodes-base.zoomTool"],
+            "description": "Management of meetings, webinars, and registrants."
+          }
+        }
+      },
+      "5.2 Project & Task Management": {
+        "5.2.1 Project Management Systems": {
+          "5.2.1.1": {
+            "name": "Project Management Systems",
+            "mapped_nodes": ["n8n-nodes-base.asana", "n8n-nodes-base.asanaTool", "n8n-nodes-base.clickUp", "n8n-nodes-base.clickUpTool", "n8n-nodes-base.jira", "n8n-nodes-base.jiraTool", "n8n-nodes-base.mondayCom", "n8n-nodes-base.mondayComTool", "n8n-nodes-base.trello", "n8n-nodes-base.trelloTool"],
+            "description": "Comprehensive tools for managing projects, boards, issues, and sprints."
+          }
+        },
+        "5.2.2 Simple Task & To-Do": {
+          "5.2.2.1": {
+            "name": "Simple Task & To-Do",
+            "mapped_nodes": ["n8n-nodes-base.googleTasks", "n8n-nodes-base.googleTasksTool", "n8n-nodes-base.microsoftToDo", "n8n-nodes-base.microsoftToDoTool"],
+            "description": "Lightweight task management for personal or simple team checklists."
+          }
+        },
+        "5.2.3 Knowledge Base & Documentation": {
+          "5.2.3.1": {
+            "name": "Knowledge Base & Documentation",
+            "mapped_nodes": ["n8n-nodes-base.notion", "n8n-nodes-base.notionTool"],
+            "description": "Managing structured content, wikis, and databases within documentation platforms."
+          }
+        }
+      },
+      "5.3 Document, File & Data Productivity": {
+        "5.3.1 Cloud Storage & File Management": {
+          "5.3.1.1": {
+            "name": "Cloud Storage & File Management",
+            "mapped_nodes": ["n8n-nodes-base.googleDrive", "n8n-nodes-base.googleDriveTool", "n8n-nodes-base.microsoftOneDrive", "n8n-nodes-base.microsoftOneDriveTool", "n8n-nodes-base.microsoftSharePoint", "n8n-nodes-base.microsoftSharePointTool", "n8n-nodes-base.spreadsheetFile"],
+            "description": "Operations for uploading, downloading, organizing, and converting files in cloud storage."
+          }
+        },
+        "5.3.2 Spreadsheets & Tables": {
+          "5.3.2.1": {
+            "name": "Spreadsheets & Tables",
+            "mapped_nodes": ["n8n-nodes-base.airtable", "n8n-nodes-base.airtableTool", "n8n-nodes-base.googleSheets", "n8n-nodes-base.googleSheetsTool"],
+            "description": "Reading and writing structured data in spreadsheets and low-code databases."
+          }
+        },
+        "5.3.3 Content Creation (Docs & Slides)": {
+          "5.3.3.1": {
+            "name": "Content Creation (Docs & Slides)",
+            "mapped_nodes": ["n8n-nodes-base.googleDocs", "n8n-nodes-base.googleDocsTool", "n8n-nodes-base.googleSlides", "n8n-nodes-base.googleSlidesTool"],
+            "description": "Automating the creation and editing of text documents and presentations."
+          }
+        },
+        "5.3.4 Calendar & Scheduling": {
+          "5.3.4.1": {
+            "name": "Calendar & Scheduling",
+            "mapped_nodes": ["n8n-nodes-base.googleCalendar", "n8n-nodes-base.googleCalendarTool", "n8n-nodes-base.iCal"],
+            "description": "Managing events, availability, and calendar file generation."
+          }
+        }
+      },
+      "5.4 Business Operations & Infrastructure": {
+        "5.4.1 CRM & Contact Management": {
+          "5.4.1.1": {
+            "name": "CRM & Contact Management",
+            "mapped_nodes": ["n8n-nodes-base.microsoftDynamicsCrm", "n8n-nodes-base.microsoftDynamicsCrmTool", "n8n-nodes-base.googleContacts", "n8n-nodes-base.googleContactsTool"],
+            "description": "Managing customer relationships, accounts, and contact directories."
+          }
+        },
+        "5.4.2 Marketing & Public Presence": {
+          "5.4.2.1": {
+            "name": "Marketing & Public Presence",
+            "mapped_nodes": ["n8n-nodes-base.googleAds", "n8n-nodes-base.googleAdsTool", "n8n-nodes-base.googleBusinessProfile", "n8n-nodes-base.googleBusinessProfileTool"],
+            "description": "Managing advertising campaigns and online business listings."
+          }
+        },
+        "5.4.3 Data Warehousing & SQL": {
+          "5.4.3.1": {
+            "name": "Data Warehousing & SQL",
+            "mapped_nodes": ["n8n-nodes-base.googleBigQuery", "n8n-nodes-base.googleBigQueryTool", "n8n-nodes-base.microsoftSql", "n8n-nodes-base.microsoftSqlTool"],
+            "description": "Enterprise-grade database operations and data warehousing queries."
+          }
+        }
+      },
+      "5.5 Admin, Security & Utilities": {
+        "5.5.1 Identity & Access Management (IAM)": {
+          "5.5.1.1": {
+            "name": "Identity & Access Management (IAM)",
+            "mapped_nodes": ["n8n-nodes-base.gSuiteAdmin", "n8n-nodes-base.gSuiteAdminTool", "n8n-nodes-base.microsoftEntra", "n8n-nodes-base.microsoftEntraTool"],
+            "description": "Administration of users, groups, and organizational units."
+          }
+        },
+        "5.5.2 Security & Compliance": {
+          "5.5.2.1": {
+            "name": "Security & Compliance",
+            "mapped_nodes": ["n8n-nodes-base.microsoftGraphSecurity", "n8n-nodes-base.microsoftGraphSecurityTool"],
+            "description": "Monitoring security alerts and scores within the Microsoft ecosystem."
+          }
+        },
+        "5.5.3 Specialized Utilities": {
+          "5.5.3.1": {
+            "name": "Specialized Utilities",
+            "mapped_nodes": ["n8n-nodes-base.googleTranslate", "n8n-nodes-base.googleTranslateTool", "n8n-nodes-base.googlePerspective", "n8n-nodes-base.googlePerspectiveTool", "n8n-nodes-base.googleBooks", "n8n-nodes-base.googleBooksTool"],
+            "description": "APIs for translation, content moderation (toxicity analysis), and book data."
+          }
+        }
+      }
+    },
+    "6. General Utilities & Specialized Services": {
+      "6.1 Data Transformation & Core Logic": {
+        "6.1.1 List & Item Manipulation": {
+          "6.1.1.1": {
+            "name": "Aggregate & Split",
+            "mapped_nodes": ["n8n-nodes-base.aggregate", "n8n-nodes-base.splitOut"],
+            "description": "Combine items into lists or split lists into separate items"
+          },
+          "6.1.1.2": {
+            "name": "Sort & Limit",
+            "mapped_nodes": ["n8n-nodes-base.sort", "n8n-nodes-base.limit"],
+            "description": "Order data or restrict the number of processed items"
+          },
+          "6.1.1.3": {
+            "name": "Filter & Deduplicate",
+            "mapped_nodes": ["n8n-nodes-base.filter", "n8n-nodes-base.removeDuplicates"],
+            "description": "Remove items based on conditions or duplicates"
+          },
+          "6.1.1.4": {
+            "name": "Key & Field Management",
+            "mapped_nodes": ["n8n-nodes-base.renameKeys", "n8n-nodes-base.set"],
+            "description": "Rename or modify JSON keys and fields"
+          },
+          "6.1.1.5": {
+            "name": "Summarize",
+            "mapped_nodes": ["n8n-nodes-base.summarize"],
+            "description": "Calculate sums, counts, or averages across items"
+          }
+        },
+        "6.1.2 File & Binary Handling": {
+          "6.1.2.1": {
+            "name": "Read/Write Operations",
+            "mapped_nodes": ["n8n-nodes-base.readBinaryFile", "n8n-nodes-base.writeBinaryFile", "n8n-nodes-base.readWriteFile", "n8n-nodes-base.readBinaryFiles"],
+            "description": "Read from or write files to the local disk"
+          },
+          "6.1.2.2": {
+            "name": "Conversion & Parsing",
+            "mapped_nodes": ["n8n-nodes-base.convertToFile", "n8n-nodes-base.moveBinaryData", "n8n-nodes-base.readPDF", "n8n-nodes-base.markdown", "n8n-nodes-base.html"],
+            "description": "Convert between binary/JSON, parse PDFs, HTML, or Markdown"
+          },
+          "6.1.2.3": {
+            "name": "Image & Visual Generation",
+            "mapped_nodes": ["n8n-nodes-base.editImage", "n8n-nodes-base.bannerbear", "n8n-nodes-base.quickChart", "n8n-nodes-base.quickChartTool", "n8n-nodes-base.apiTemplateIo", "n8n-nodes-base.apiTemplateIoTool"],
+            "description": "Edit images, generate charts, PDFs, or graphics via templates"
+          }
+        },
+        "6.1.3 Workflow Utilities": {
+          "6.1.3.1": {
+            "name": "Debugging & Control",
+            "mapped_nodes": ["n8n-nodes-base.debugHelper", "n8n-nodes-base.stopAndError", "n8n-nodes-base.stickyNote", "n8n-nodes-base.simulate"],
+            "description": "Tools for debugging, error throwing, canvas annotation, and node simulation"
+          },
+          "6.1.3.2": {
+            "name": "Instance & Flow Management",
+            "mapped_nodes": ["n8n-nodes-base.n8n", "n8n-nodes-base.respondToWebhook", "n8n-nodes-base.form"],
+            "description": "Manage n8n instance, webhook responses, and multi-step forms"
+          },
+          "6.1.3.3": {
+            "name": "Comparison & Training",
+            "mapped_nodes": ["n8n-nodes-base.compareDatasets", "n8n-nodes-base.n8nTrainingCustomerDatastore", "n8n-nodes-base.n8nTrainingCustomerMessenger"],
+            "description": "Compare datasets and internal training nodes"
+          }
+        }
+      },
+      "6.2 Marketing, Sales & Customer Success": {
+        "6.2.1 CRM & Lead Management": {
+          "6.2.1.1": {
+            "name": "Sales CRM",
+            "mapped_nodes": ["n8n-nodes-base.agileCrm", "n8n-nodes-base.agileCrmTool", "n8n-nodes-base.copper", "n8n-nodes-base.copperTool", "n8n-nodes-base.freshworksCrm", "n8n-nodes-base.freshworksCrmTool", "n8n-nodes-base.highLevel", "n8n-nodes-base.highLevelTool", "n8n-nodes-base.keap", "n8n-nodes-base.keapTool", "n8n-nodes-base.monicaCrm", "n8n-nodes-base.monicaCrmTool", "n8n-nodes-base.salesmate", "n8n-nodes-base.salesmateTool", "n8n-nodes-base.hubspot"],
+            "description": "Manage sales pipelines, contacts, and deals"
+          },
+          "6.2.1.2": {
+            "name": "Lead Enrichment",
+            "mapped_nodes": ["n8n-nodes-base.clearbit", "n8n-nodes-base.clearbitTool", "n8n-nodes-base.dropcontact", "n8n-nodes-base.dropcontactTool", "n8n-nodes-base.humanticAi", "n8n-nodes-base.humanticAiTool", "n8n-nodes-base.hunter", "n8n-nodes-base.hunterTool", "n8n-nodes-base.uplead", "n8n-nodes-base.upleadTool"],
+            "description": "Enrich contact data and find email addresses"
+          },
+          "6.2.1.3": {
+            "name": "Affiliate & Loyalty",
+            "mapped_nodes": ["n8n-nodes-base.tapfiliate", "n8n-nodes-base.tapfiliateTool"],
+            "description": "Manage affiliate programs and tracking"
+          }
+        },
+        "6.2.2 Email Marketing & Automation": {
+          "6.2.2.1": {
+            "name": "Marketing Automation Platforms",
+            "mapped_nodes": ["n8n-nodes-base.activeCampaign", "n8n-nodes-base.automizy", "n8n-nodes-base.autopilot", "n8n-nodes-base.autopilotTool", "n8n-nodes-base.convertKit", "n8n-nodes-base.convertKitTool", "n8n-nodes-base.customerIo", "n8n-nodes-base.customerIoTool", "n8n-nodes-base.egoi", "n8n-nodes-base.egoiTool", "n8n-nodes-base.getResponse", "n8n-nodes-base.getResponseTool", "n8n-nodes-base.iterable", "n8n-nodes-base.iterableTool", "n8n-nodes-base.lemlist", "n8n-nodes-base.lemlistTool", "n8n-nodes-base.mailerLite", "n8n-nodes-base.mailerLiteTool", "n8n-nodes-base.mautic", "n8n-nodes-base.mauticTool", "n8n-nodes-base.sendInBlue", "n8n-nodes-base.sendInBlueTool", "n8n-nodes-base.sendy", "n8n-nodes-base.sendyTool", "n8n-nodes-base.vero", "n8n-nodes-base.veroTool"],
+            "description": "Manage subscribers, campaigns, and marketing flows"
+          },
+          "6.2.2.2": {
+            "name": "Transactional Email",
+            "mapped_nodes": ["n8n-nodes-base.emailSend", "n8n-nodes-base.emailSendTool", "n8n-nodes-base.mailgun", "n8n-nodes-base.mailgunTool", "n8n-nodes-base.mailjet", "n8n-nodes-base.mailjetTool", "n8n-nodes-base.mandrill", "n8n-nodes-base.mandrillTool", "n8n-nodes-base.mailcheck", "n8n-nodes-base.mailcheckTool"],
+            "description": "Send individual transactional emails and validate addresses"
+          }
+        },
+        "6.2.3 Customer Support & Engagement": {
+          "6.2.3.1": {
+            "name": "Helpdesk",
+            "mapped_nodes": ["n8n-nodes-base.freshdesk", "n8n-nodes-base.freshdeskTool", "n8n-nodes-base.freshservice", "n8n-nodes-base.freshserviceTool", "n8n-nodes-base.helpScout", "n8n-nodes-base.helpScoutTool", "n8n-nodes-base.intercom", "n8n-nodes-base.intercomTool", "n8n-nodes-base.zammad", "n8n-nodes-base.zammadTool", "n8n-nodes-base.zendesk", "n8n-nodes-base.zendeskTool", "n8n-nodes-base.drift", "n8n-nodes-base.driftTool"],
+            "description": "Manage customer support tickets and live chat"
+          },
+          "6.2.3.2": {
+            "name": "Engagement & Analytics",
+            "mapped_nodes": ["n8n-nodes-base.segment", "n8n-nodes-base.segmentTool", "n8n-nodes-base.postHog", "n8n-nodes-base.postHogTool", "n8n-nodes-base.gong", "n8n-nodes-base.gongTool"],
+            "description": "Track user events, manage CDP, and analyze calls"
+          }
+        }
+      },
+      "6.3 Development, IT & Security": {
+        "6.3.1 DevOps & CI/CD": {
+          "6.3.1.1": {
+            "name": "Build & Deploy",
+            "mapped_nodes": ["n8n-nodes-base.circleCi", "n8n-nodes-base.circleCiTool", "n8n-nodes-base.jenkins", "n8n-nodes-base.jenkinsTool", "n8n-nodes-base.netlify", "n8n-nodes-base.netlifyTool", "n8n-nodes-base.rundeck", "n8n-nodes-base.rundeckTool", "n8n-nodes-base.travisCi", "n8n-nodes-base.travisCiTool"],
+            "description": "Manage build pipelines and deployments"
+          },
+          "6.3.1.2": {
+            "name": "Monitoring & Logging",
+            "mapped_nodes": ["n8n-nodes-base.grafana", "n8n-nodes-base.grafanaTool", "n8n-nodes-base.pagerDuty", "n8n-nodes-base.pagerDutyTool", "n8n-nodes-base.sentryIo", "n8n-nodes-base.sentryIoTool", "n8n-nodes-base.splunk", "n8n-nodes-base.splunkTool", "n8n-nodes-base.uptimeRobot", "n8n-nodes-base.uptimeRobotTool"],
+            "description": "Monitor system health, logs, and handle incidents"
+          }
+        },
+        "6.3.2 Security & Identity": {
+          "6.3.2.1": {
+            "name": "Access Management",
+            "mapped_nodes": ["n8n-nodes-base.bitwarden", "n8n-nodes-base.bitwardenTool", "n8n-nodes-base.ldap", "n8n-nodes-base.ldapTool", "n8n-nodes-base.okta", "n8n-nodes-base.oktaTool", "n8n-nodes-base.totp", "n8n-nodes-base.totpTool"],
+            "description": "Manage user identities, passwords, and 2FA"
+          },
+          "6.3.2.2": {
+            "name": "Cybersecurity Operations",
+            "mapped_nodes": ["n8n-nodes-base.cloudflare", "n8n-nodes-base.cloudflareTool", "n8n-nodes-base.elasticSecurity", "n8n-nodes-base.elasticSecurityTool", "n8n-nodes-base.misp", "n8n-nodes-base.mispTool", "n8n-nodes-base.securityScorecard", "n8n-nodes-base.securityScorecardTool", "n8n-nodes-base.theHive", "n8n-nodes-base.theHiveTool", "n8n-nodes-base.theHiveProject", "n8n-nodes-base.theHiveProjectTool", "n8n-nodes-base.venafiTlsProtectCloud", "n8n-nodes-base.venafiTlsProtectCloudTool", "n8n-nodes-base.venafiTlsProtectDatacenter", "n8n-nodes-base.venafiTlsProtectDatacenterTool"],
+            "description": "Manage threats, certificates, and security incidents"
+          }
+        },
+        "6.3.3 Database & Backend": {
+          "6.3.3.1": {
+            "name": "Databases",
+            "mapped_nodes": ["n8n-nodes-base.crateDb", "n8n-nodes-base.crateDbTool", "n8n-nodes-base.filemaker", "n8n-nodes-base.filemakerTool", "n8n-nodes-base.questDb", "n8n-nodes-base.questDbTool", "n8n-nodes-base.timescaleDb", "n8n-nodes-base.timescaleDbTool", "n8n-nodes-base.metabase", "n8n-nodes-base.metabaseTool"],
+            "description": "Connect to SQL/NoSQL, Time-series and BI databases"
+          },
+          "6.3.3.2": {
+            "name": "Dev Tools & Protocols",
+            "mapped_nodes": ["n8n-nodes-base.npm", "n8n-nodes-base.npmTool", "n8n-nodes-base.postBin", "n8n-nodes-base.postBinTool", "n8n-nodes-base.urlScanIo", "n8n-nodes-base.urlScanIoTool", "n8n-nodes-base.jwt", "n8n-nodes-base.jwtTool", "n8n-nodes-base.amqp", "n8n-nodes-base.amqpTool", "n8n-nodes-base.rssFeedRead", "n8n-nodes-base.rssFeedReadTool"],
+            "description": "Utilities for package management, API testing, JWT, and messaging protocols"
+          }
+        },
+        "6.3.4 AI & Machine Learning": {
+          "6.3.4.1": {
+            "name": "AI Services",
+            "mapped_nodes": ["n8n-nodes-base.aiTransform", "n8n-nodes-base.deepL", "n8n-nodes-base.deepLTool", "n8n-nodes-base.jinaAi", "n8n-nodes-base.jinaAiTool", "n8n-nodes-base.mindee", "n8n-nodes-base.openThesaurus", "n8n-nodes-base.openThesaurusTool"],
+            "description": "Translation, document parsing, and AI transformations"
+          }
+        }
+      },
+      "6.4 Business Operations & Productivity": {
+        "6.4.1 Project & Task Management": {
+          "6.4.1.1": {
+            "name": "Agile & Task Boards",
+            "mapped_nodes": ["n8n-nodes-base.clickUp", "n8n-nodes-base.linear", "n8n-nodes-base.linearTool", "n8n-nodes-base.taiga", "n8n-nodes-base.taigaTool", "n8n-nodes-base.todoist", "n8n-nodes-base.todoistTool", "n8n-nodes-base.wekan", "n8n-nodes-base.wekanTool", "n8n-nodes-base.flow", "n8n-nodes-base.flowTrigger"],
+            "description": "Track tasks and agile projects"
+          },
+          "6.4.1.2": {
+            "name": "Advanced Project Ops",
+            "mapped_nodes": ["n8n-nodes-base.haloPSA", "n8n-nodes-base.haloPSATool", "n8n-nodes-base.kitemaker", "n8n-nodes-base.kitemakerTool", "n8n-nodes-base.syncroMsp", "n8n-nodes-base.syncroMspTool", "n8n-nodes-base.affinity", "n8n-nodes-base.affinityTool"],
+            "description": "Managed Service Provider (MSP) and specialized project tools"
+          }
+        },
+        "6.4.2 Data Management & Low Code": {
+          "6.4.2.1": {
+            "name": "Spreadsheets & Databases",
+            "mapped_nodes": ["n8n-nodes-base.baserow", "n8n-nodes-base.baserowTool", "n8n-nodes-base.coda", "n8n-nodes-base.codaTool", "n8n-nodes-base.grist", "n8n-nodes-base.gristTool", "n8n-nodes-base.nocodb", "n8n-nodes-base.nocoDbTool", "n8n-nodes-base.raindrop", "n8n-nodes-base.raindropTool", "n8n-nodes-base.seaTable", "n8n-nodes-base.seaTableTool", "n8n-nodes-base.stackby", "n8n-nodes-base.stackbyTool", "n8n-nodes-base.uproc", "n8n-nodes-base.uprocTool", "n8n-nodes-base.loneScale", "n8n-nodes-base.loneScaleTool"],
+            "description": "Manage wikis, spreadsheets, and low-code databases"
+          },
+          "6.4.2.2": {
+            "name": "App Builders & Enterprise Logic",
+            "mapped_nodes": ["n8n-nodes-base.adalo", "n8n-nodes-base.adaloTool", "n8n-nodes-base.bubble", "n8n-nodes-base.bubbleTool", "n8n-nodes-base.quickbase", "n8n-nodes-base.quickbaseTool", "n8n-nodes-base.actionNetwork", "n8n-nodes-base.actionNetworkTool", "n8n-nodes-base.serviceNow", "n8n-nodes-base.serviceNowTool"],
+            "description": "Low-code app platforms and enterprise service management"
+          }
+        },
+        "6.4.3 Finance & Logistics": {
+          "6.4.3.1": {
+            "name": "Accounting & ERP",
+            "mapped_nodes": ["n8n-nodes-base.chargebee", "n8n-nodes-base.chargebeeTool", "n8n-nodes-base.invoiceNinja", "n8n-nodes-base.invoiceNinjaTool", "n8n-nodes-base.paddle", "n8n-nodes-base.paddleTool", "n8n-nodes-base.profitWell", "n8n-nodes-base.profitWellTool", "n8n-nodes-base.quickbooks", "n8n-nodes-base.quickbooksTool", "n8n-nodes-base.wise", "n8n-nodes-base.odoo", "n8n-nodes-base.odooTool", "n8n-nodes-base.magento2", "n8n-nodes-base.magento2Tool", "n8n-nodes-base.unleashedSoftware", "n8n-nodes-base.unleashedSoftwareTool"],
+            "description": "Handle invoicing, subscriptions, payments, and ERP"
+          },
+          "6.4.3.2": {
+            "name": "HR & Time Tracking",
+            "mapped_nodes": ["n8n-nodes-base.bambooHr", "n8n-nodes-base.bambooHrTool", "n8n-nodes-base.clockify", "n8n-nodes-base.clockifyTool", "n8n-nodes-base.harvest", "n8n-nodes-base.harvestTool"],
+            "description": "Manage employees and track work hours"
+          },
+          "6.4.3.3": {
+            "name": "Logistics & Delivery",
+            "mapped_nodes": ["n8n-nodes-base.dhl", "n8n-nodes-base.dhlTool", "n8n-nodes-base.onfleet", "n8n-nodes-base.onfleetTool"],
+            "description": "Shipping, tracking, and last-mile delivery"
+          }
+        },
+        "6.4.4 Communication": {
+          "6.4.4.1": {
+            "name": "Chat & Messaging",
+            "mapped_nodes": ["n8n-nodes-base.line", "n8n-nodes-base.lineTool", "n8n-nodes-base.pushbullet", "n8n-nodes-base.pushbulletTool", "n8n-nodes-base.pushover", "n8n-nodes-base.pushoverTool", "n8n-nodes-base.twake", "n8n-nodes-base.twakeTool", "n8n-nodes-base.twist", "n8n-nodes-base.twistTool", "n8n-nodes-base.whatsApp", "n8n-nodes-base.whatsAppTool", "n8n-nodes-base.zulip", "n8n-nodes-base.zulipTool", "n8n-nodes-base.gotify", "n8n-nodes-base.gotifyTool", "n8n-nodes-base.signl4", "n8n-nodes-base.signl4Tool", "n8n-nodes-base.spontit", "n8n-nodes-base.spontitTool"],
+            "description": "Instant messaging, push notifications, and team chat"
+          },
+          "6.4.4.2": {
+            "name": "SMS & Telephony",
+            "mapped_nodes": ["n8n-nodes-base.messageBird", "n8n-nodes-base.messageBirdTool", "n8n-nodes-base.mocean", "n8n-nodes-base.moceanTool", "n8n-nodes-base.msg91", "n8n-nodes-base.msg91Tool", "n8n-nodes-base.plivo", "n8n-nodes-base.plivoTool", "n8n-nodes-base.sms77", "n8n-nodes-base.sms77Tool", "n8n-nodes-base.vonage", "n8n-nodes-base.vonageTool"],
+            "description": "Send SMS and manage voice calls"
+          }
+        }
+      },
+      "6.5 Web Services, IoT & Miscellaneous": {
+        "6.5.1 Web Utilities & Scraping": {
+          "6.5.1.1": {
+            "name": "Scraping & Automation",
+            "mapped_nodes": ["n8n-nodes-base.airtop", "n8n-nodes-base.airtopTool", "n8n-nodes-base.peekalink", "n8n-nodes-base.peekalinkTool", "n8n-nodes-base.phantombuster", "n8n-nodes-base.phantombusterTool"],
+            "description": "Browser automation and link previews"
+          },
+          "6.5.1.2": {
+            "name": "URL & Brand",
+            "mapped_nodes": ["n8n-nodes-base.bitly", "n8n-nodes-base.bitlyTool", "n8n-nodes-base.brandfetch", "n8n-nodes-base.BrandfetchTool", "n8n-nodes-base.oneSimpleApi", "n8n-nodes-base.oneSimpleApiTool", "n8n-nodes-base.yourls", "n8n-nodes-base.yourlsTool"],
+            "description": "URL shortening and brand asset retrieval"
+          }
+        },
+        "6.5.2 Content & Social": {
+          "6.5.2.1": {
+            "name": "CMS & Blogging",
+            "mapped_nodes": ["n8n-nodes-base.cockpit", "n8n-nodes-base.cockpitTool", "n8n-nodes-base.contentful", "n8n-nodes-base.contentfulTool", "n8n-nodes-base.ghost", "n8n-nodes-base.ghostTool", "n8n-nodes-base.medium", "n8n-nodes-base.mediumTool", "n8n-nodes-base.storyblok", "n8n-nodes-base.storyblokTool", "n8n-nodes-base.strapi", "n8n-nodes-base.strapiTool"],
+            "description": "Headless CMS and blogging platforms"
+          },
+          "6.5.2.2": {
+            "name": "Social & Community",
+            "mapped_nodes": ["n8n-nodes-base.crowdDev", "n8n-nodes-base.crowdDevTool", "n8n-nodes-base.discourse", "n8n-nodes-base.discourseTool", "n8n-nodes-base.disqus", "n8n-nodes-base.hackerNews", "n8n-nodes-base.hackerNewsTool", "n8n-nodes-base.orbit", "n8n-nodes-base.reddit", "n8n-nodes-base.redditTool", "n8n-nodes-base.beeminder", "n8n-nodes-base.beeminderTool"],
+            "description": "Forums, community management, and social feeds"
+          },
+          "6.5.2.3": {
+            "name": "Events & Webinars",
+            "mapped_nodes": ["n8n-nodes-base.goToWebinar", "n8n-nodes-base.goToWebinarTool", "n8n-nodes-base.demio", "n8n-nodes-base.demioTool"],
+            "description": "Manage online events and webinars"
+          }
+        },
+        "6.5.3 Lifestyle & IoT": {
+          "6.5.3.1": {
+            "name": "Home & Personal",
+            "mapped_nodes": ["n8n-nodes-base.homeAssistant", "n8n-nodes-base.homeAssistantTool", "n8n-nodes-base.oura", "n8n-nodes-base.ouraTool", "n8n-nodes-base.philipsHue", "n8n-nodes-base.philipsHueTool", "n8n-nodes-base.spotify", "n8n-nodes-base.spotifyTool", "n8n-nodes-base.strava", "n8n-nodes-base.stravaTool"],
+            "description": "Home automation, fitness tracking, and music"
+          },
+          "6.5.3.2": {
+            "name": "Public Data",
+            "mapped_nodes": ["n8n-nodes-base.coinGecko", "n8n-nodes-base.coinGeckoTool", "n8n-nodes-base.marketstack", "n8n-nodes-base.marketstackTool", "n8n-nodes-base.nasa", "n8n-nodes-base.nasaTool", "n8n-nodes-base.openWeatherMap", "n8n-nodes-base.openWeatherMapTool"],
+            "description": "Cryptocurrency, stock market, space, and weather data"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,637 @@
+{
+  "Taxonomy": {
+    "6. Data Transformation & Core Logic": {
+      "6.1 List & Item Manipulation": {
+        "6.1.1": {
+          "name": "Aggregate & Split",
+          "mapped_nodes": ["n8n-nodes-base.aggregate", "n8n-nodes-base.splitOut"],
+          "description": "Combine items into lists or split lists into separate items"
+        },
+        "6.1.2": {
+          "name": "Sort & Limit",
+          "mapped_nodes": ["n8n-nodes-base.sort", "n8n-nodes-base.limit"],
+          "description": "Order data or restrict the number of processed items"
+        },
+        "6.1.3": {
+          "name": "Filter & Deduplicate",
+          "mapped_nodes": ["n8n-nodes-base.filter", "n8n-nodes-base.removeDuplicates"],
+          "description": "Remove items based on conditions or duplicates"
+        },
+        "6.1.4": {
+          "name": "Key & Field Management",
+          "mapped_nodes": ["n8n-nodes-base.renameKeys", "n8n-nodes-base.set"],
+          "description": "Rename or modify JSON keys and fields"
+        },
+        "6.1.5": {
+          "name": "Summarize",
+          "mapped_nodes": ["n8n-nodes-base.summarize"],
+          "description": "Calculate sums, counts, or averages across items"
+        }
+      },
+      "6.2 File & Binary Handling": {
+        "6.2.1": {
+          "name": "Read/Write Operations",
+          "mapped_nodes": [
+            "n8n-nodes-base.readBinaryFile",
+            "n8n-nodes-base.writeBinaryFile",
+            "n8n-nodes-base.readWriteFile",
+            "n8n-nodes-base.readBinaryFiles"
+          ],
+          "description": "Read from or write files to the local disk"
+        },
+        "6.2.2": {
+          "name": "Conversion & Parsing",
+          "mapped_nodes": [
+            "n8n-nodes-base.convertToFile",
+            "n8n-nodes-base.moveBinaryData",
+            "n8n-nodes-base.readPDF",
+            "n8n-nodes-base.markdown",
+            "n8n-nodes-base.html"
+          ],
+          "description": "Convert between binary/JSON, parse PDFs, HTML, or Markdown"
+        },
+        "6.2.3": {
+          "name": "Image & Visual Generation",
+          "mapped_nodes": [
+            "n8n-nodes-base.editImage", 
+            "n8n-nodes-base.bannerbear",
+            "n8n-nodes-base.quickChart",
+            "n8n-nodes-base.quickChartTool",
+            "n8n-nodes-base.apiTemplateIo",
+            "n8n-nodes-base.apiTemplateIoTool"
+          ],
+          "description": "Edit images, generate charts, PDFs, or graphics via templates"
+        }
+      },
+      "6.3 Workflow Utilities": {
+        "6.3.1": {
+          "name": "Debugging & Control",
+          "mapped_nodes": [
+            "n8n-nodes-base.debugHelper",
+            "n8n-nodes-base.stopAndError",
+            "n8n-nodes-base.stickyNote",
+            "n8n-nodes-base.simulate"
+          ],
+          "description": "Tools for debugging, error throwing, canvas annotation, and node simulation"
+        },
+        "6.3.2": {
+          "name": "Instance & Flow Management",
+          "mapped_nodes": [
+            "n8n-nodes-base.n8n",
+            "n8n-nodes-base.respondToWebhook",
+            "n8n-nodes-base.form"
+          ],
+          "description": "Manage n8n instance, webhook responses, and multi-step forms"
+        },
+        "6.3.3": {
+          "name": "Comparison & Training",
+          "mapped_nodes": [
+            "n8n-nodes-base.compareDatasets",
+            "n8n-nodes-base.n8nTrainingCustomerDatastore",
+            "n8n-nodes-base.n8nTrainingCustomerMessenger"
+          ],
+          "description": "Compare datasets and internal training nodes"
+        }
+      }
+    },
+    "7. Marketing, Sales & Customer Success": {
+      "7.1 CRM & Lead Management": {
+        "7.1.1": {
+          "name": "Sales CRM",
+          "mapped_nodes": [
+            "n8n-nodes-base.agileCrm",
+            "n8n-nodes-base.agileCrmTool",
+            "n8n-nodes-base.copper",
+            "n8n-nodes-base.copperTool",
+            "n8n-nodes-base.freshworksCrm",
+            "n8n-nodes-base.freshworksCrmTool",
+            "n8n-nodes-base.highLevel",
+            "n8n-nodes-base.highLevelTool",
+            "n8n-nodes-base.keap",
+            "n8n-nodes-base.keapTool",
+            "n8n-nodes-base.monicaCrm",
+            "n8n-nodes-base.monicaCrmTool",
+            "n8n-nodes-base.salesmate",
+            "n8n-nodes-base.salesmateTool",
+            "n8n-nodes-base.hubspot"
+          ],
+          "description": "Manage sales pipelines, contacts, and deals"
+        },
+        "7.1.2": {
+          "name": "Lead Enrichment",
+          "mapped_nodes": [
+            "n8n-nodes-base.clearbit",
+            "n8n-nodes-base.clearbitTool",
+            "n8n-nodes-base.dropcontact",
+            "n8n-nodes-base.dropcontactTool",
+            "n8n-nodes-base.humanticAi",
+            "n8n-nodes-base.humanticAiTool",
+            "n8n-nodes-base.hunter",
+            "n8n-nodes-base.hunterTool",
+            "n8n-nodes-base.uplead",
+            "n8n-nodes-base.upleadTool"
+          ],
+          "description": "Enrich contact data and find email addresses"
+        },
+        "7.1.3": {
+           "name": "Affiliate & Loyalty",
+           "mapped_nodes": [
+             "n8n-nodes-base.tapfiliate",
+             "n8n-nodes-base.tapfiliateTool"
+           ],
+           "description": "Manage affiliate programs and tracking"
+        }
+      },
+      "7.2 Email Marketing & Automation": {
+        "7.2.1": {
+          "name": "Marketing Automation Platforms",
+          "mapped_nodes": [
+            "n8n-nodes-base.activeCampaign",
+            "n8n-nodes-base.automizy",
+            "n8n-nodes-base.autopilot",
+            "n8n-nodes-base.autopilotTool",
+            "n8n-nodes-base.convertKit",
+            "n8n-nodes-base.convertKitTool",
+            "n8n-nodes-base.customerIo",
+            "n8n-nodes-base.customerIoTool",
+            "n8n-nodes-base.egoi",
+            "n8n-nodes-base.egoiTool",
+            "n8n-nodes-base.getResponse",
+            "n8n-nodes-base.getResponseTool",
+            "n8n-nodes-base.iterable",
+            "n8n-nodes-base.iterableTool",
+            "n8n-nodes-base.lemlist",
+            "n8n-nodes-base.lemlistTool",
+            "n8n-nodes-base.mailerLite",
+            "n8n-nodes-base.mailerLiteTool",
+            "n8n-nodes-base.mautic",
+            "n8n-nodes-base.mauticTool",
+            "n8n-nodes-base.sendInBlue",
+            "n8n-nodes-base.sendInBlueTool",
+            "n8n-nodes-base.sendy",
+            "n8n-nodes-base.sendyTool",
+            "n8n-nodes-base.vero",
+            "n8n-nodes-base.veroTool"
+          ],
+          "description": "Manage subscribers, campaigns, and marketing flows"
+        },
+        "7.2.2": {
+          "name": "Transactional Email",
+          "mapped_nodes": [
+            "n8n-nodes-base.emailSend",
+            "n8n-nodes-base.emailSendTool",
+            "n8n-nodes-base.mailgun",
+            "n8n-nodes-base.mailgunTool",
+            "n8n-nodes-base.mailjet",
+            "n8n-nodes-base.mailjetTool",
+            "n8n-nodes-base.mandrill",
+            "n8n-nodes-base.mandrillTool",
+            "n8n-nodes-base.mailcheck",
+            "n8n-nodes-base.mailcheckTool"
+          ],
+          "description": "Send individual transactional emails and validate addresses"
+        }
+      },
+      "7.3 Customer Support & Engagement": {
+        "7.3.1": {
+          "name": "Helpdesk",
+          "mapped_nodes": [
+            "n8n-nodes-base.freshdesk",
+            "n8n-nodes-base.freshdeskTool",
+            "n8n-nodes-base.freshservice",
+            "n8n-nodes-base.freshserviceTool",
+            "n8n-nodes-base.helpScout",
+            "n8n-nodes-base.helpScoutTool",
+            "n8n-nodes-base.intercom",
+            "n8n-nodes-base.intercomTool",
+            "n8n-nodes-base.zammad",
+            "n8n-nodes-base.zammadTool",
+            "n8n-nodes-base.zendesk",
+            "n8n-nodes-base.zendeskTool",
+            "n8n-nodes-base.drift",
+            "n8n-nodes-base.driftTool"
+          ],
+          "description": "Manage customer support tickets and live chat"
+        },
+        "7.3.2": {
+          "name": "Engagement & Analytics",
+          "mapped_nodes": [
+             "n8n-nodes-base.segment", 
+             "n8n-nodes-base.segmentTool",
+             "n8n-nodes-base.postHog",
+             "n8n-nodes-base.postHogTool",
+             "n8n-nodes-base.gong",
+             "n8n-nodes-base.gongTool"
+          ],
+          "description": "Track user events, manage CDP, and analyze calls"
+        }
+      }
+    },
+    "8. Development, IT & Security": {
+      "8.1 DevOps & CI/CD": {
+        "8.1.1": {
+          "name": "Build & Deploy",
+          "mapped_nodes": [
+            "n8n-nodes-base.circleCi",
+            "n8n-nodes-base.circleCiTool",
+            "n8n-nodes-base.jenkins",
+            "n8n-nodes-base.jenkinsTool",
+            "n8n-nodes-base.netlify",
+            "n8n-nodes-base.netlifyTool",
+            "n8n-nodes-base.rundeck",
+            "n8n-nodes-base.rundeckTool",
+            "n8n-nodes-base.travisCi",
+            "n8n-nodes-base.travisCiTool"
+          ],
+          "description": "Manage build pipelines and deployments"
+        },
+        "8.1.2": {
+          "name": "Monitoring & Logging",
+          "mapped_nodes": [
+            "n8n-nodes-base.grafana",
+            "n8n-nodes-base.grafanaTool",
+            "n8n-nodes-base.pagerDuty",
+            "n8n-nodes-base.pagerDutyTool",
+            "n8n-nodes-base.sentryIo",
+            "n8n-nodes-base.sentryIoTool",
+            "n8n-nodes-base.splunk",
+            "n8n-nodes-base.splunkTool",
+            "n8n-nodes-base.uptimeRobot",
+            "n8n-nodes-base.uptimeRobotTool"
+          ],
+          "description": "Monitor system health, logs, and handle incidents"
+        }
+      },
+      "8.2 Security & Identity": {
+        "8.2.1": {
+          "name": "Access Management",
+          "mapped_nodes": [
+            "n8n-nodes-base.bitwarden",
+            "n8n-nodes-base.bitwardenTool",
+            "n8n-nodes-base.ldap",
+            "n8n-nodes-base.ldapTool",
+            "n8n-nodes-base.okta",
+            "n8n-nodes-base.oktaTool",
+            "n8n-nodes-base.totp",
+            "n8n-nodes-base.totpTool"
+          ],
+          "description": "Manage user identities, passwords, and 2FA"
+        },
+        "8.2.2": {
+          "name": "Cybersecurity Operations",
+          "mapped_nodes": [
+            "n8n-nodes-base.cloudflare",
+            "n8n-nodes-base.cloudflareTool",
+            "n8n-nodes-base.elasticSecurity",
+            "n8n-nodes-base.elasticSecurityTool",
+            "n8n-nodes-base.misp",
+            "n8n-nodes-base.mispTool",
+            "n8n-nodes-base.securityScorecard",
+            "n8n-nodes-base.securityScorecardTool",
+            "n8n-nodes-base.theHive",
+            "n8n-nodes-base.theHiveTool",
+            "n8n-nodes-base.theHiveProject",
+            "n8n-nodes-base.theHiveProjectTool",
+            "n8n-nodes-base.venafiTlsProtectCloud",
+            "n8n-nodes-base.venafiTlsProtectCloudTool",
+            "n8n-nodes-base.venafiTlsProtectDatacenter",
+            "n8n-nodes-base.venafiTlsProtectDatacenterTool"
+          ],
+          "description": "Manage threats, certificates, and security incidents"
+        }
+      },
+      "8.3 Database & Backend": {
+        "8.3.1": {
+          "name": "Databases",
+          "mapped_nodes": [
+            "n8n-nodes-base.crateDb",
+            "n8n-nodes-base.crateDbTool",
+            "n8n-nodes-base.filemaker",
+            "n8n-nodes-base.filemakerTool",
+            "n8n-nodes-base.questDb",
+            "n8n-nodes-base.questDbTool",
+            "n8n-nodes-base.timescaleDb",
+            "n8n-nodes-base.timescaleDbTool",
+            "n8n-nodes-base.metabase",
+            "n8n-nodes-base.metabaseTool"
+          ],
+          "description": "Connect to SQL/NoSQL, Time-series and BI databases"
+        },
+        "8.3.2": {
+          "name": "Dev Tools & Protocols",
+          "mapped_nodes": [
+            "n8n-nodes-base.npm",
+            "n8n-nodes-base.npmTool",
+            "n8n-nodes-base.postBin",
+            "n8n-nodes-base.postBinTool",
+            "n8n-nodes-base.urlScanIo",
+            "n8n-nodes-base.urlScanIoTool",
+            "n8n-nodes-base.jwt",
+            "n8n-nodes-base.jwtTool",
+            "n8n-nodes-base.amqp",
+            "n8n-nodes-base.amqpTool",
+            "n8n-nodes-base.rssFeedRead",
+            "n8n-nodes-base.rssFeedReadTool"
+          ],
+          "description": "Utilities for package management, API testing, JWT, and messaging protocols"
+        }
+      },
+      "8.4 AI & Machine Learning": {
+        "8.4.1": {
+          "name": "AI Services",
+          "mapped_nodes": [
+            "n8n-nodes-base.aiTransform",
+            "n8n-nodes-base.deepL",
+            "n8n-nodes-base.deepLTool",
+            "n8n-nodes-base.jinaAi",
+            "n8n-nodes-base.jinaAiTool",
+            "n8n-nodes-base.mindee",
+            "n8n-nodes-base.openThesaurus",
+            "n8n-nodes-base.openThesaurusTool"
+          ],
+          "description": "Translation, document parsing, and AI transformations"
+        }
+      }
+    },
+    "9. Business Operations & Productivity": {
+      "9.1 Project & Task Management": {
+        "9.1.1": {
+          "name": "Agile & Task Boards",
+          "mapped_nodes": [
+            "n8n-nodes-base.clickUp",
+            "n8n-nodes-base.linear",
+            "n8n-nodes-base.linearTool",
+            "n8n-nodes-base.taiga",
+            "n8n-nodes-base.taigaTool",
+            "n8n-nodes-base.todoist",
+            "n8n-nodes-base.todoistTool",
+            "n8n-nodes-base.wekan",
+            "n8n-nodes-base.wekanTool",
+            "n8n-nodes-base.flow",
+            "n8n-nodes-base.flowTrigger"
+          ],
+          "description": "Track tasks and agile projects"
+        },
+        "9.1.2": {
+          "name": "Advanced Project Ops",
+          "mapped_nodes": [
+             "n8n-nodes-base.haloPSA",
+             "n8n-nodes-base.haloPSATool",
+             "n8n-nodes-base.kitemaker",
+             "n8n-nodes-base.kitemakerTool",
+             "n8n-nodes-base.syncroMsp",
+             "n8n-nodes-base.syncroMspTool",
+             "n8n-nodes-base.affinity",
+             "n8n-nodes-base.affinityTool"
+          ],
+          "description": "Managed Service Provider (MSP) and specialized project tools"
+        }
+      },
+      "9.2 Data Management & Low Code": {
+        "9.2.1": {
+          "name": "Spreadsheets & Databases",
+          "mapped_nodes": [
+            "n8n-nodes-base.baserow",
+            "n8n-nodes-base.baserowTool",
+            "n8n-nodes-base.coda",
+            "n8n-nodes-base.codaTool",
+            "n8n-nodes-base.grist",
+            "n8n-nodes-base.gristTool",
+            "n8n-nodes-base.nocodb",
+            "n8n-nodes-base.nocoDbTool",
+            "n8n-nodes-base.raindrop",
+            "n8n-nodes-base.raindropTool",
+            "n8n-nodes-base.seaTable",
+            "n8n-nodes-base.seaTableTool",
+            "n8n-nodes-base.stackby",
+            "n8n-nodes-base.stackbyTool",
+            "n8n-nodes-base.uproc",
+            "n8n-nodes-base.uprocTool",
+            "n8n-nodes-base.loneScale",
+            "n8n-nodes-base.loneScaleTool"
+          ],
+          "description": "Manage wikis, spreadsheets, and low-code databases"
+        },
+        "9.2.2": {
+          "name": "App Builders & Enterprise Logic",
+          "mapped_nodes": [
+            "n8n-nodes-base.adalo",
+            "n8n-nodes-base.adaloTool",
+            "n8n-nodes-base.bubble",
+            "n8n-nodes-base.bubbleTool",
+            "n8n-nodes-base.quickbase",
+            "n8n-nodes-base.quickbaseTool",
+            "n8n-nodes-base.actionNetwork",
+            "n8n-nodes-base.actionNetworkTool",
+            "n8n-nodes-base.serviceNow",
+            "n8n-nodes-base.serviceNowTool"
+          ],
+          "description": "Low-code app platforms and enterprise service management"
+        }
+      },
+      "9.3 Finance & Logistics": {
+        "9.3.1": {
+          "name": "Accounting & ERP",
+          "mapped_nodes": [
+            "n8n-nodes-base.chargebee",
+            "n8n-nodes-base.chargebeeTool",
+            "n8n-nodes-base.invoiceNinja",
+            "n8n-nodes-base.invoiceNinjaTool",
+            "n8n-nodes-base.paddle",
+            "n8n-nodes-base.paddleTool",
+            "n8n-nodes-base.profitWell",
+            "n8n-nodes-base.profitWellTool",
+            "n8n-nodes-base.quickbooks",
+            "n8n-nodes-base.quickbooksTool",
+            "n8n-nodes-base.wise",
+            "n8n-nodes-base.odoo",
+            "n8n-nodes-base.odooTool",
+            "n8n-nodes-base.magento2",
+            "n8n-nodes-base.magento2Tool",
+            "n8n-nodes-base.unleashedSoftware",
+            "n8n-nodes-base.unleashedSoftwareTool"
+          ],
+          "description": "Handle invoicing, subscriptions, payments, and ERP"
+        },
+        "9.3.2": {
+          "name": "HR & Time Tracking",
+          "mapped_nodes": [
+            "n8n-nodes-base.bambooHr",
+            "n8n-nodes-base.bambooHrTool",
+            "n8n-nodes-base.clockify",
+            "n8n-nodes-base.clockifyTool",
+            "n8n-nodes-base.harvest",
+            "n8n-nodes-base.harvestTool"
+          ],
+          "description": "Manage employees and track work hours"
+        },
+        "9.3.3": {
+           "name": "Logistics & Delivery",
+           "mapped_nodes": [
+             "n8n-nodes-base.dhl",
+             "n8n-nodes-base.dhlTool",
+             "n8n-nodes-base.onfleet",
+             "n8n-nodes-base.onfleetTool"
+           ],
+           "description": "Shipping, tracking, and last-mile delivery"
+        }
+      },
+      "9.4 Communication": {
+        "9.4.1": {
+          "name": "Chat & Messaging",
+          "mapped_nodes": [
+            "n8n-nodes-base.line",
+            "n8n-nodes-base.lineTool",
+            "n8n-nodes-base.pushbullet",
+            "n8n-nodes-base.pushbulletTool",
+            "n8n-nodes-base.pushover",
+            "n8n-nodes-base.pushoverTool",
+            "n8n-nodes-base.twake",
+            "n8n-nodes-base.twakeTool",
+            "n8n-nodes-base.twist",
+            "n8n-nodes-base.twistTool",
+            "n8n-nodes-base.whatsApp",
+            "n8n-nodes-base.whatsAppTool",
+            "n8n-nodes-base.zulip",
+            "n8n-nodes-base.zulipTool",
+            "n8n-nodes-base.gotify",
+            "n8n-nodes-base.gotifyTool",
+            "n8n-nodes-base.signl4",
+            "n8n-nodes-base.signl4Tool",
+            "n8n-nodes-base.spontit",
+            "n8n-nodes-base.spontitTool"
+          ],
+          "description": "Instant messaging, push notifications, and team chat"
+        },
+        "9.4.2": {
+          "name": "SMS & Telephony",
+          "mapped_nodes": [
+            "n8n-nodes-base.messageBird",
+            "n8n-nodes-base.messageBirdTool",
+            "n8n-nodes-base.mocean",
+            "n8n-nodes-base.moceanTool",
+            "n8n-nodes-base.msg91",
+            "n8n-nodes-base.msg91Tool",
+            "n8n-nodes-base.plivo",
+            "n8n-nodes-base.plivoTool",
+            "n8n-nodes-base.sms77",
+            "n8n-nodes-base.sms77Tool",
+            "n8n-nodes-base.vonage",
+            "n8n-nodes-base.vonageTool"
+          ],
+          "description": "Send SMS and manage voice calls"
+        }
+      }
+    },
+    "10. Web Services, IoT & Miscellaneous": {
+      "10.1 Web Utilities & Scraping": {
+        "10.1.1": {
+          "name": "Scraping & Automation",
+          "mapped_nodes": [
+            "n8n-nodes-base.airtop",
+            "n8n-nodes-base.airtopTool",
+            "n8n-nodes-base.peekalink",
+            "n8n-nodes-base.peekalinkTool",
+            "n8n-nodes-base.phantombuster",
+            "n8n-nodes-base.phantombusterTool"
+          ],
+          "description": "Browser automation and link previews"
+        },
+        "10.1.2": {
+          "name": "URL & Brand",
+          "mapped_nodes": [
+            "n8n-nodes-base.bitly",
+            "n8n-nodes-base.bitlyTool",
+            "n8n-nodes-base.brandfetch",
+            "n8n-nodes-base.BrandfetchTool",
+            "n8n-nodes-base.oneSimpleApi",
+            "n8n-nodes-base.oneSimpleApiTool",
+            "n8n-nodes-base.yourls",
+            "n8n-nodes-base.yourlsTool"
+          ],
+          "description": "URL shortening and brand asset retrieval"
+        }
+      },
+      "10.2 Content & Social": {
+        "10.2.1": {
+          "name": "CMS & Blogging",
+          "mapped_nodes": [
+            "n8n-nodes-base.cockpit",
+            "n8n-nodes-base.cockpitTool",
+            "n8n-nodes-base.contentful",
+            "n8n-nodes-base.contentfulTool",
+            "n8n-nodes-base.ghost",
+            "n8n-nodes-base.ghostTool",
+            "n8n-nodes-base.medium",
+            "n8n-nodes-base.mediumTool",
+            "n8n-nodes-base.storyblok",
+            "n8n-nodes-base.storyblokTool",
+            "n8n-nodes-base.strapi",
+            "n8n-nodes-base.strapiTool"
+          ],
+          "description": "Headless CMS and blogging platforms"
+        },
+        "10.2.2": {
+          "name": "Social & Community",
+          "mapped_nodes": [
+            "n8n-nodes-base.crowdDev",
+            "n8n-nodes-base.crowdDevTool",
+            "n8n-nodes-base.discourse",
+            "n8n-nodes-base.discourseTool",
+            "n8n-nodes-base.disqus",
+            "n8n-nodes-base.hackerNews",
+            "n8n-nodes-base.hackerNewsTool",
+            "n8n-nodes-base.orbit",
+            "n8n-nodes-base.reddit",
+            "n8n-nodes-base.redditTool",
+            "n8n-nodes-base.beeminder",
+            "n8n-nodes-base.beeminderTool"
+          ],
+          "description": "Forums, community management, and social feeds"
+        },
+        "10.2.3": {
+           "name": "Events & Webinars",
+           "mapped_nodes": [
+             "n8n-nodes-base.goToWebinar",
+             "n8n-nodes-base.goToWebinarTool",
+             "n8n-nodes-base.demio",
+             "n8n-nodes-base.demioTool"
+           ],
+           "description": "Manage online events and webinars"
+        }
+      },
+      "10.3 Lifestyle & IoT": {
+        "10.3.1": {
+          "name": "Home & Personal",
+          "mapped_nodes": [
+            "n8n-nodes-base.homeAssistant",
+            "n8n-nodes-base.homeAssistantTool",
+            "n8n-nodes-base.oura",
+            "n8n-nodes-base.ouraTool",
+            "n8n-nodes-base.philipsHue",
+            "n8n-nodes-base.philipsHueTool",
+            "n8n-nodes-base.spotify",
+            "n8n-nodes-base.spotifyTool",
+            "n8n-nodes-base.strava",
+            "n8n-nodes-base.stravaTool"
+          ],
+          "description": "Home automation, fitness tracking, and music"
+        },
+        "10.3.2": {
+          "name": "Public Data",
+          "mapped_nodes": [
+            "n8n-nodes-base.coinGecko",
+            "n8n-nodes-base.coinGeckoTool",
+            "n8n-nodes-base.marketstack",
+            "n8n-nodes-base.marketstackTool",
+            "n8n-nodes-base.nasa",
+            "n8n-nodes-base.nasaTool",
+            "n8n-nodes-base.openWeatherMap",
+            "n8n-nodes-base.openWeatherMapTool"
+          ],
+          "description": "Cryptocurrency, stock market, space, and weather data"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+1. 01_Core_Logic (核心邏輯與觸發器)
+這部分主要是尚未分類的 Trigger (觸發器)。雖然你的 Taxonomy 涵蓋了主流服務的 Trigger（如 AWS, GitHub, Google），但許多 SaaS 的特定 Trigger 尚未收錄。
+
+Acuity Scheduling Trigger
+Affinity Trigger
+AMQP Trigger
+Brevo Trigger
+Cal.com Trigger
+Calendly Trigger
+Call n8n Workflow Tool (這是 LangChain 用的工具，允許 AI 呼叫工作流)
+Chat Trigger (這對 AI Chatbot 很重要，雖然 Taxonomy 有 Chat Response，但漏了 Trigger)
+Clockify Trigger
+Customer.io Trigger
+Emelia Trigger
+Email Trigger (IMAP) (Taxonomy 有 Gmail，但沒有通用的 IMAP Trigger)
+Email Trigger (IMAP) Tool
+Eventbrite Trigger
+Evaluation Trigger
+Facebook Lead Ads Trigger
+Facebook Trigger
+Figma Trigger (Beta)
+Flow
+Flow Trigger
+Form.io Trigger
+Formstack Trigger
+Gumroad Trigger
+Help Scout Trigger
+Invoice Ninja Trigger
+Local File Trigger
+Manual Chat Trigger (這是新版 Chat 介面的手動觸發)
+Mailjet Trigger
+MCP Server Trigger
+Postmark Trigger
+Pushcut Trigger
+RSS Feed Trigger (Taxonomy 只有 RSS Read)
+SurveyMonkey Trigger
+TheHive Trigger / TheHive 5 Trigger
+Toggl Trigger
+Venafi TLS Protect Cloud Trigger
+Webflow Trigger
+Workable Trigger
+Workflow Retriever
+Wufoo Trigger
+Zendesk Trigger
+crowd.dev Trigger
+
+2. 02_AI_Data (AI 與資料智能)
+你的 Taxonomy 在這方面覆蓋率極高，只有極少數特定節點未被映射。
+
+Chat Memory Manager (Taxonomy 有 Memory Manager，確認是否指同一個，若 ID 不同則漏)
+Chat Messages Retriever
+Simple Memory (舊版或簡易版記憶節點)
+Vector Store Question Answer Tool (Taxonomy 有 toolVectorStore，但這是更具體的 QA Tool)
+Question and Answer Chain (Taxonomy 有 chainRetrievalQa，可能已覆蓋，但名稱不完全匹配)
+
+3. 03_Dev_Cloud (開發與雲端架構)
+Google Cloud Realtime Database (Taxonomy 有 Firestore，但漏了 Realtime DB)
+Google Cloud Realtime Database Tool
+
+4. 04_Sales_Marketing (銷售與行銷)
+Netscaler ADC (Taxonomy 有 citrixAdc，如果是指同一個則已覆蓋，但名稱不符)
+Microsoft Excel 365 Tool (Taxonomy 有 microsoftExcelTool，需確認 ID 是否一致)
+
+5. 05_Productivity_Ops (生產力與營運)
+Google Workspace Admin (Taxonomy 有 gSuiteAdmin，這是舊名，建議更新為 Google Workspace Admin)
+Google Workspace Admin Tool
+Jira Software (Taxonomy 只有 jira，需確認是否區分 Software 與 Service Desk)
+Jira Software Tool
+
+6. 06_Uncategorized (未分類與通用工具)
+這部分主要是冷門或新興的服務。
+seven (簡訊服務 Gateway)
+seven Tool
+Evaluation (可能與 Core Logic 的 Evaluation Trigger 相關)
+Mailcheck (Taxonomy 有 mailcheckTool，但可能漏了主節點)
+Pushcut (Taxonomy 漏了 Action 節點)
+RSS Read (Taxonomy 有 rssFeedRead，需確認 ID)
+Signl4 (Taxonomy 拼寫為 signl4，需確認大小寫匹配)

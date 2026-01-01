@@ -1,0 +1,184 @@
+{
+  "Taxonomy": {
+    "1. Sales & Customer Relationship Management (CRM)": {
+      "1.1 Comprehensive CRM Platforms": {
+        "1.1.1": {
+          "name": "Enterprise CRM Suites",
+          "mapped_nodes": [
+            "n8n-nodes-base.salesforce",
+            "n8n-nodes-base.salesforceTool",
+            "n8n-nodes-base.hubspot",
+            "n8n-nodes-base.hubspotTool",
+            "n8n-nodes-base.zohoCrm",
+            "n8n-nodes-base.zohoCrmTool"
+          ],
+          "description": "Manages the entire customer lifecycle, including leads, deals, contacts, and accounts."
+        },
+        "1.1.2": {
+          "name": "Pipeline & Deal Management",
+          "mapped_nodes": [
+            "n8n-nodes-base.pipedrive",
+            "n8n-nodes-base.pipedriveTool"
+          ],
+          "description": "Focuses specifically on sales pipeline visualization and deal tracking."
+        }
+      },
+      "1.2 Commerce, Finance & ERP": {
+        "1.2.1": {
+          "name": "E-Commerce Platforms",
+          "mapped_nodes": [
+            "n8n-nodes-base.shopify",
+            "n8n-nodes-base.shopifyTool",
+            "n8n-nodes-base.wooCommerce",
+            "n8n-nodes-base.wooCommerceTool"
+          ],
+          "description": "Manages online stores, products, and orders."
+        },
+        "1.2.2": {
+          "name": "Payment Processing",
+          "mapped_nodes": [
+            "n8n-nodes-base.stripe",
+            "n8n-nodes-base.stripeTool",
+            "n8n-nodes-base.payPal"
+          ],
+          "description": "Handles payment transactions, invoicing, and customer billing."
+        },
+        "1.2.3": {
+          "name": "Accounting & ERP Systems",
+          "mapped_nodes": [
+            "n8n-nodes-base.xero",
+            "n8n-nodes-base.xeroTool",
+            "n8n-nodes-base.erpNext",
+            "n8n-nodes-base.erpNextTool"
+          ],
+          "description": "Manages business finances, bookkeeping, and enterprise resource planning."
+        }
+      }
+    },
+    "2. Marketing & Content Strategy": {
+      "2.1 Marketing Automation": {
+        "2.1.1": {
+          "name": "Email Marketing & Engagement",
+          "mapped_nodes": [
+            "n8n-nodes-base.mailchimp",
+            "n8n-nodes-base.mailchimpTool",
+            "n8n-nodes-base.sendGrid",
+            "n8n-nodes-base.sendGridTool",
+            "n8n-nodes-base.activeCampaign",
+            "n8n-nodes-base.activeCampaignTool"
+          ],
+          "description": "Automates email campaigns, newsletters, and customer engagement flows."
+        }
+      },
+      "2.2 Social Media & Content Distribution": {
+        "2.2.1": {
+          "name": "Social Networks",
+          "mapped_nodes": [
+            "n8n-nodes-base.twitter",
+            "n8n-nodes-base.twitterTool",
+            "n8n-nodes-base.linkedIn",
+            "n8n-nodes-base.linkedInTool",
+            "n8n-nodes-base.facebookGraphApi",
+            "n8n-nodes-base.facebookGraphApiTool"
+          ],
+          "description": "Publishes posts and interacts with audiences on social platforms."
+        },
+        "2.2.2": {
+          "name": "Video & Media",
+          "mapped_nodes": [
+            "n8n-nodes-base.youTube",
+            "n8n-nodes-base.youTubeTool"
+          ],
+          "description": "Manages video content, channels, and playlists."
+        },
+        "2.2.3": {
+          "name": "Content Management Systems (CMS)",
+          "mapped_nodes": [
+            "n8n-nodes-base.wordpress",
+            "n8n-nodes-base.wordpressTool"
+          ],
+          "description": "Manages website content, posts, and pages."
+        }
+      }
+    },
+    "3. Business Operations & Communication": {
+      "3.1 Communication Channels": {
+        "3.1.1": {
+          "name": "Messaging & VoIP",
+          "mapped_nodes": [
+            "n8n-nodes-base.twilio",
+            "n8n-nodes-base.twilioTool",
+            "n8n-nodes-base.ciscoWebex",
+            "n8n-nodes-base.ciscoWebexTool",
+            "n8n-nodes-base.matrix",
+            "n8n-nodes-base.matrixTool"
+          ],
+          "description": "Handles SMS, voice calls, and team chat messaging."
+        }
+      },
+      "3.2 File & Data Management": {
+        "3.2.1": {
+          "name": "Cloud Storage",
+          "mapped_nodes": [
+            "n8n-nodes-base.box",
+            "n8n-nodes-base.dropbox",
+            "n8n-nodes-base.dropboxTool",
+            "n8n-nodes-base.nextCloud",
+            "n8n-nodes-base.nextCloudTool"
+          ],
+          "description": "Stores, organizes, and shares files in the cloud."
+        },
+        "3.2.2": {
+          "name": "Data Analysis & Spreadsheets",
+          "mapped_nodes": [
+            "n8n-nodes-base.microsoftExcel",
+            "n8n-nodes-base.microsoftExcelTool",
+            "n8n-nodes-base.googleAnalytics",
+            "n8n-nodes-base.googleAnalyticsTool"
+          ],
+          "description": "Analyzes business data and manages spreadsheet records."
+        },
+        "3.2.3": {
+          "name": "Data Collection & Forms",
+          "mapped_nodes": [
+            "n8n-nodes-base.koBoToolbox",
+            "n8n-nodes-base.koBoToolboxTool"
+          ],
+          "description": "Collects survey data and manages field submissions."
+        }
+      },
+      "3.3 Operational Utilities": {
+        "3.3.1": {
+          "name": "AI & Translation Services",
+          "mapped_nodes": [
+            "n8n-nodes-base.perplexity",
+            "n8n-nodes-base.perplexityTool",
+            "n8n-nodes-base.lingvaNex",
+            "n8n-nodes-base.lingvaNexTool"
+          ],
+          "description": "Provides AI-driven answers and language translation services."
+        },
+        "3.3.2": {
+          "name": "Format Extraction & Conversion",
+          "mapped_nodes": [
+            "n8n-nodes-base.extractFromFile",
+            "n8n-nodes-base.htmlExtract",
+            "n8n-nodes-base.xml"
+          ],
+          "description": "Extracts and converts data from various file formats."
+        },
+        "3.3.3": {
+          "name": "System & Execution Utilities",
+          "mapped_nodes": [
+            "n8n-nodes-base.executeCommand",
+            "n8n-nodes-base.executeCommandTool",
+            "n8n-nodes-base.executionData",
+            "n8n-nodes-base.citrixAdc",
+            "n8n-nodes-base.cortex"
+          ],
+          "description": "Executes system commands, manages execution data, and handles network/security infrastructure."
+        }
+      }
+    }
+  }
+}

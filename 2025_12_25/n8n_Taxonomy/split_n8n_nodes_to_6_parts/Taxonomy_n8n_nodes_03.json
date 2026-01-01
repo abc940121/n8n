@@ -1,0 +1,174 @@
+{
+  "Taxonomy": {
+    "3. Development & Cloud Infrastructure": {
+      "3.1 Databases & Data Management": {
+        "3.1.1 Relational Databases (SQL)": {
+          "name": "SQL Databases",
+          "mapped_nodes": [
+            "n8n-nodes-base.mySql",
+            "n8n-nodes-base.mySqlTool",
+            "n8n-nodes-base.postgres",
+            "n8n-nodes-base.postgresTool",
+            "n8n-nodes-base.snowflake",
+            "n8n-nodes-base.snowflakeTool"
+          ],
+          "description": "Store and query structured data using SQL (MySQL, PostgreSQL, Snowflake)."
+        },
+        "3.1.2 NoSQL & Document Stores": {
+          "name": "NoSQL Databases",
+          "mapped_nodes": [
+            "n8n-nodes-base.mongoDb",
+            "n8n-nodes-base.mongoDbTool",
+            "n8n-nodes-base.awsDynamoDb",
+            "n8n-nodes-base.googleFirebaseCloudFirestore",
+            "n8n-nodes-base.googleFirebaseCloudFirestoreTool",
+            "n8n-nodes-base.azureCosmosDb"
+          ],
+          "description": "Manage unstructured or semi-structured data (documents, collections)."
+        },
+        "3.1.3 Realtime & In-Memory Stores": {
+          "name": "Realtime & Key-Value Stores",
+          "mapped_nodes": [
+            "n8n-nodes-base.redis",
+            "n8n-nodes-base.redisTool",
+            "n8n-nodes-base.googleFirebaseRealtimeDatabase",
+            "n8n-nodes-base.googleFirebaseRealtimeDatabaseTool"
+          ],
+          "description": "High-performance data storage for caching and realtime syncing."
+        },
+        "3.1.4 Search & Analytics": {
+          "name": "Search Engines",
+          "mapped_nodes": [
+            "n8n-nodes-base.elasticsearch",
+            "n8n-nodes-base.elasticsearchTool"
+          ],
+          "description": "Index, search, and analyze large volumes of data."
+        }
+      },
+      "3.2 Cloud Storage & Transfer": {
+        "3.2.1 Object Storage": {
+          "name": "Cloud Object Storage",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsS3",
+            "n8n-nodes-base.awsS3Tool",
+            "n8n-nodes-base.googleCloudStorage",
+            "n8n-nodes-base.googleCloudStorageTool",
+            "n8n-nodes-base.azureStorage",
+            "n8n-nodes-base.s3",
+            "n8n-nodes-base.s3Tool"
+          ],
+          "description": "Store and retrieve files/objects in the cloud (S3, GCS, Azure Blob)."
+        },
+        "3.2.2 File Transfer Protocols": {
+          "name": "FTP & SSH",
+          "mapped_nodes": [
+            "n8n-nodes-base.ftp",
+            "n8n-nodes-base.ssh"
+          ],
+          "description": "Transfer files and execute commands on remote servers."
+        }
+      },
+      "3.3 DevOps & Version Control": {
+        "3.3.1 Source Code Management": {
+          "name": "Git & Repositories",
+          "mapped_nodes": [
+            "n8n-nodes-base.git",
+            "n8n-nodes-base.gitTool",
+            "n8n-nodes-base.github",
+            "n8n-nodes-base.githubTool",
+            "n8n-nodes-base.gitlab",
+            "n8n-nodes-base.gitlabTool"
+          ],
+          "description": "Manage code versioning, issues, and CI/CD pipelines."
+        },
+        "3.3.2 Infrastructure & Security": {
+          "name": "Identity & Infrastructure",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsIam",
+            "n8n-nodes-base.awsCognito",
+            "n8n-nodes-base.awsCertificateManager",
+            "n8n-nodes-base.awsElb"
+          ],
+          "description": "Manage user identities, SSL certificates, and load balancers."
+        },
+        "3.3.3 Serverless Compute": {
+          "name": "FaaS (Serverless)",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsLambda",
+            "n8n-nodes-base.awsLambdaTool"
+          ],
+          "description": "Execute code without provisioning servers."
+        }
+      },
+      "3.4 Messaging & Event Streaming": {
+        "3.4.1 Message Queues": {
+          "name": "Queues",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsSqs",
+            "n8n-nodes-base.rabbitmq",
+            "n8n-nodes-base.rabbitmqTool"
+          ],
+          "description": "Decouple services using message queues."
+        },
+        "3.4.2 Pub/Sub & Streaming": {
+          "name": "Pub/Sub",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsSns",
+            "n8n-nodes-base.awsSnsTool",
+            "n8n-nodes-base.kafka",
+            "n8n-nodes-base.kafkaTool",
+            "n8n-nodes-base.mqtt",
+            "n8n-nodes-base.mqttTool"
+          ],
+          "description": "Publish and subscribe to event streams."
+        },
+        "3.4.3 Email Infrastructure": {
+          "name": "Transactional Email",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsSes",
+            "n8n-nodes-base.awsSesTool"
+          ],
+          "description": "Send high-volume transactional emails (AWS SES)."
+        }
+      },
+      "3.5 AI & Machine Learning Services": {
+        "3.5.1 Natural Language Processing": {
+          "name": "NLP Services",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsComprehend",
+            "n8n-nodes-base.googleCloudNaturalLanguage",
+            "n8n-nodes-base.googleCloudNaturalLanguageTool"
+          ],
+          "description": "Analyze text for sentiment, entities, and language."
+        },
+        "3.5.2 Vision & Document AI": {
+          "name": "Vision & OCR",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsRekognition",
+            "n8n-nodes-base.awsTextract",
+            "n8n-nodes-base.awsTextractTool"
+          ],
+          "description": "Analyze images and extract text from documents."
+        },
+        "3.5.3 Audio Processing": {
+          "name": "Speech-to-Text",
+          "mapped_nodes": [
+            "n8n-nodes-base.awsTranscribe",
+            "n8n-nodes-base.awsTranscribeTool"
+          ],
+          "description": "Convert speech into text."
+        }
+      },
+      "3.6 API Utilities": {
+        "3.6.1 API Protocols": {
+          "name": "GraphQL",
+          "mapped_nodes": [
+            "n8n-nodes-base.graphql",
+            "n8n-nodes-base.graphqlTool"
+          ],
+          "description": "Query APIs using the GraphQL query language."
+        }
+      }
+    }
+  }
+}

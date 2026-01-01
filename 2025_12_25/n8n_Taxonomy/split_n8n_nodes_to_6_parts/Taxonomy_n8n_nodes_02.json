@@ -1,0 +1,306 @@
+{
+  "Taxonomy": {
+    "1. AI Orchestration (Agents & Chains)": {
+      "1.1 AI Agents": {
+        "1.1.1": {
+          "name": "AI Agent",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.agent"
+          ],
+          "description": "Autonomous agent that generates action plans and executes them using tools."
+        },
+        "1.1.2": {
+          "name": "Tool Definitions",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.agentTool",
+            "@n8n/n8n-nodes-langchain.mcpClientTool"
+          ],
+          "description": "Definitions for tools or MCP clients that agents can utilize."
+        }
+      },
+      "1.2 Chains": {
+        "1.2.1": {
+          "name": "Basic Chains",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.chainLlm",
+            "@n8n/n8n-nodes-langchain.chainSummarization"
+          ],
+          "description": "Linear sequences for basic prompting or summarization tasks."
+        },
+        "1.2.2": {
+          "name": "QA & Retrieval Chains",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.chainRetrievalQa"
+          ],
+          "description": "Chains specialized in answering questions based on retrieved documents."
+        }
+      },
+      "1.3 Interaction & Response": {
+        "1.3.1": {
+          "name": "Chat Response",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.chat"
+          ],
+          "description": "Sends a response back to the chat interface (used with Chat Trigger)."
+        }
+      }
+    },
+    "2. Model Providers (LLMs & Embeddings)": {
+      "2.1 Chat Models (LLMs)": {
+        "2.1.1": {
+          "name": "Proprietary Models",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+            "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+            "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+            "@n8n/n8n-nodes-langchain.lmChatGoogleVertex",
+            "@n8n/n8n-nodes-langchain.lmChatAwsBedrock",
+            "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+            "@n8n/n8n-nodes-langchain.lmChatCohere",
+            "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+            "@n8n/n8n-nodes-langchain.lmChatXAiGrok"
+          ],
+          "description": "Hosted chat models from major providers like OpenAI, Anthropic, Google, etc."
+        },
+        "2.1.2": {
+          "name": "Open Source / Self-Hosted Models",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.lmChatOllama",
+            "@n8n/n8n-nodes-langchain.lmOllama",
+            "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+            "@n8n/n8n-nodes-langchain.lmOpenHuggingFaceInference"
+          ],
+          "description": "Models run locally (Ollama) or via open inference APIs."
+        },
+        "2.1.3": {
+          "name": "Model Gateways",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+            "@n8n/n8n-nodes-langchain.lmChatVercelAiGateway",
+            "@n8n/n8n-nodes-langchain.lmChatGroq",
+            "@n8n/n8n-nodes-langchain.modelSelector"
+          ],
+          "description": "Routers and gateways to access multiple underlying models."
+        },
+        "2.1.4": {
+          "name": "Legacy / Completion Models",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.lmOpenAi",
+            "@n8n/n8n-nodes-langchain.lmCohere"
+          ],
+          "description": "Legacy completion-based models (non-chat)."
+        }
+      },
+      "2.2 Embeddings Models": {
+        "2.2.1": {
+          "name": "Text Embeddings",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+            "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+            "@n8n/n8n-nodes-langchain.embeddingsGoogleVertex",
+            "@n8n/n8n-nodes-langchain.embeddingsAwsBedrock",
+            "@n8n/n8n-nodes-langchain.embeddingsCohere",
+            "@n8n/n8n-nodes-langchain.embeddingsAzureOpenAi",
+            "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+            "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+            "@n8n/n8n-nodes-langchain.embeddingsOllama"
+          ],
+          "description": "Models that convert text into vector representations for RAG."
+        }
+      },
+      "2.3 Direct API Integrations": {
+        "2.3.1": {
+          "name": "Provider APIs",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.openAi",
+            "@n8n/n8n-nodes-langchain.openAiAssistant",
+            "@n8n/n8n-nodes-langchain.anthropic",
+            "@n8n/n8n-nodes-langchain.googleGemini",
+            "n8n-nodes-base.mistralAi"
+          ],
+          "description": "Direct interaction with provider APIs for tasks beyond simple chat (e.g., Assistants API, file management)."
+        }
+      }
+    },
+    "3. RAG Infrastructure (Vector Stores & Data)": {
+      "3.1 Vector Stores": {
+        "3.1.1": {
+          "name": "Cloud Vector Databases",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+            "@n8n/n8n-nodes-langchain.vectorStorePineconeInsert",
+            "@n8n/n8n-nodes-langchain.vectorStorePineconeLoad",
+            "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+            "@n8n/n8n-nodes-langchain.vectorStoreSupabaseInsert",
+            "@n8n/n8n-nodes-langchain.vectorStoreSupabaseLoad",
+            "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+            "@n8n/n8n-nodes-langchain.vectorStoreWeaviate",
+            "@n8n/n8n-nodes-langchain.vectorStoreMongoDBAtlas",
+            "@n8n/n8n-nodes-langchain.vectorStoreMilvus",
+            "@n8n/n8n-nodes-langchain.vectorStoreZep",
+            "@n8n/n8n-nodes-langchain.vectorStoreZepInsert",
+            "@n8n/n8n-nodes-langchain.vectorStoreZepLoad"
+          ],
+          "description": "Connectors to external vector database services."
+        },
+        "3.1.2": {
+          "name": "Self-Hosted / In-Memory",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+            "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+            "@n8n/n8n-nodes-langchain.vectorStoreInMemoryInsert",
+            "@n8n/n8n-nodes-langchain.vectorStoreInMemoryLoad"
+          ],
+          "description": "Local or Postgres-based vector storage solutions."
+        }
+      },
+      "3.2 Retrieval & Reranking": {
+        "3.2.1": {
+          "name": "Retrievers",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+            "@n8n/n8n-nodes-langchain.retrieverMultiQuery",
+            "@n8n/n8n-nodes-langchain.rerankerCohere"
+          ],
+          "description": "Logic for querying vector stores and ranking results."
+        }
+      },
+      "3.3 Document Processing": {
+        "3.3.1": {
+          "name": "Document Loaders",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+            "@n8n/n8n-nodes-langchain.documentJsonInputLoader",
+            "@n8n/n8n-nodes-langchain.documentBinaryInputLoader",
+            "@n8n/n8n-nodes-langchain.documentGithubLoader"
+          ],
+          "description": "Ingest data from files, JSON, or repositories into the chain."
+        },
+        "3.3.2": {
+          "name": "Text Splitters",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+            "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+            "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter"
+          ],
+          "description": "Break down large documents into manageable chunks for embeddings."
+        }
+      }
+    },
+    "4. Agent Capabilities (Tools)": {
+      "4.1 Knowledge & Calculation Tools": {
+        "4.1.1": {
+          "name": "Information Lookup",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.toolWikipedia",
+            "@n8n/n8n-nodes-langchain.toolSerpApi",
+            "@n8n/n8n-nodes-langchain.toolSearXng",
+            "@n8n/n8n-nodes-langchain.toolWolframAlpha"
+          ],
+          "description": "Tools for retrieving external knowledge or performing calculations."
+        },
+        "4.1.2": {
+          "name": "Computation",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.toolCalculator"
+          ],
+          "description": "Basic mathematical operations for agents."
+        }
+      },
+      "4.2 System & Custom Tools": {
+        "4.2.1": {
+          "name": "Custom Functionality",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.toolCode",
+            "@n8n/n8n-nodes-langchain.toolHttpRequest",
+            "@n8n/n8n-nodes-langchain.toolExecutor",
+            "@n8n/n8n-nodes-langchain.toolThink",
+            "@n8n/n8n-nodes-langchain.toolVectorStore"
+          ],
+          "description": "Custom logic, HTTP requests, or vector lookups packaged as tools."
+        },
+        "4.2.2": {
+          "name": "Custom Chain Logic",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.code"
+          ],
+          "description": "Custom code execution within LangChain chains (non-tool)."
+        }
+      },
+      "4.3 Application Integration Tools": {
+        "4.3.1": {
+          "name": "App Actions as Tools",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleChatTool",
+            "n8n-nodes-base.rocketchatTool",
+            "n8n-nodes-base.supabaseTool",
+            "n8n-nodes-base.mistralAiTool",
+            "@n8n/n8n-nodes-langchain.anthropicTool",
+            "@n8n/n8n-nodes-langchain.googleGeminiTool"
+          ],
+          "description": "Specific application actions wrapped for use by AI agents."
+        }
+      },
+      "4.4 Standard App Integrations": {
+        "4.4.1": {
+          "name": "Standard Nodes (Non-Tool)",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleChat",
+            "n8n-nodes-base.rocketchat",
+            "n8n-nodes-base.supabase"
+          ],
+          "description": "Standard n8n nodes for these services (not wrapped as AI Tools)."
+        }
+      }
+    },
+    "5. Memory & Context Management": {
+      "5.1 Chat Memory": {
+        "5.1.1": {
+          "name": "Memory Stores",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+            "@n8n/n8n-nodes-langchain.memoryRedisChat",
+            "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+            "@n8n/n8n-nodes-langchain.memoryMongoDbChat",
+            "@n8n/n8n-nodes-langchain.memoryMotorhead",
+            "@n8n/n8n-nodes-langchain.memoryXata",
+            "@n8n/n8n-nodes-langchain.memoryZep"
+          ],
+          "description": "Storage backends for maintaining conversation history."
+        },
+        "5.1.2": {
+          "name": "Memory Management",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.memoryManager",
+            "@n8n/n8n-nodes-langchain.memoryChatRetriever"
+          ],
+          "description": "Utilities to retrieve and manage context window."
+        }
+      }
+    },
+    "6. Data Structuring & Analysis": {
+      "6.1 Output Parsing": {
+        "6.1.1": {
+          "name": "Format Enforcers",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.outputParserStructured",
+            "@n8n/n8n-nodes-langchain.outputParserItemList",
+            "@n8n/n8n-nodes-langchain.outputParserAutofixing"
+          ],
+          "description": "Ensures LLM output adheres to specific JSON schemas or list formats."
+        }
+      },
+      "6.2 Text Analysis": {
+        "6.2.1": {
+          "name": "NLP Utilities",
+          "mapped_nodes": [
+            "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+            "@n8n/n8n-nodes-langchain.textClassifier",
+            "@n8n/n8n-nodes-langchain.informationExtractor"
+          ],
+          "description": "Specialized nodes for classifying or extracting data from text."
+        }
+      }
+    }
+  }
+}

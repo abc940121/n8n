@@ -1,0 +1,1545 @@
+[
+  {
+    "filename": "activeCampaignTrigger.json",
+    "name": "n8n-nodes-base.activeCampaignTrigger",
+    "displayName": "ActiveCampaign Trigger",
+    "description": "Handle ActiveCampaign events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event Names or IDs",
+      "Config: Source"
+    ]
+  },
+  {
+    "filename": "acuitySchedulingTrigger.json",
+    "name": "n8n-nodes-base.acuitySchedulingTrigger",
+    "displayName": "Acuity Scheduling Trigger",
+    "description": "Handle Acuity Scheduling events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Event",
+      "Config: Resolve Data"
+    ]
+  },
+  {
+    "filename": "affinityTrigger.json",
+    "name": "n8n-nodes-base.affinityTrigger",
+    "displayName": "Affinity Trigger",
+    "description": "Handle Affinity events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "airtableTrigger.json",
+    "name": "n8n-nodes-base.airtableTrigger",
+    "displayName": "Airtable Trigger",
+    "description": "Starts the workflow when Airtable events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Authentication",
+      "Config: Base"
+    ]
+  },
+  {
+    "filename": "amqpTrigger.json",
+    "name": "n8n-nodes-base.amqpTrigger",
+    "displayName": "AMQP Trigger",
+    "description": "Listens to AMQP 1.0 Messages",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Queue / Topic",
+      "Config: Clientname",
+      "Config: Subscription"
+    ]
+  },
+  {
+    "filename": "asanaTrigger.json",
+    "name": "n8n-nodes-base.asanaTrigger",
+    "displayName": "Asana Trigger",
+    "description": "Starts the workflow when Asana events occur.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Resource",
+      "Config: Workspace Name or ID"
+    ]
+  },
+  {
+    "filename": "autopilotTrigger.json",
+    "name": "n8n-nodes-base.autopilotTrigger",
+    "displayName": "Autopilot Trigger",
+    "description": "Handle Autopilot events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "awsSnsTrigger.json",
+    "name": "n8n-nodes-base.awsSnsTrigger",
+    "displayName": "AWS SNS Trigger",
+    "description": "Handle AWS SNS events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Topic"
+    ]
+  },
+  {
+    "filename": "bitbucketTrigger.json",
+    "name": "n8n-nodes-base.bitbucketTrigger",
+    "displayName": "Bitbucket Trigger",
+    "description": "Handle Bitbucket events via webhooks",
+    "category_tags": [
+      "Workspace",
+      "Repository"
+    ],
+    "capabilities": []
+  },
+  {
+    "filename": "boxTrigger.json",
+    "name": "n8n-nodes-base.boxTrigger",
+    "displayName": "Box Trigger",
+    "description": "Starts the workflow when Box events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events",
+      "Config: Target Type",
+      "Config: Target ID"
+    ]
+  },
+  {
+    "filename": "calendlyTrigger.json",
+    "name": "n8n-nodes-base.calendlyTrigger",
+    "displayName": "Calendly Trigger",
+    "description": "Starts the workflow when Calendly events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Action required: Calendly will discontinue API Key authentication on May 31, 2025. Update node to use OAuth2 authentication now to ensure your workflows continue to work.",
+      "Config: Scope"
+    ]
+  },
+  {
+    "filename": "calTrigger.json",
+    "name": "n8n-nodes-base.calTrigger",
+    "displayName": "Cal.com Trigger",
+    "description": "Handle Cal.com events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events",
+      "Config: API Version",
+      "Config: API Version"
+    ]
+  },
+  {
+    "filename": "chargebeeTrigger.json",
+    "name": "n8n-nodes-base.chargebeeTrigger",
+    "displayName": "Chargebee Trigger",
+    "description": "Starts the workflow when Chargebee events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "chatTrigger.json",
+    "name": "@n8n/n8n-nodes-langchain.chatTrigger",
+    "displayName": "Chat Trigger",
+    "description": "Runs the workflow when an n8n generated webchat is submitted",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Make Chat Publicly Available",
+      "Config: Mode",
+      "Config: Chat will be live at the URL above once you activate this workflow. Live executions will show up in the ‘executions’ tab"
+    ]
+  },
+  {
+    "filename": "ciscoWebexTrigger.json",
+    "name": "n8n-nodes-base.ciscoWebexTrigger",
+    "displayName": "Webex by Cisco Trigger",
+    "description": "Starts the workflow when Cisco Webex events occur.",
+    "category_tags": [
+      "[All]",
+      "Recording",
+      "Membership",
+      "Message",
+      "Custom API Call",
+      "Meeting",
+      "Room",
+      "Attachment Action"
+    ],
+    "capabilities": []
+  },
+  {
+    "filename": "clickUpTrigger.json",
+    "name": "n8n-nodes-base.clickUpTrigger",
+    "displayName": "ClickUp Trigger",
+    "description": "Handle ClickUp events via webhooks (Beta)",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Team Name or ID",
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "clockifyTrigger.json",
+    "name": "n8n-nodes-base.clockifyTrigger",
+    "displayName": "Clockify Trigger",
+    "description": "Listens to Clockify events",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Workspace Name or ID",
+      "Config: Trigger"
+    ]
+  },
+  {
+    "filename": "convertKitTrigger.json",
+    "name": "n8n-nodes-base.convertKitTrigger",
+    "displayName": "ConvertKit Trigger",
+    "description": "Handle ConvertKit events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event",
+      "Config: Form Name or ID",
+      "Config: Sequence Name or ID"
+    ]
+  },
+  {
+    "filename": "copperTrigger.json",
+    "name": "n8n-nodes-base.copperTrigger",
+    "displayName": "Copper Trigger",
+    "description": "Handle Copper events via webhooks",
+    "category_tags": [
+      "Task",
+      "Opportunity",
+      "Project",
+      "Custom API Call",
+      "Company",
+      "Person",
+      "Lead"
+    ],
+    "capabilities": []
+  },
+  {
+    "filename": "cron.json",
+    "name": "n8n-nodes-base.cron",
+    "displayName": "Cron",
+    "description": "Triggers the workflow at a specific time",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This workflow will run on the schedule you define here once you <a data-key=\"activate\">activate</a> it.<br><br>For testing, you can also trigger it manually: by going back to the canvas and clicking 'execute workflow'",
+      "Config: Trigger Times"
+    ]
+  },
+  {
+    "filename": "crowdDevTrigger.json",
+    "name": "n8n-nodes-base.crowdDevTrigger",
+    "displayName": "crowd.dev Trigger",
+    "description": "Starts the workflow when crowd.dev events occur.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Trigger"
+    ]
+  },
+  {
+    "filename": "crypto.json",
+    "name": "n8n-nodes-base.crypto",
+    "displayName": "Crypto",
+    "description": "Provide cryptographic utilities",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Action",
+      "Config: Type",
+      "Config: Binary File"
+    ]
+  },
+  {
+    "filename": "cryptoTool.json",
+    "name": "n8n-nodes-base.cryptoTool",
+    "displayName": "Crypto Tool",
+    "description": "Provide cryptographic utilities",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Description",
+      "Config: Action",
+      "Config: Type"
+    ]
+  },
+  {
+    "filename": "customerIoTrigger.json",
+    "name": "n8n-nodes-base.customerIoTrigger",
+    "displayName": "Customer.io Trigger",
+    "description": "Starts the workflow on a Customer.io update (Beta)",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "dateTime.json",
+    "name": "n8n-nodes-base.dateTime",
+    "displayName": "Date & Time",
+    "description": "Allows you to manipulate date and time values",
+    "category_tags": [],
+    "capabilities": [
+      "Add (Add time to Date Value)",
+      "Subtract (Subtract time from Date Value)"
+    ]
+  },
+  {
+    "filename": "dateTimeTool.json",
+    "name": "n8n-nodes-base.dateTimeTool",
+    "displayName": "Date & Time Tool",
+    "description": "Manipulate date and time values",
+    "category_tags": [],
+    "capabilities": [
+      "Add to a Date",
+      "Extract Part of a Date",
+      "Format a Date",
+      "Get Current Date",
+      "Get Time Between Dates",
+      "Round a Date",
+      "Subtract From a Date"
+    ]
+  },
+  {
+    "filename": "emailReadImap.json",
+    "name": "n8n-nodes-base.emailReadImap",
+    "displayName": "Email Trigger (IMAP)",
+    "description": "Triggers the workflow when a new email is received",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Mailbox Name",
+      "Config: Action",
+      "Config: Download Attachments"
+    ]
+  },
+  {
+    "filename": "emailReadImapTool.json",
+    "name": "n8n-nodes-base.emailReadImapTool",
+    "displayName": "Email Trigger (IMAP) Tool",
+    "description": "Triggers the workflow when a new email is received",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Description",
+      "Config: Mailbox Name",
+      "Config: Action"
+    ]
+  },
+  {
+    "filename": "emeliaTrigger.json",
+    "name": "n8n-nodes-base.emeliaTrigger",
+    "displayName": "Emelia Trigger",
+    "description": "Handle Emelia campaign activity events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Campaign Name or ID",
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "errorTrigger.json",
+    "name": "n8n-nodes-base.errorTrigger",
+    "displayName": "Error Trigger",
+    "description": "Triggers the workflow when another workflow has an error",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node will trigger when there is an error in another workflow, as long as that workflow is set up to do so. <a href=\"https://docs.n8n.io/integrations/core-nodes/n8n-nodes-base.errortrigger\" target=\"_blank\">More info<a>"
+    ]
+  },
+  {
+    "filename": "evaluationTrigger.json",
+    "name": "n8n-nodes-base.evaluationTrigger",
+    "displayName": "Evaluation Trigger",
+    "description": "Run a test dataset through your workflow to check performance",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Pulls a test dataset from a Google Sheet. The workflow will run once for each row, in sequence. Tips for wiring this node up <a href=\"https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/#combining-multiple-triggers\">here</a>.",
+      "Config: Credentials",
+      "Config: Authentication"
+    ]
+  },
+  {
+    "filename": "eventbriteTrigger.json",
+    "name": "n8n-nodes-base.eventbriteTrigger",
+    "displayName": "Eventbrite Trigger",
+    "description": "Handle Eventbrite events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Organization Name or ID",
+      "Config: Event Name or ID"
+    ]
+  },
+  {
+    "filename": "executeWorkflow.json",
+    "name": "n8n-nodes-base.executeWorkflow",
+    "displayName": "Execute Sub-workflow",
+    "description": "Execute another workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Execute a Sub-Workflow"
+    ]
+  },
+  {
+    "filename": "executeWorkflowTrigger.json",
+    "name": "n8n-nodes-base.executeWorkflowTrigger",
+    "displayName": "Execute Workflow Trigger",
+    "description": "Helpers for calling other n8n workflows. Used for designing modular, microservice-like workflows.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events",
+      "Config: When an ‘execute workflow’ node calls this workflow, the execution starts here. Any data passed into the 'execute workflow' node will be output by this node.",
+      "Config: This node is out of date. Please upgrade by removing it and adding a new one"
+    ]
+  },
+  {
+    "filename": "facebookLeadAdsTrigger.json",
+    "name": "n8n-nodes-base.facebookLeadAdsTrigger",
+    "displayName": "Facebook Lead Ads Trigger",
+    "description": "Handle Facebook Lead Ads events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Due to Facebook API limitations, you can use just one Facebook Lead Ads trigger for each Facebook App",
+      "Config: Event",
+      "Config: Page"
+    ]
+  },
+  {
+    "filename": "facebookTrigger.json",
+    "name": "n8n-nodes-base.facebookTrigger",
+    "displayName": "Facebook Trigger",
+    "description": "Starts the workflow when Facebook events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: APP ID",
+      "Config: To watch Whatsapp business account events use the Whatsapp trigger node",
+      "Config: Object"
+    ]
+  },
+  {
+    "filename": "figmaTrigger.json",
+    "name": "n8n-nodes-base.figmaTrigger",
+    "displayName": "Figma Trigger (Beta)",
+    "description": "Starts the workflow when Figma events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Team ID",
+      "Config: Trigger On"
+    ]
+  },
+  {
+    "filename": "flow.json",
+    "name": "n8n-nodes-base.flow",
+    "displayName": "Flow",
+    "description": "Consume Flow API",
+    "category_tags": [
+      "Task"
+    ],
+    "capabilities": [
+      "Create (Create a new task)",
+      "Update (Update a task)",
+      "Get (Get a task)",
+      "Get Many (Get many tasks)"
+    ]
+  },
+  {
+    "filename": "flowTrigger.json",
+    "name": "n8n-nodes-base.flowTrigger",
+    "displayName": "Flow Trigger",
+    "description": "Handle Flow events via webhooks",
+    "category_tags": [
+      "Task",
+      "Project"
+    ],
+    "capabilities": []
+  },
+  {
+    "filename": "formIoTrigger.json",
+    "name": "n8n-nodes-base.formIoTrigger",
+    "displayName": "Form.io Trigger",
+    "description": "Handle form.io events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Project Name or ID",
+      "Config: Form Name or ID",
+      "Config: Trigger Events"
+    ]
+  },
+  {
+    "filename": "formstackTrigger.json",
+    "name": "n8n-nodes-base.formstackTrigger",
+    "displayName": "Formstack Trigger",
+    "description": "Starts the workflow on a Formstack form submission.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Form Name or ID",
+      "Config: Simplify"
+    ]
+  },
+  {
+    "filename": "formTrigger.json",
+    "name": "n8n-nodes-base.formTrigger",
+    "displayName": "n8n Form Trigger",
+    "description": "Generate webforms in n8n and pass their responses to the workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Form Path",
+      "Config: Form Title",
+      "Config: Form Description"
+    ]
+  },
+  {
+    "filename": "function.json",
+    "name": "n8n-nodes-base.function",
+    "displayName": "Function",
+    "description": "Run custom function code which gets executed once and allows you to add, remove, change and replace items",
+    "category_tags": [],
+    "capabilities": [
+      "Config: A newer version of this node type is available, called the ‘Code’ node",
+      "Config: JavaScript Code"
+    ]
+  },
+  {
+    "filename": "functionItem.json",
+    "name": "n8n-nodes-base.functionItem",
+    "displayName": "Function Item",
+    "description": "Run custom function code which gets executed once per item",
+    "category_tags": [],
+    "capabilities": [
+      "Config: A newer version of this node type is available, called the ‘Code’ node",
+      "Config: JavaScript Code"
+    ]
+  },
+  {
+    "filename": "getResponseTrigger.json",
+    "name": "n8n-nodes-base.getResponseTrigger",
+    "displayName": "GetResponse Trigger",
+    "description": "Starts the workflow when GetResponse events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Events",
+      "Config: List Names or IDs"
+    ]
+  },
+  {
+    "filename": "githubTrigger.json",
+    "name": "n8n-nodes-base.githubTrigger",
+    "displayName": "Github Trigger",
+    "description": "Starts the workflow when Github events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Only members with owner privileges for an organization or admin privileges for a repository can set up the webhooks this node requires.",
+      "Config: Authentication",
+      "Config: Repository Owner"
+    ]
+  },
+  {
+    "filename": "gitlabTrigger.json",
+    "name": "n8n-nodes-base.gitlabTrigger",
+    "displayName": "GitLab Trigger",
+    "description": "Starts the workflow when GitLab events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Repository Owner",
+      "Config: Repository Name"
+    ]
+  },
+  {
+    "filename": "gmailTrigger.json",
+    "name": "n8n-nodes-base.gmailTrigger",
+    "displayName": "Gmail Trigger",
+    "description": "Fetches emails from Gmail and starts the workflow on specified polling intervals.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Authentication",
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "googleBusinessProfileTrigger.json",
+    "name": "n8n-nodes-base.googleBusinessProfileTrigger",
+    "displayName": "Google Business Profile Trigger",
+    "description": "Fetches reviews from Google Business Profile and starts the workflow on specified polling intervals.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Event",
+      "Config: Account"
+    ]
+  },
+  {
+    "filename": "googleCalendarTrigger.json",
+    "name": "n8n-nodes-base.googleCalendarTrigger",
+    "displayName": "Google Calendar Trigger",
+    "description": "Starts the workflow when Google Calendar events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Calendar",
+      "Config: Trigger On"
+    ]
+  },
+  {
+    "filename": "googleDriveTrigger.json",
+    "name": "n8n-nodes-base.googleDriveTrigger",
+    "displayName": "Google Drive Trigger",
+    "description": "Starts the workflow when Google Drive events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Credential Type",
+      "Config: Trigger On"
+    ]
+  },
+  {
+    "filename": "googleSheetsTrigger.json",
+    "name": "n8n-nodes-base.googleSheetsTrigger",
+    "displayName": "Google Sheets Trigger",
+    "description": "Starts the workflow when Google Sheets events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Authentication",
+      "Config: Document"
+    ]
+  },
+  {
+    "filename": "gumroadTrigger.json",
+    "name": "n8n-nodes-base.gumroadTrigger",
+    "displayName": "Gumroad Trigger",
+    "description": "Handle Gumroad events via webhooks",
+    "category_tags": [
+      "Dispute",
+      "Cancellation",
+      "Refund",
+      "Dispute Won",
+      "Sale"
+    ],
+    "capabilities": []
+  },
+  {
+    "filename": "helpScoutTrigger.json",
+    "name": "n8n-nodes-base.helpScoutTrigger",
+    "displayName": "Help Scout Trigger",
+    "description": "Starts the workflow when Help Scout events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "httpRequest.json",
+    "name": "n8n-nodes-base.httpRequest",
+    "displayName": "HTTP Request",
+    "description": "Makes an HTTP request and returns the response data",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Request Method",
+      "Config: URL"
+    ]
+  },
+  {
+    "filename": "httpRequestTool.json",
+    "name": "n8n-nodes-base.httpRequestTool",
+    "displayName": "HTTP Request Tool",
+    "description": "Makes an HTTP request and returns the response data",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Try the HTTP request tool with our pre-built",
+      "Config: Description",
+      "Config: "
+    ]
+  },
+  {
+    "filename": "hubspotTrigger.json",
+    "name": "n8n-nodes-base.hubspotTrigger",
+    "displayName": "HubSpot Trigger",
+    "description": "Starts the workflow when HubSpot events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events",
+      "Config: Additional Fields"
+    ]
+  },
+  {
+    "filename": "if.json",
+    "name": "n8n-nodes-base.if",
+    "displayName": "If",
+    "description": "Route items to different branches (true/false)",
+    "category_tags": [
+      "Logic Control"
+    ],
+    "capabilities": []
+  },
+  {
+    "filename": "invoiceNinjaTrigger.json",
+    "name": "n8n-nodes-base.invoiceNinjaTrigger",
+    "displayName": "Invoice Ninja Trigger",
+    "description": "Starts the workflow when Invoice Ninja events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: API Version",
+      "Config: API Version",
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "itemLists.json",
+    "name": "n8n-nodes-base.itemLists",
+    "displayName": "Item Lists",
+    "description": "Helper for working with lists of items and transforming arrays",
+    "category_tags": [
+      "Item List"
+    ],
+    "capabilities": [
+      "Concatenate Items (Combine fields into a list in a single new item)",
+      "Limit (Remove items if there are too many)",
+      "Remove Duplicates (Remove extra items that are similar)",
+      "Sort (Change the item order)",
+      "Split Out Items (Turn a list inside item(s) into separate items)",
+      "Summarize (Aggregate items together (pivot table))"
+    ]
+  },
+  {
+    "filename": "jiraTrigger.json",
+    "name": "n8n-nodes-base.jiraTrigger",
+    "displayName": "Jira Trigger",
+    "description": "Starts the workflow when Jira events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Jira Version",
+      "Config: Authenticate Incoming Webhook",
+      "Config: Authenticate Webhook With"
+    ]
+  },
+  {
+    "filename": "jotFormTrigger.json",
+    "name": "n8n-nodes-base.jotFormTrigger",
+    "displayName": "JotForm Trigger",
+    "description": "Handle JotForm events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Form Name or ID",
+      "Config: Resolve Data",
+      "Config: Only Answers"
+    ]
+  },
+  {
+    "filename": "kafkaTrigger.json",
+    "name": "n8n-nodes-base.kafkaTrigger",
+    "displayName": "Kafka Trigger",
+    "description": "Consume messages from a Kafka topic",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Topic",
+      "Config: Group ID",
+      "Config: Use Schema Registry"
+    ]
+  },
+  {
+    "filename": "keapTrigger.json",
+    "name": "n8n-nodes-base.keapTrigger",
+    "displayName": "Keap Trigger",
+    "description": "Starts the workflow when Infusionsoft events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event Name or ID",
+      "Config: RAW Data"
+    ]
+  },
+  {
+    "filename": "koBoToolboxTrigger.json",
+    "name": "n8n-nodes-base.koBoToolboxTrigger",
+    "displayName": "KoBoToolbox Trigger",
+    "description": "Process KoBoToolbox submissions",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Form Name or ID",
+      "Config: Trigger On",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "lemlistTrigger.json",
+    "name": "n8n-nodes-base.lemlistTrigger",
+    "displayName": "Lemlist Trigger",
+    "description": "Handle Lemlist events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "linearTrigger.json",
+    "name": "n8n-nodes-base.linearTrigger",
+    "displayName": "Linear Trigger",
+    "description": "Starts the workflow when Linear events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Make sure your credential has the \"Admin\" scope to create webhooks.",
+      "Config: Team Name or ID"
+    ]
+  },
+  {
+    "filename": "localFileTrigger.json",
+    "name": "n8n-nodes-base.localFileTrigger",
+    "displayName": "Local File Trigger",
+    "description": "Triggers a workflow on file system changes",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Trigger On",
+      "Config: File to Watch",
+      "Config: Folder to Watch"
+    ]
+  },
+  {
+    "filename": "loneScaleTrigger.json",
+    "name": "n8n-nodes-base.loneScaleTrigger",
+    "displayName": "LoneScale Trigger",
+    "description": "Trigger LoneScale Workflow",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Workflow Name"
+    ]
+  },
+  {
+    "filename": "mailchimpTrigger.json",
+    "name": "n8n-nodes-base.mailchimpTrigger",
+    "displayName": "Mailchimp Trigger",
+    "description": "Handle Mailchimp events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: List Name or ID",
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "mailerLiteTrigger.json",
+    "name": "n8n-nodes-base.mailerLiteTrigger",
+    "displayName": "MailerLite Trigger",
+    "description": "Starts the workflow when MailerLite events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "mailjetTrigger.json",
+    "name": "n8n-nodes-base.mailjetTrigger",
+    "displayName": "Mailjet Trigger",
+    "description": "Handle Mailjet events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "manualChatTrigger.json",
+    "name": "@n8n/n8n-nodes-langchain.manualChatTrigger",
+    "displayName": "Manual Chat Trigger",
+    "description": "Runs the flow on new manual chat message",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node is where a manual chat workflow execution starts. To make one, go back to the canvas and click ‘Chat’",
+      "Config: Chat and execute workflow"
+    ]
+  },
+  {
+    "filename": "manualTrigger.json",
+    "name": "n8n-nodes-base.manualTrigger",
+    "displayName": "Manual Trigger",
+    "description": "Runs the flow on clicking a button in n8n",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node is where the workflow execution starts (when you click the ‘test’ button on the canvas).<br><br> <a data-action=\"showNodeCreator\">Explore other ways to trigger your workflow</a> (e.g on a schedule, or a webhook)"
+    ]
+  },
+  {
+    "filename": "mauticTrigger.json",
+    "name": "n8n-nodes-base.mauticTrigger",
+    "displayName": "Mautic Trigger",
+    "description": "Handle Mautic events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Event Names or IDs",
+      "Config: Events Order"
+    ]
+  },
+  {
+    "filename": "mcpTrigger.json",
+    "name": "@n8n/n8n-nodes-langchain.mcpTrigger",
+    "displayName": "MCP Server Trigger",
+    "description": "Expose n8n tools as an MCP Server endpoint",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Path"
+    ]
+  },
+  {
+    "filename": "merge.json",
+    "name": "n8n-nodes-base.merge",
+    "displayName": "Merge",
+    "description": "Merges data of multiple streams once data from both is available",
+    "category_tags": [],
+    "capabilities": [
+      "Config: <strong>New node version available:</strong> get the latest version with added features from the nodes panel.",
+      "Config: Mode",
+      "Config: Join"
+    ]
+  },
+  {
+    "filename": "microsoftOneDriveTrigger.json",
+    "name": "n8n-nodes-base.microsoftOneDriveTrigger",
+    "displayName": "Microsoft OneDrive Trigger",
+    "description": "Trigger for Microsoft OneDrive API.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Trigger On",
+      "Config: Simplify"
+    ]
+  },
+  {
+    "filename": "microsoftOutlookTrigger.json",
+    "name": "n8n-nodes-base.microsoftOutlookTrigger",
+    "displayName": "Microsoft Outlook Trigger",
+    "description": "Fetches emails from Microsoft Outlook and starts the workflow on specified polling intervals.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Trigger On",
+      "Config: Output"
+    ]
+  },
+  {
+    "filename": "microsoftTeamsTrigger.json",
+    "name": "n8n-nodes-base.microsoftTeamsTrigger",
+    "displayName": "Microsoft Teams Trigger",
+    "description": "Triggers workflows in n8n based on events from Microsoft Teams, such as new messages or team updates, using specified configurations.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Trigger On",
+      "Config: Watch All Teams",
+      "Config: Team"
+    ]
+  },
+  {
+    "filename": "mqttTrigger.json",
+    "name": "n8n-nodes-base.mqttTrigger",
+    "displayName": "MQTT Trigger",
+    "description": "Listens to MQTT events",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Topics",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "n8nTrigger.json",
+    "name": "n8n-nodes-base.n8nTrigger",
+    "displayName": "n8n Trigger",
+    "description": "Handle events and perform actions on your n8n instance",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "netlifyTrigger.json",
+    "name": "n8n-nodes-base.netlifyTrigger",
+    "displayName": "Netlify Trigger",
+    "description": "Handle netlify events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Site Name or ID",
+      "Config: Event",
+      "Config: Form Name or ID"
+    ]
+  },
+  {
+    "filename": "notionTrigger.json",
+    "name": "n8n-nodes-base.notionTrigger",
+    "displayName": "Notion Trigger",
+    "description": "Starts the workflow when Notion events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Event",
+      "Config: In Notion, make sure to <a href=\"https://www.notion.so/help/add-and-manage-connections-with-the-api\" target=\"_blank\">add your connection</a> to the pages you want to access."
+    ]
+  },
+  {
+    "filename": "onfleetTrigger.json",
+    "name": "n8n-nodes-base.onfleetTrigger",
+    "displayName": "Onfleet Trigger",
+    "description": "Starts the workflow when Onfleet events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Trigger On",
+      "Config: Additional Fields"
+    ]
+  },
+  {
+    "filename": "payPalTrigger.json",
+    "name": "n8n-nodes-base.payPalTrigger",
+    "displayName": "PayPal Trigger",
+    "description": "Handle PayPal events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event Names or IDs"
+    ]
+  },
+  {
+    "filename": "pipedriveTrigger.json",
+    "name": "n8n-nodes-base.pipedriveTrigger",
+    "displayName": "Pipedrive Trigger",
+    "description": "Starts the workflow when Pipedrive events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Incoming Authentication",
+      "Config: Action"
+    ]
+  },
+  {
+    "filename": "postgresTrigger.json",
+    "name": "n8n-nodes-base.postgresTrigger",
+    "displayName": "Postgres Trigger",
+    "description": "Listens to Postgres messages",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Listen For",
+      "Config: Schema Name",
+      "Config: Table Name"
+    ]
+  },
+  {
+    "filename": "postmarkTrigger.json",
+    "name": "n8n-nodes-base.postmarkTrigger",
+    "displayName": "Postmark Trigger",
+    "description": "Starts the workflow when Postmark events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events",
+      "Config: First Open",
+      "Config: Include Content"
+    ]
+  },
+  {
+    "filename": "pushcutTrigger.json",
+    "name": "n8n-nodes-base.pushcutTrigger",
+    "displayName": "Pushcut Trigger",
+    "description": "Starts the workflow when Pushcut events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Action Name"
+    ]
+  },
+  {
+    "filename": "rabbitmqTrigger.json",
+    "name": "n8n-nodes-base.rabbitmqTrigger",
+    "displayName": "RabbitMQ Trigger",
+    "description": "Listens to RabbitMQ messages",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Queue / Topic",
+      "Config: Options",
+      "Config: To delete an item from the queue, insert a RabbitMQ node later in the workflow and use the 'Delete from queue' operation"
+    ]
+  },
+  {
+    "filename": "redisTrigger.json",
+    "name": "n8n-nodes-base.redisTrigger",
+    "displayName": "Redis Trigger",
+    "description": "Subscribe to redis channel",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Channels",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "retrieverWorkflow.json",
+    "name": "@n8n/n8n-nodes-langchain.retrieverWorkflow",
+    "displayName": "Workflow Retriever",
+    "description": "Use an n8n Workflow as Retriever",
+    "category_tags": [],
+    "capabilities": [
+      "Config: The workflow will receive \"query\" as input and the output of the last node will be returned and converted to Documents",
+      "Config: Source",
+      "Config: Workflow ID"
+    ]
+  },
+  {
+    "filename": "rssFeedReadTrigger.json",
+    "name": "n8n-nodes-base.rssFeedReadTrigger",
+    "displayName": "RSS Feed Trigger",
+    "description": "Starts a workflow when an RSS feed is updated",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Feed URL"
+    ]
+  },
+  {
+    "filename": "salesforceTrigger.json",
+    "name": "n8n-nodes-base.salesforceTrigger",
+    "displayName": "Salesforce Trigger",
+    "description": "Fetches data from Salesforce and starts the workflow on specified polling intervals.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Trigger On",
+      "Config: Custom Object Name or ID"
+    ]
+  },
+  {
+    "filename": "scheduleTrigger.json",
+    "name": "n8n-nodes-base.scheduleTrigger",
+    "displayName": "Schedule Trigger",
+    "description": "Triggers the workflow on a given schedule",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This workflow will run on the schedule you define here once you <a data-key=\"activate\">activate</a> it.<br><br>For testing, you can also trigger it manually: by going back to the canvas and clicking 'execute workflow'",
+      "Config: Trigger Rules"
+    ]
+  },
+  {
+    "filename": "seaTableTrigger.json",
+    "name": "n8n-nodes-base.seaTableTrigger",
+    "displayName": "SeaTable Trigger",
+    "description": "Starts the workflow when SeaTable events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Table Name or ID",
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "sendInBlueTrigger.json",
+    "name": "n8n-nodes-base.sendInBlueTrigger",
+    "displayName": "Brevo Trigger",
+    "description": "Starts the workflow when Brevo events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Resource",
+      "Config: Trigger On",
+      "Config: Trigger On"
+    ]
+  },
+  {
+    "filename": "set.json",
+    "name": "n8n-nodes-base.set",
+    "displayName": "Set",
+    "description": "Sets values on items and optionally remove other values",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Keep Only Set",
+      "Config: Values to Set",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "shopifyTrigger.json",
+    "name": "n8n-nodes-base.shopifyTrigger",
+    "displayName": "Shopify Trigger",
+    "description": "Handle Shopify events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Trigger On"
+    ]
+  },
+  {
+    "filename": "simulateTrigger.json",
+    "name": "n8n-nodes-base.simulateTrigger",
+    "displayName": "Simulate Trigger",
+    "description": "Simulate a trigger node",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Icon to Display on Canvas",
+      "Config: Subtitle",
+      "Config: Output (JSON)"
+    ]
+  },
+  {
+    "filename": "slackTrigger.json",
+    "name": "n8n-nodes-base.slackTrigger",
+    "displayName": "Slack Trigger",
+    "description": "Handle Slack events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Set up a webhook in your Slack app to enable this node. <a href=\"https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/#configure-a-webhook-in-slack\" target=\"_blank\">More info</a>. We also recommend setting up a <a href=\"https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/#verify-the-webhook\" target=\"_blank\">signing secret</a> to ensure the authenticity of requests.",
+      "Config: Trigger On"
+    ]
+  },
+  {
+    "filename": "splitInBatches.json",
+    "name": "n8n-nodes-base.splitInBatches",
+    "displayName": "Split In Batches",
+    "description": "Split data into batches and iterate over each batch",
+    "category_tags": [],
+    "capabilities": [
+      "Config: You may not need this node — n8n nodes automatically run once for each input item. <a href=\"https://docs.n8n.io/getting-started/key-concepts/looping.html#using-loops-in-n8n\" target=\"_blank\">More info</a>",
+      "Config: Batch Size",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "sseTrigger.json",
+    "name": "n8n-nodes-base.sseTrigger",
+    "displayName": "SSE Trigger",
+    "description": "Triggers the workflow when Server-Sent Events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: URL"
+    ]
+  },
+  {
+    "filename": "start.json",
+    "name": "n8n-nodes-base.start",
+    "displayName": "Start",
+    "description": "Starts the workflow execution from this node",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node is where a manual workflow execution starts. To make one, go back to the canvas and click ‘execute workflow’"
+    ]
+  },
+  {
+    "filename": "stravaTrigger.json",
+    "name": "n8n-nodes-base.stravaTrigger",
+    "displayName": "Strava Trigger",
+    "description": "Starts the workflow when Strava events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Object",
+      "Config: Event",
+      "Config: Resolve Data"
+    ]
+  },
+  {
+    "filename": "stripeTrigger.json",
+    "name": "n8n-nodes-base.stripeTrigger",
+    "displayName": "Stripe Trigger",
+    "description": "Handle Stripe events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Events",
+      "Config: API Version"
+    ]
+  },
+  {
+    "filename": "surveyMonkeyTrigger.json",
+    "name": "n8n-nodes-base.surveyMonkeyTrigger",
+    "displayName": "SurveyMonkey Trigger",
+    "description": "Starts the workflow when Survey Monkey events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Type",
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "switch.json",
+    "name": "n8n-nodes-base.switch",
+    "displayName": "Switch",
+    "description": "Route items depending on defined expression or rules",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Mode",
+      "Config: Output",
+      "Config: Data Type"
+    ]
+  },
+  {
+    "filename": "taigaTrigger.json",
+    "name": "n8n-nodes-base.taigaTrigger",
+    "displayName": "Taiga Trigger",
+    "description": "Handle Taiga events via webhook",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Project Name or ID",
+      "Config: Resources",
+      "Config: Operations"
+    ]
+  },
+  {
+    "filename": "telegramTrigger.json",
+    "name": "n8n-nodes-base.telegramTrigger",
+    "displayName": "Telegram Trigger",
+    "description": "Starts the workflow on a Telegram update",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Due to Telegram API limitations, you can use just one Telegram trigger for each bot at a time",
+      "Config: Trigger On",
+      "Config: Every uploaded attachment, even if sent in a group, will trigger a separate event. You can identify that an attachment belongs to a certain group by <code>media_group_id</code> ."
+    ]
+  },
+  {
+    "filename": "theHiveProjectTrigger.json",
+    "name": "n8n-nodes-base.theHiveProjectTrigger",
+    "displayName": "TheHive 5 Trigger",
+    "description": "Starts the workflow when TheHive events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: You must set up the webhook in TheHive — instructions <a href=\"https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/#configure-a-webhook-in-thehive\" target=\"_blank\">here</a>",
+      "Config: Events",
+      "Config: Filters"
+    ]
+  },
+  {
+    "filename": "theHiveTrigger.json",
+    "name": "n8n-nodes-base.theHiveTrigger",
+    "displayName": "TheHive Trigger",
+    "description": "Starts the workflow when TheHive events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: You must set up the webhook in TheHive — instructions <a href=\"https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/#configure-a-webhook-in-thehive\" target=\"_blank\">here</a>",
+      "Config: Events",
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "togglTrigger.json",
+    "name": "n8n-nodes-base.togglTrigger",
+    "displayName": "Toggl Trigger",
+    "description": "Starts the workflow when Toggl events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Poll Times",
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "toolWorkflow.json",
+    "name": "@n8n/n8n-nodes-langchain.toolWorkflow",
+    "displayName": "Call n8n Workflow Tool",
+    "description": "Uses another n8n workflow as a tool. Allows packaging any n8n node(s) as a tool.",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node must be connected to an AI agent. <a data-action='openSelectiveNodeCreator' data-action-parameter-creatorview='AI'>Insert one</a>",
+      "Config: See an example of a workflow to suggest meeting slots using AI <a href=\"/templates/1953\" target=\"_blank\">here</a>.",
+      "Config: Name"
+    ]
+  },
+  {
+    "filename": "trelloTrigger.json",
+    "name": "n8n-nodes-base.trelloTrigger",
+    "displayName": "Trello Trigger",
+    "description": "Starts the workflow when Trello events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Model ID"
+    ]
+  },
+  {
+    "filename": "twilioTrigger.json",
+    "name": "n8n-nodes-base.twilioTrigger",
+    "displayName": "Twilio Trigger",
+    "description": "Starts the workflow on a Twilio update",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Trigger On",
+      "Config: The 'New Call' event may take up to thirty minutes to be triggered"
+    ]
+  },
+  {
+    "filename": "typeformTrigger.json",
+    "name": "n8n-nodes-base.typeformTrigger",
+    "displayName": "Typeform Trigger",
+    "description": "Starts the workflow on a Typeform form submission",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Form Name or ID",
+      "Config: Simplify Answers"
+    ]
+  },
+  {
+    "filename": "venafiTlsProtectCloudTrigger.json",
+    "name": "n8n-nodes-base.venafiTlsProtectCloudTrigger",
+    "displayName": "Venafi TLS Protect Cloud Trigger",
+    "description": "Starts the workflow when Venafi events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Resource",
+      "Config: Trigger On"
+    ]
+  },
+  {
+    "filename": "wait.json",
+    "name": "n8n-nodes-base.wait",
+    "displayName": "Wait",
+    "description": "Wait before continue with execution",
+    "category_tags": [],
+    "capabilities": [
+      "Method: DELETE",
+      "Method: GET",
+      "Method: HEAD",
+      "Method: PATCH",
+      "Method: POST",
+      "Method: PUT"
+    ]
+  },
+  {
+    "filename": "webflow.json",
+    "name": "n8n-nodes-base.webflow",
+    "displayName": "Webflow",
+    "description": "Consume the Webflow API",
+    "category_tags": [
+      "Item"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "webflowTool.json",
+    "name": "n8n-nodes-base.webflowTool",
+    "displayName": "Webflow Tool",
+    "description": "Consume the Webflow API",
+    "category_tags": [
+      "Item"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "webflowTrigger.json",
+    "name": "n8n-nodes-base.webflowTrigger",
+    "displayName": "Webflow Trigger",
+    "description": "Handle Webflow events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: Site Name or ID",
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "webhook.json",
+    "name": "n8n-nodes-base.webhook",
+    "displayName": "Webhook",
+    "description": "Starts the workflow when a webhook is called",
+    "category_tags": [],
+    "capabilities": [
+      "Method: DELETE",
+      "Method: GET",
+      "Method: HEAD",
+      "Method: PATCH",
+      "Method: POST",
+      "Method: PUT",
+      "Method: DELETE",
+      "Method: GET",
+      "Method: HEAD",
+      "Method: PATCH",
+      "Method: POST",
+      "Method: PUT"
+    ]
+  },
+  {
+    "filename": "whatsAppTrigger.json",
+    "name": "n8n-nodes-base.whatsAppTrigger",
+    "displayName": "WhatsApp Trigger",
+    "description": "Handle WhatsApp events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Due to Facebook API limitations, you can use just one WhatsApp trigger for each Facebook App",
+      "Config: Trigger On",
+      "Config: Options"
+    ]
+  },
+  {
+    "filename": "wiseTrigger.json",
+    "name": "n8n-nodes-base.wiseTrigger",
+    "displayName": "Wise Trigger",
+    "description": "Handle Wise events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Profile Name or ID",
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "wooCommerceTrigger.json",
+    "name": "n8n-nodes-base.wooCommerceTrigger",
+    "displayName": "WooCommerce Trigger",
+    "description": "Handle WooCommerce events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Event"
+    ]
+  },
+  {
+    "filename": "workableTrigger.json",
+    "name": "n8n-nodes-base.workableTrigger",
+    "displayName": "Workable Trigger",
+    "description": "Starts the workflow when Workable events occur",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Trigger On",
+      "Config: Filters"
+    ]
+  },
+  {
+    "filename": "workflowTrigger.json",
+    "name": "n8n-nodes-base.workflowTrigger",
+    "displayName": "Workflow Trigger",
+    "description": "Triggers based on various lifecycle events, like when a workflow is activated",
+    "category_tags": [],
+    "capabilities": [
+      "Config: This node is deprecated and would not be updated in the future. Please use 'n8n Trigger' node instead.",
+      "Config: Events"
+    ]
+  },
+  {
+    "filename": "wufooTrigger.json",
+    "name": "n8n-nodes-base.wufooTrigger",
+    "displayName": "Wufoo Trigger",
+    "description": "Handle Wufoo events via webhooks",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Forms Name or ID",
+      "Config: Only Answers"
+    ]
+  },
+  {
+    "filename": "zendeskTrigger.json",
+    "name": "n8n-nodes-base.zendeskTrigger",
+    "displayName": "Zendesk Trigger",
+    "description": "Handle Zendesk events via webhooks",
+    "category_tags": [
+      "Logic Control"
+    ],
+    "capabilities": []
+  }
+]

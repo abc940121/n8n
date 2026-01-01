@@ -1,0 +1,1212 @@
+[
+  {
+    "filename": "awsCertificateManager.json",
+    "name": "n8n-nodes-base.awsCertificateManager",
+    "displayName": "AWS Certificate Manager",
+    "description": "Sends data to AWS Certificate Manager",
+    "category_tags": [
+      "Custom API Call",
+      "Certificate"
+    ],
+    "capabilities": [
+      "Delete (Delete a certificate)",
+      "Get (Get a certificate)",
+      "Get Many (Get many certificates)",
+      "Get Metadata (Get certificate metadata)",
+      "Renew (Renew a certificate)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsCognito.json",
+    "name": "n8n-nodes-base.awsCognito",
+    "displayName": "AWS Cognito",
+    "description": "Sends data to AWS Cognito",
+    "category_tags": [
+      "User",
+      "Group",
+      "Custom API Call",
+      "User Pool"
+    ],
+    "capabilities": [
+      "Create (Create a new group)",
+      "Delete (Delete an existing group)",
+      "Get (Retrieve details of an existing group)",
+      "Get Many (Retrieve a list of groups)",
+      "Update (Update an existing group)",
+      "Custom API Call",
+      "Add to Group (Add an existing user to a group)",
+      "Create (Create a new user)",
+      "Delete (Delete a user)",
+      "Get (Retrieve information of an existing user)",
+      "Get Many (Retrieve a list of users)",
+      "Remove From Group (Remove a user from a group)",
+      "Update (Update an existing user)",
+      "Custom API Call",
+      "Get",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsComprehend.json",
+    "name": "n8n-nodes-base.awsComprehend",
+    "displayName": "AWS Comprehend",
+    "description": "Sends data to Amazon Comprehend",
+    "category_tags": [
+      "Custom API Call",
+      "Text"
+    ],
+    "capabilities": [
+      "Detect Dominant Language (Identify the dominant language)",
+      "Detect Entities (Inspects text for named entities, and returns information about them)",
+      "Detect Sentiment (Analyse the sentiment of the text)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsDynamoDb.json",
+    "name": "n8n-nodes-base.awsDynamoDb",
+    "displayName": "AWS DynamoDB",
+    "description": "Consume the AWS DynamoDB API",
+    "category_tags": [
+      "Custom API Call",
+      "Item"
+    ],
+    "capabilities": [
+      "Create or Update (Create a new record, or update the current one if it already exists (upsert))",
+      "Delete (Delete an item)",
+      "Get (Get an item)",
+      "Get Many (Get many items)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsElb.json",
+    "name": "n8n-nodes-base.awsElb",
+    "displayName": "AWS ELB",
+    "description": "Sends data to AWS ELB API",
+    "category_tags": [
+      "Load Balancer",
+      "Listener Certificate",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Create (Create a load balancer)",
+      "Delete (Delete a load balancer)",
+      "Get (Get a load balancer)",
+      "Get Many (Get many load balancers)",
+      "Custom API Call",
+      "Add (Add the specified SSL server certificate to the certificate list for the specified HTTPS or TLS listener)",
+      "Get Many (Get many listener certificates)",
+      "Remove (Remove the specified certificate from the certificate list for the specified HTTPS or TLS listener)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsIam.json",
+    "name": "n8n-nodes-base.awsIam",
+    "displayName": "AWS IAM",
+    "description": "Interacts with Amazon IAM",
+    "category_tags": [
+      "Custom API Call",
+      "User",
+      "Group"
+    ],
+    "capabilities": [
+      "Add to Group (Add an existing user to a group)",
+      "Create (Create a new user)",
+      "Delete (Delete a user)",
+      "Get (Retrieve a user)",
+      "Get Many (Retrieve a list of users)",
+      "Remove From Group (Remove a user from a group)",
+      "Update (Update a user)",
+      "Custom API Call",
+      "Create (Create a new group)",
+      "Delete (Delete an existing group)",
+      "Get (Retrieve details of an existing group)",
+      "Get Many (Retrieve a list of groups)",
+      "Update (Update an existing group)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsLambda.json",
+    "name": "n8n-nodes-base.awsLambda",
+    "displayName": "AWS Lambda",
+    "description": "Invoke functions on AWS Lambda",
+    "category_tags": [],
+    "capabilities": [
+      "Invoke (Invoke a function)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsLambdaTool.json",
+    "name": "n8n-nodes-base.awsLambdaTool",
+    "displayName": "AWS Lambda Tool",
+    "description": "Invoke functions on AWS Lambda",
+    "category_tags": [],
+    "capabilities": [
+      "Invoke (Invoke a function)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsRekognition.json",
+    "name": "n8n-nodes-base.awsRekognition",
+    "displayName": "AWS Rekognition",
+    "description": "Sends data to AWS Rekognition",
+    "category_tags": [
+      "Custom API Call",
+      "Image"
+    ],
+    "capabilities": [
+      "Analyze",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsS3.json",
+    "name": "n8n-nodes-base.awsS3",
+    "displayName": "AWS S3",
+    "description": "Sends data to AWS S3",
+    "category_tags": [
+      "File",
+      "Folder",
+      "Bucket"
+    ],
+    "capabilities": [
+      "Create (Create a bucket)",
+      "Delete (Delete a bucket)",
+      "Get Many (Get many buckets)",
+      "Search (Search within a bucket)",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get Many (Get many folders)",
+      "Copy (Copy a file)",
+      "Delete (Delete a file)",
+      "Download (Download a file)",
+      "Get Many (Get many files)",
+      "Upload (Upload a file)"
+    ]
+  },
+  {
+    "filename": "awsS3Tool.json",
+    "name": "n8n-nodes-base.awsS3Tool",
+    "displayName": "AWS S3 Tool",
+    "description": "Sends data to AWS S3",
+    "category_tags": [
+      "Custom API Call",
+      "File",
+      "Folder",
+      "Bucket"
+    ],
+    "capabilities": [
+      "Create (Create a bucket)",
+      "Delete (Delete a bucket)",
+      "Get Many (Get many buckets)",
+      "Search (Search within a bucket)",
+      "Custom API Call",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get Many (Get many folders)",
+      "Custom API Call",
+      "Copy (Copy a file)",
+      "Delete (Delete a file)",
+      "Download (Download a file)",
+      "Get Many (Get many files)",
+      "Upload (Upload a file)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsSes.json",
+    "name": "n8n-nodes-base.awsSes",
+    "displayName": "AWS SES",
+    "description": "Sends data to AWS SES",
+    "category_tags": [
+      "Custom API Call",
+      "Email",
+      "Template",
+      "Custom Verification Email"
+    ],
+    "capabilities": [
+      "Create (Create a new custom verification email template)",
+      "Delete (Delete an existing custom verification email template)",
+      "Get (Get the custom email verification template)",
+      "Get Many (Get many of the existing custom verification email templates for your account)",
+      "Send (Add an email address to the list of identities)",
+      "Update (Update an existing custom verification email template)",
+      "Custom API Call",
+      "Send",
+      "Send Template",
+      "Custom API Call",
+      "Create (Create a template)",
+      "Delete (Delete a template)",
+      "Get (Get a template)",
+      "Get Many (Get many templates)",
+      "Update (Update a template)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsSesTool.json",
+    "name": "n8n-nodes-base.awsSesTool",
+    "displayName": "AWS SES Tool",
+    "description": "Sends data to AWS SES",
+    "category_tags": [
+      "Custom API Call",
+      "Email",
+      "Template",
+      "Custom Verification Email"
+    ],
+    "capabilities": [
+      "Create (Create a new custom verification email template)",
+      "Delete (Delete an existing custom verification email template)",
+      "Get (Get the custom email verification template)",
+      "Get Many (Get many of the existing custom verification email templates for your account)",
+      "Send (Add an email address to the list of identities)",
+      "Update (Update an existing custom verification email template)",
+      "Custom API Call",
+      "Send",
+      "Send Template",
+      "Custom API Call",
+      "Create (Create a template)",
+      "Delete (Delete a template)",
+      "Get (Get a template)",
+      "Get Many (Get many templates)",
+      "Update (Update a template)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsSns.json",
+    "name": "n8n-nodes-base.awsSns",
+    "displayName": "AWS SNS",
+    "description": "Sends data to AWS SNS",
+    "category_tags": [],
+    "capabilities": [
+      "Create (Create a topic)",
+      "Delete (Delete a topic)",
+      "Publish (Publish a message to a topic)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsSnsTool.json",
+    "name": "n8n-nodes-base.awsSnsTool",
+    "displayName": "AWS SNS Tool",
+    "description": "Sends data to AWS SNS",
+    "category_tags": [],
+    "capabilities": [
+      "Create (Create a topic)",
+      "Delete (Delete a topic)",
+      "Publish (Publish a message to a topic)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsSqs.json",
+    "name": "n8n-nodes-base.awsSqs",
+    "displayName": "AWS SQS",
+    "description": "Sends messages to AWS SQS",
+    "category_tags": [],
+    "capabilities": [
+      "Send Message (Send a message to a queue)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsTextract.json",
+    "name": "n8n-nodes-base.awsTextract",
+    "displayName": "AWS Textract",
+    "description": "Sends data to Amazon Textract",
+    "category_tags": [],
+    "capabilities": [
+      "Analyze Receipt or Invoice",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsTextractTool.json",
+    "name": "n8n-nodes-base.awsTextractTool",
+    "displayName": "AWS Textract Tool",
+    "description": "Sends data to Amazon Textract",
+    "category_tags": [],
+    "capabilities": [
+      "Analyze Receipt or Invoice",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsTranscribe.json",
+    "name": "n8n-nodes-base.awsTranscribe",
+    "displayName": "AWS Transcribe",
+    "description": "Sends data to AWS Transcribe",
+    "category_tags": [
+      "Custom API Call",
+      "Transcription Job"
+    ],
+    "capabilities": [
+      "Create (Create a transcription job)",
+      "Delete (Delete a transcription job)",
+      "Get (Get a transcription job)",
+      "Get Many (Get many transcription jobs)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "awsTranscribeTool.json",
+    "name": "n8n-nodes-base.awsTranscribeTool",
+    "displayName": "AWS Transcribe Tool",
+    "description": "Sends data to AWS Transcribe",
+    "category_tags": [
+      "Custom API Call",
+      "Transcription Job"
+    ],
+    "capabilities": [
+      "Create (Create a transcription job)",
+      "Delete (Delete a transcription job)",
+      "Get (Get a transcription job)",
+      "Get Many (Get many transcription jobs)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "azureCosmosDb.json",
+    "name": "n8n-nodes-base.azureCosmosDb",
+    "displayName": "Azure Cosmos DB",
+    "description": "Interact with Azure Cosmos DB API",
+    "category_tags": [
+      "Custom API Call",
+      "Item",
+      "Container"
+    ],
+    "capabilities": [
+      "Create (Create a container)",
+      "Delete (Delete a container)",
+      "Get (Retrieve a container)",
+      "Get Many (Retrieve a list of containers)",
+      "Custom API Call",
+      "Create (Create a new item)",
+      "Delete (Delete an existing item)",
+      "Get (Retrieve an item)",
+      "Get Many (Retrieve a list of items)",
+      "Execute Query",
+      "Update (Update an existing item)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "azureStorage.json",
+    "name": "n8n-nodes-base.azureStorage",
+    "displayName": "Azure Storage",
+    "description": "Interact with Azure Storage API",
+    "category_tags": [
+      "Custom API Call",
+      "Blob",
+      "Container"
+    ],
+    "capabilities": [
+      "Create (Create a new blob or replace an existing one)",
+      "Delete (Delete a blob)",
+      "Get (Retrieve data for a specific blob)",
+      "Get Many (Retrieve a list of blobs)",
+      "Custom API Call",
+      "Create (Create a container)",
+      "Delete (Delete a container)",
+      "Get (Retrieve data for a specific container)",
+      "Get Many (Retrieve a list of containers)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "elasticsearch.json",
+    "name": "n8n-nodes-base.elasticsearch",
+    "displayName": "Elasticsearch",
+    "description": "Consume the Elasticsearch API",
+    "category_tags": [
+      "Custom API Call",
+      "Index",
+      "Document"
+    ],
+    "capabilities": [
+      "Create (Create a document)",
+      "Delete (Delete a document)",
+      "Get (Get a document)",
+      "Get Many (Get many documents)",
+      "Update (Update a document)",
+      "Custom API Call",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "elasticsearchTool.json",
+    "name": "n8n-nodes-base.elasticsearchTool",
+    "displayName": "Elasticsearch Tool",
+    "description": "Consume the Elasticsearch API",
+    "category_tags": [
+      "Custom API Call",
+      "Index",
+      "Document"
+    ],
+    "capabilities": [
+      "Create (Create a document)",
+      "Delete (Delete a document)",
+      "Get (Get a document)",
+      "Get Many (Get many documents)",
+      "Update (Update a document)",
+      "Custom API Call",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "ftp.json",
+    "name": "n8n-nodes-base.ftp",
+    "displayName": "FTP",
+    "description": "Transfer files via FTP or SFTP",
+    "category_tags": [],
+    "capabilities": [
+      "Delete (Delete a file/folder)",
+      "Download (Download a file)",
+      "List (List folder content)",
+      "Rename (Rename/move oldPath to newPath)",
+      "Upload (Upload a file)"
+    ]
+  },
+  {
+    "filename": "git.json",
+    "name": "n8n-nodes-base.git",
+    "displayName": "Git",
+    "description": "Control git.",
+    "category_tags": [],
+    "capabilities": [
+      "Add (Add a file or folder to commit)",
+      "Add Config (Add configuration property)",
+      "Clone (Clone a repository)",
+      "Commit (Commit files or folders to git)",
+      "Fetch (Fetch from remote repository)",
+      "List Config (Return current configuration)",
+      "Log (Return git commit history)",
+      "Pull (Pull from remote repository)",
+      "Push (Push to remote repository)",
+      "Push Tags (Push Tags to remote repository)",
+      "Status (Return status of current repository)",
+      "Tag (Create a new tag)",
+      "User Setup (Set the user)"
+    ]
+  },
+  {
+    "filename": "github.json",
+    "name": "n8n-nodes-base.github",
+    "displayName": "GitHub",
+    "description": "Consume GitHub API",
+    "category_tags": [
+      "Issue",
+      "User",
+      "Workflow",
+      "Release",
+      "Repository",
+      "Organization",
+      "File",
+      "Custom API Call",
+      "Review"
+    ],
+    "capabilities": [
+      "Get Repositories (Returns all repositories of an organization)",
+      "Custom API Call",
+      "Create (Create a new issue)",
+      "Create Comment (Create a new comment on an issue)",
+      "Edit (Edit an issue)",
+      "Get (Get the data of a single issue)",
+      "Lock (Lock an issue)",
+      "Custom API Call",
+      "Create (Create a new file in repository)",
+      "Delete (Delete a file in repository)",
+      "Edit (Edit a file in repository)",
+      "Get (Get the data of a single file)",
+      "List (List contents of a folder)",
+      "Custom API Call",
+      "Get (Get the data of a single repository)",
+      "Get Issues (Returns issues of a repository)",
+      "Get License (Returns the contents of the repository's license file, if one is detected)",
+      "Get Profile (Get the community profile of a repository with metrics, health score, description, license, etc)",
+      "Get Pull Requests (Returns pull requests of a repository)",
+      "List Popular Paths (Get the top 10 popular content paths over the last 14 days)",
+      "List Referrers (Get the top 10 referrering domains over the last 14 days)",
+      "Custom API Call",
+      "Get Repositories (Returns the repositories of a user)",
+      "Invite (Invites a user to an organization)",
+      "Custom API Call",
+      "Create (Creates a new release)",
+      "Delete (Delete a release)",
+      "Get (Get a release)",
+      "Get Many (Get many repository releases)",
+      "Update (Update a release)",
+      "Custom API Call",
+      "Create (Creates a new review)",
+      "Get (Get a review for a pull request)",
+      "Get Many (Get many reviews for a pull request)",
+      "Update (Update a review)",
+      "Custom API Call",
+      "Disable (Disable a workflow)",
+      "Dispatch (Dispatch a workflow event)",
+      "Dispatch and Wait for Completion (Dispatch a workflow event and wait for a webhook to be called before proceeding)",
+      "Enable (Enable a workflow)",
+      "Get (Get a workflow)",
+      "Get Usage (Get the usage of a workflow)",
+      "List (List workflows)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "githubTool.json",
+    "name": "n8n-nodes-base.githubTool",
+    "displayName": "GitHub Tool",
+    "description": "Consume GitHub API",
+    "category_tags": [
+      "Issue",
+      "User",
+      "Workflow",
+      "Release",
+      "Repository",
+      "Organization",
+      "File",
+      "Custom API Call",
+      "Review"
+    ],
+    "capabilities": [
+      "Get Repositories (Returns all repositories of an organization)",
+      "Custom API Call",
+      "Create (Create a new issue)",
+      "Create Comment (Create a new comment on an issue)",
+      "Edit (Edit an issue)",
+      "Get (Get the data of a single issue)",
+      "Lock (Lock an issue)",
+      "Custom API Call",
+      "Create (Create a new file in repository)",
+      "Delete (Delete a file in repository)",
+      "Edit (Edit a file in repository)",
+      "Get (Get the data of a single file)",
+      "List (List contents of a folder)",
+      "Custom API Call",
+      "Get (Get the data of a single repository)",
+      "Get Issues (Returns issues of a repository)",
+      "Get License (Returns the contents of the repository's license file, if one is detected)",
+      "Get Profile (Get the community profile of a repository with metrics, health score, description, license, etc)",
+      "Get Pull Requests (Returns pull requests of a repository)",
+      "List Popular Paths (Get the top 10 popular content paths over the last 14 days)",
+      "List Referrers (Get the top 10 referrering domains over the last 14 days)",
+      "Custom API Call",
+      "Get Repositories (Returns the repositories of a user)",
+      "Invite (Invites a user to an organization)",
+      "Custom API Call",
+      "Create (Creates a new release)",
+      "Delete (Delete a release)",
+      "Get (Get a release)",
+      "Get Many (Get many repository releases)",
+      "Update (Update a release)",
+      "Custom API Call",
+      "Create (Creates a new review)",
+      "Get (Get a review for a pull request)",
+      "Get Many (Get many reviews for a pull request)",
+      "Update (Update a review)",
+      "Custom API Call",
+      "Disable (Disable a workflow)",
+      "Dispatch (Dispatch a workflow event)",
+      "Dispatch and Wait for Completion (Dispatch a workflow event and wait for a webhook to be called before proceeding)",
+      "Enable (Enable a workflow)",
+      "Get (Get a workflow)",
+      "Get Usage (Get the usage of a workflow)",
+      "List (List workflows)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "gitlab.json",
+    "name": "n8n-nodes-base.gitlab",
+    "displayName": "GitLab",
+    "description": "Retrieve data from GitLab API",
+    "category_tags": [
+      "Issue",
+      "User",
+      "Release",
+      "Repository",
+      "File",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Create (Create a new issue)",
+      "Create Comment (Create a new comment on an issue)",
+      "Edit (Edit an issue)",
+      "Get (Get the data of a single issue)",
+      "Lock (Lock an issue)",
+      "Custom API Call",
+      "Get (Get the data of a single repository)",
+      "Get Issues (Returns issues of a repository)",
+      "Custom API Call",
+      "Get Repositories (Returns the repositories of a user)",
+      "Custom API Call",
+      "Create (Create a new release)",
+      "Delete (Delete a release)",
+      "Get (Get a release)",
+      "Get Many (Get many releases)",
+      "Update (Update a release)",
+      "Custom API Call",
+      "Create (Create a new file in repository)",
+      "Delete (Delete a file in repository)",
+      "Edit (Edit a file in repository)",
+      "Get (Get the data of a single file)",
+      "List (List contents of a folder)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "gitlabTool.json",
+    "name": "n8n-nodes-base.gitlabTool",
+    "displayName": "GitLab Tool",
+    "description": "Retrieve data from GitLab API",
+    "category_tags": [
+      "Issue",
+      "User",
+      "Release",
+      "Repository",
+      "File",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Create (Create a new issue)",
+      "Create Comment (Create a new comment on an issue)",
+      "Edit (Edit an issue)",
+      "Get (Get the data of a single issue)",
+      "Lock (Lock an issue)",
+      "Custom API Call",
+      "Get (Get the data of a single repository)",
+      "Get Issues (Returns issues of a repository)",
+      "Custom API Call",
+      "Get Repositories (Returns the repositories of a user)",
+      "Custom API Call",
+      "Create (Create a new release)",
+      "Delete (Delete a release)",
+      "Get (Get a release)",
+      "Get Many (Get many releases)",
+      "Update (Update a release)",
+      "Custom API Call",
+      "Create (Create a new file in repository)",
+      "Delete (Delete a file in repository)",
+      "Edit (Edit a file in repository)",
+      "Get (Get the data of a single file)",
+      "List (List contents of a folder)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "gitTool.json",
+    "name": "n8n-nodes-base.gitTool",
+    "displayName": "Git Tool",
+    "description": "Control git.",
+    "category_tags": [],
+    "capabilities": [
+      "Add (Add a file or folder to commit)",
+      "Add Config (Add configuration property)",
+      "Clone (Clone a repository)",
+      "Commit (Commit files or folders to git)",
+      "Fetch (Fetch from remote repository)",
+      "List Config (Return current configuration)",
+      "Log (Return git commit history)",
+      "Pull (Pull from remote repository)",
+      "Push (Push to remote repository)",
+      "Push Tags (Push Tags to remote repository)",
+      "Status (Return status of current repository)",
+      "Tag (Create a new tag)",
+      "User Setup (Set the user)"
+    ]
+  },
+  {
+    "filename": "googleCloudNaturalLanguage.json",
+    "name": "n8n-nodes-base.googleCloudNaturalLanguage",
+    "displayName": "Google Cloud Natural Language",
+    "description": "Consume Google Cloud Natural Language API",
+    "category_tags": [
+      "Custom API Call",
+      "Document"
+    ],
+    "capabilities": [
+      "Analyze Sentiment",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleCloudNaturalLanguageTool.json",
+    "name": "n8n-nodes-base.googleCloudNaturalLanguageTool",
+    "displayName": "Google Cloud Natural Language Tool",
+    "description": "Consume Google Cloud Natural Language API",
+    "category_tags": [
+      "Custom API Call",
+      "Document"
+    ],
+    "capabilities": [
+      "Analyze Sentiment",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleCloudStorage.json",
+    "name": "n8n-nodes-base.googleCloudStorage",
+    "displayName": "Google Cloud Storage",
+    "description": "Use the Google Cloud Storage API",
+    "category_tags": [
+      "Object",
+      "Custom API Call",
+      "Bucket"
+    ],
+    "capabilities": [
+      "Create (Create a new Bucket)",
+      "Delete (Delete an empty Bucket)",
+      "Get (Get metadata for a specific Bucket)",
+      "Get Many (Get list of Buckets)",
+      "Update (Update the metadata of a bucket)",
+      "Custom API Call",
+      "Create (Create an object)",
+      "Delete (Delete an object)",
+      "Get (Get object data or metadata)",
+      "Get Many (Retrieve a list of objects)",
+      "Update (Update an object's metadata)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleCloudStorageTool.json",
+    "name": "n8n-nodes-base.googleCloudStorageTool",
+    "displayName": "Google Cloud Storage Tool",
+    "description": "Use the Google Cloud Storage API",
+    "category_tags": [
+      "Object",
+      "Custom API Call",
+      "Bucket"
+    ],
+    "capabilities": [
+      "Create (Create a new Bucket)",
+      "Delete (Delete an empty Bucket)",
+      "Get (Get metadata for a specific Bucket)",
+      "Get Many (Get list of Buckets)",
+      "Update (Update the metadata of a bucket)",
+      "Custom API Call",
+      "Create (Create an object)",
+      "Delete (Delete an object)",
+      "Get (Get object data or metadata)",
+      "Get Many (Retrieve a list of objects)",
+      "Update (Update an object's metadata)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleFirebaseCloudFirestore.json",
+    "name": "n8n-nodes-base.googleFirebaseCloudFirestore",
+    "displayName": "Google Cloud Firestore",
+    "description": "Interact with Google Firebase - Cloud Firestore API",
+    "category_tags": [
+      "Custom API Call",
+      "Document",
+      "Collection"
+    ],
+    "capabilities": [
+      "Create (Create a document)",
+      "Create or Update (Create a new document, or update the current one if it already exists (upsert))",
+      "Delete (Delete a document)",
+      "Get (Get a document)",
+      "Get Many (Get many documents from a collection)",
+      "Query (Runs a query against your documents)",
+      "Custom API Call",
+      "Get Many (Get many root collections)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleFirebaseCloudFirestoreTool.json",
+    "name": "n8n-nodes-base.googleFirebaseCloudFirestoreTool",
+    "displayName": "Google Cloud Firestore Tool",
+    "description": "Interact with Google Firebase - Cloud Firestore API",
+    "category_tags": [
+      "Custom API Call",
+      "Document",
+      "Collection"
+    ],
+    "capabilities": [
+      "Create (Create a document)",
+      "Create or Update (Create a new document, or update the current one if it already exists (upsert))",
+      "Delete (Delete a document)",
+      "Get (Get a document)",
+      "Get Many (Get many documents from a collection)",
+      "Query (Runs a query against your documents)",
+      "Custom API Call",
+      "Get Many (Get many root collections)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleFirebaseRealtimeDatabase.json",
+    "name": "n8n-nodes-base.googleFirebaseRealtimeDatabase",
+    "displayName": "Google Cloud Realtime Database",
+    "description": "Interact with Google Firebase - Realtime Database API",
+    "category_tags": [],
+    "capabilities": [
+      "Create (Write data to a database)",
+      "Delete (Delete data from a database)",
+      "Get (Get a record from a database)",
+      "Push (Append to a list of data)",
+      "Update (Update item on a database)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleFirebaseRealtimeDatabaseTool.json",
+    "name": "n8n-nodes-base.googleFirebaseRealtimeDatabaseTool",
+    "displayName": "Google Cloud Realtime Database Tool",
+    "description": "Interact with Google Firebase - Realtime Database API",
+    "category_tags": [],
+    "capabilities": [
+      "Create (Write data to a database)",
+      "Delete (Delete data from a database)",
+      "Get (Get a record from a database)",
+      "Push (Append to a list of data)",
+      "Update (Update item on a database)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "graphql.json",
+    "name": "n8n-nodes-base.graphql",
+    "displayName": "GraphQL",
+    "description": "Makes a GraphQL request and returns the received data",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Authentication",
+      "Config: HTTP Request Method",
+      "Config: Endpoint"
+    ]
+  },
+  {
+    "filename": "graphqlTool.json",
+    "name": "n8n-nodes-base.graphqlTool",
+    "displayName": "GraphQL Tool",
+    "description": "Makes a GraphQL request and returns the received data",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Description",
+      "Config: Authentication",
+      "Config: HTTP Request Method"
+    ]
+  },
+  {
+    "filename": "kafka.json",
+    "name": "n8n-nodes-base.kafka",
+    "displayName": "Kafka",
+    "description": "Sends messages to a Kafka topic",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Topic",
+      "Config: Send Input Data",
+      "Config: Message"
+    ]
+  },
+  {
+    "filename": "kafkaTool.json",
+    "name": "n8n-nodes-base.kafkaTool",
+    "displayName": "Kafka Tool",
+    "description": "Sends messages to a Kafka topic",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Description",
+      "Config: Topic",
+      "Config: Send Input Data"
+    ]
+  },
+  {
+    "filename": "mongoDb.json",
+    "name": "n8n-nodes-base.mongoDb",
+    "displayName": "MongoDB",
+    "description": "Find, insert and update documents in MongoDB",
+    "category_tags": [
+      "Document",
+      "Search Index"
+    ],
+    "capabilities": [
+      "Aggregate (Aggregate documents)",
+      "Delete (Delete documents)",
+      "Find (Find documents)",
+      "Find And Replace (Find and replace documents)",
+      "Find And Update (Find and update documents)",
+      "Insert (Insert documents)",
+      "Update (Update documents)",
+      "Create",
+      "Drop",
+      "List",
+      "Update"
+    ]
+  },
+  {
+    "filename": "mongoDbTool.json",
+    "name": "n8n-nodes-base.mongoDbTool",
+    "displayName": "MongoDB Tool",
+    "description": "Find, insert and update documents in MongoDB",
+    "category_tags": [
+      "Document",
+      "Search Index"
+    ],
+    "capabilities": [
+      "Aggregate (Aggregate documents)",
+      "Delete (Delete documents)",
+      "Find (Find documents)",
+      "Find And Replace (Find and replace documents)",
+      "Find And Update (Find and update documents)",
+      "Insert (Insert documents)",
+      "Update (Update documents)",
+      "Create",
+      "Drop",
+      "List",
+      "Update"
+    ]
+  },
+  {
+    "filename": "mqtt.json",
+    "name": "n8n-nodes-base.mqtt",
+    "displayName": "MQTT",
+    "description": "Push messages to MQTT",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Topic",
+      "Config: Send Input Data",
+      "Config: Message"
+    ]
+  },
+  {
+    "filename": "mqttTool.json",
+    "name": "n8n-nodes-base.mqttTool",
+    "displayName": "MQTT Tool",
+    "description": "Push messages to MQTT",
+    "category_tags": [],
+    "capabilities": [
+      "Config: Description",
+      "Config: Topic",
+      "Config: Send Input Data"
+    ]
+  },
+  {
+    "filename": "mySql.json",
+    "name": "n8n-nodes-base.mySql",
+    "displayName": "MySQL",
+    "description": "Get, add and update data in MySQL",
+    "category_tags": [],
+    "capabilities": [
+      "Execute Query (Execute an SQL query)",
+      "Insert (Insert rows in database)",
+      "Update (Update rows in database)"
+    ]
+  },
+  {
+    "filename": "mySqlTool.json",
+    "name": "n8n-nodes-base.mySqlTool",
+    "displayName": "MySQL Tool",
+    "description": "Get, add and update data in MySQL",
+    "category_tags": [
+      "Database"
+    ],
+    "capabilities": [
+      "Delete (Delete an entire table or rows in a table)",
+      "Execute SQL (Execute an SQL query)",
+      "Insert (Insert rows in a table)",
+      "Insert or Update (Insert or update rows in a table)",
+      "Select (Select rows from a table)",
+      "Update (Update rows in a table)"
+    ]
+  },
+  {
+    "filename": "postgres.json",
+    "name": "n8n-nodes-base.postgres",
+    "displayName": "Postgres",
+    "description": "Get, add and update data in Postgres",
+    "category_tags": [],
+    "capabilities": [
+      "Execute Query (Execute an SQL query)",
+      "Insert (Insert rows in database)",
+      "Update (Update rows in database)"
+    ]
+  },
+  {
+    "filename": "postgresTool.json",
+    "name": "n8n-nodes-base.postgresTool",
+    "displayName": "Postgres Tool",
+    "description": "Get, add and update data in Postgres",
+    "category_tags": [
+      "Database"
+    ],
+    "capabilities": [
+      "Delete (Delete an entire table or rows in a table)",
+      "Execute Query (Execute an SQL query)",
+      "Insert (Insert rows in a table)",
+      "Insert or Update (Insert or update rows in a table)",
+      "Select (Select rows from a table)",
+      "Update (Update rows in a table)"
+    ]
+  },
+  {
+    "filename": "rabbitmq.json",
+    "name": "n8n-nodes-base.rabbitmq",
+    "displayName": "RabbitMQ",
+    "description": "Sends messages to a RabbitMQ topic",
+    "category_tags": [],
+    "capabilities": [
+      "Send a Message to RabbitMQ",
+      "Delete From Queue",
+      "Send a Message to RabbitMQ",
+      "Delete From Queue"
+    ]
+  },
+  {
+    "filename": "rabbitmqTool.json",
+    "name": "n8n-nodes-base.rabbitmqTool",
+    "displayName": "RabbitMQ Tool",
+    "description": "Sends messages to a RabbitMQ topic",
+    "category_tags": [],
+    "capabilities": [
+      "Send a Message to RabbitMQ",
+      "Delete From Queue",
+      "Send a Message to RabbitMQ",
+      "Delete From Queue"
+    ]
+  },
+  {
+    "filename": "redis.json",
+    "name": "n8n-nodes-base.redis",
+    "displayName": "Redis",
+    "description": "Get, send and update data in Redis",
+    "category_tags": [],
+    "capabilities": [
+      "Delete (Delete a key from Redis)",
+      "Get (Get the value of a key from Redis)",
+      "Increment (Atomically increments a key by 1. Creates the key if it does not exist.)",
+      "Info (Returns generic information about the Redis instance)",
+      "Keys (Returns all the keys matching a pattern)",
+      "Pop (Pop data from a redis list)",
+      "Publish (Publish message to redis channel)",
+      "Push (Push data to a redis list)",
+      "Set (Set the value of a key in redis)"
+    ]
+  },
+  {
+    "filename": "redisTool.json",
+    "name": "n8n-nodes-base.redisTool",
+    "displayName": "Redis Tool",
+    "description": "Get, send and update data in Redis",
+    "category_tags": [],
+    "capabilities": [
+      "Delete (Delete a key from Redis)",
+      "Get (Get the value of a key from Redis)",
+      "Increment (Atomically increments a key by 1. Creates the key if it does not exist.)",
+      "Info (Returns generic information about the Redis instance)",
+      "Keys (Returns all the keys matching a pattern)",
+      "Pop (Pop data from a redis list)",
+      "Publish (Publish message to redis channel)",
+      "Push (Push data to a redis list)",
+      "Set (Set the value of a key in redis)"
+    ]
+  },
+  {
+    "filename": "s3.json",
+    "name": "n8n-nodes-base.s3",
+    "displayName": "S3",
+    "description": "Sends data to any S3-compatible service",
+    "category_tags": [
+      "File",
+      "Folder",
+      "Bucket"
+    ],
+    "capabilities": [
+      "Create (Create a bucket)",
+      "Delete (Delete a bucket)",
+      "Get Many (Get many buckets)",
+      "Search (Search within a bucket)",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get Many (Get many folders)",
+      "Copy (Copy a file)",
+      "Delete (Delete a file)",
+      "Download (Download a file)",
+      "Get Many (Get many files)",
+      "Upload (Upload a file)"
+    ]
+  },
+  {
+    "filename": "s3Tool.json",
+    "name": "n8n-nodes-base.s3Tool",
+    "displayName": "S3 Tool",
+    "description": "Sends data to any S3-compatible service",
+    "category_tags": [
+      "File",
+      "Folder",
+      "Bucket"
+    ],
+    "capabilities": [
+      "Create (Create a bucket)",
+      "Delete (Delete a bucket)",
+      "Get Many (Get many buckets)",
+      "Search (Search within a bucket)",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get Many (Get many folders)",
+      "Copy (Copy a file)",
+      "Delete (Delete a file)",
+      "Download (Download a file)",
+      "Get Many (Get many files)",
+      "Upload (Upload a file)"
+    ]
+  },
+  {
+    "filename": "snowflake.json",
+    "name": "n8n-nodes-base.snowflake",
+    "displayName": "Snowflake",
+    "description": "Get, add and update data in Snowflake",
+    "category_tags": [],
+    "capabilities": [
+      "Execute Query (Execute an SQL query)",
+      "Insert (Insert rows in database)",
+      "Update (Update rows in database)"
+    ]
+  },
+  {
+    "filename": "snowflakeTool.json",
+    "name": "n8n-nodes-base.snowflakeTool",
+    "displayName": "Snowflake Tool",
+    "description": "Get, add and update data in Snowflake",
+    "category_tags": [],
+    "capabilities": [
+      "Execute Query (Execute an SQL query)",
+      "Insert (Insert rows in database)",
+      "Update (Update rows in database)"
+    ]
+  },
+  {
+    "filename": "ssh.json",
+    "name": "n8n-nodes-base.ssh",
+    "displayName": "SSH",
+    "description": "Execute commands via SSH",
+    "category_tags": [
+      "File",
+      "Command"
+    ],
+    "capabilities": [
+      "Execute (Execute a command)",
+      "Download (Download a file)",
+      "Upload (Upload a file)"
+    ]
+  }
+]

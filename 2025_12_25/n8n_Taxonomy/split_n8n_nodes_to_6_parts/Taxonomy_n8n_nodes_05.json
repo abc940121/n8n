@@ -1,0 +1,186 @@
+{
+  "Taxonomy": {
+    "5. Productivity & Operations": {
+      "5.1 Communication & Collaboration": {
+        "5.1.1": {
+          "name": "Instant Messaging (ChatOps)",
+          "mapped_nodes": [
+            "n8n-nodes-base.discord",
+            "n8n-nodes-base.discordTool",
+            "n8n-nodes-base.mattermost",
+            "n8n-nodes-base.mattermostTool",
+            "n8n-nodes-base.slack",
+            "n8n-nodes-base.slackTool",
+            "n8n-nodes-base.telegram",
+            "n8n-nodes-base.telegramTool",
+            "n8n-nodes-base.microsoftTeams",
+            "n8n-nodes-base.microsoftTeamsTool"
+          ],
+          "description": "Integration with chat platforms for messaging, channel management, and bot interactions."
+        },
+        "5.1.2": {
+          "name": "Email Management",
+          "mapped_nodes": [
+            "n8n-nodes-base.gmail",
+            "n8n-nodes-base.gmailTool",
+            "n8n-nodes-base.microsoftOutlook",
+            "n8n-nodes-base.microsoftOutlookTool"
+          ],
+          "description": "Sending, receiving, and organizing emails, drafts, and attachments."
+        },
+        "5.1.3": {
+          "name": "Video Conferencing",
+          "mapped_nodes": [
+            "n8n-nodes-base.zoom",
+            "n8n-nodes-base.zoomTool"
+          ],
+          "description": "Management of meetings, webinars, and registrants."
+        }
+      },
+      "5.2 Project & Task Management": {
+        "5.2.1": {
+          "name": "Project Management Systems",
+          "mapped_nodes": [
+            "n8n-nodes-base.asana",
+            "n8n-nodes-base.asanaTool",
+            "n8n-nodes-base.clickUp",
+            "n8n-nodes-base.clickUpTool",
+            "n8n-nodes-base.jira",
+            "n8n-nodes-base.jiraTool",
+            "n8n-nodes-base.mondayCom",
+            "n8n-nodes-base.mondayComTool",
+            "n8n-nodes-base.trello",
+            "n8n-nodes-base.trelloTool"
+          ],
+          "description": "Comprehensive tools for managing projects, boards, issues, and sprints."
+        },
+        "5.2.2": {
+          "name": "Simple Task & To-Do",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleTasks",
+            "n8n-nodes-base.googleTasksTool",
+            "n8n-nodes-base.microsoftToDo",
+            "n8n-nodes-base.microsoftToDoTool"
+          ],
+          "description": "Lightweight task management for personal or simple team checklists."
+        },
+        "5.2.3": {
+          "name": "Knowledge Base & Documentation",
+          "mapped_nodes": [
+            "n8n-nodes-base.notion",
+            "n8n-nodes-base.notionTool"
+          ],
+          "description": "Managing structured content, wikis, and databases within documentation platforms."
+        }
+      },
+      "5.3 Document, File & Data Productivity": {
+        "5.3.1": {
+          "name": "Cloud Storage & File Management",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleDrive",
+            "n8n-nodes-base.googleDriveTool",
+            "n8n-nodes-base.microsoftOneDrive",
+            "n8n-nodes-base.microsoftOneDriveTool",
+            "n8n-nodes-base.microsoftSharePoint",
+            "n8n-nodes-base.microsoftSharePointTool",
+            "n8n-nodes-base.spreadsheetFile"
+          ],
+          "description": "Operations for uploading, downloading, organizing, and converting files in cloud storage."
+        },
+        "5.3.2": {
+          "name": "Spreadsheets & Tables",
+          "mapped_nodes": [
+            "n8n-nodes-base.airtable",
+            "n8n-nodes-base.airtableTool",
+            "n8n-nodes-base.googleSheets",
+            "n8n-nodes-base.googleSheetsTool"
+          ],
+          "description": "Reading and writing structured data in spreadsheets and low-code databases."
+        },
+        "5.3.3": {
+          "name": "Content Creation (Docs & Slides)",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleDocs",
+            "n8n-nodes-base.googleDocsTool",
+            "n8n-nodes-base.googleSlides",
+            "n8n-nodes-base.googleSlidesTool"
+          ],
+          "description": "Automating the creation and editing of text documents and presentations."
+        },
+        "5.3.4": {
+          "name": "Calendar & Scheduling",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleCalendar",
+            "n8n-nodes-base.googleCalendarTool",
+            "n8n-nodes-base.iCal"
+          ],
+          "description": "Managing events, availability, and calendar file generation."
+        }
+      },
+      "5.4 Business Operations & Infrastructure": {
+        "5.4.1": {
+          "name": "CRM & Contact Management",
+          "mapped_nodes": [
+            "n8n-nodes-base.microsoftDynamicsCrm",
+            "n8n-nodes-base.microsoftDynamicsCrmTool",
+            "n8n-nodes-base.googleContacts",
+            "n8n-nodes-base.googleContactsTool"
+          ],
+          "description": "Managing customer relationships, accounts, and contact directories."
+        },
+        "5.4.2": {
+          "name": "Marketing & Public Presence",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleAds",
+            "n8n-nodes-base.googleAdsTool",
+            "n8n-nodes-base.googleBusinessProfile",
+            "n8n-nodes-base.googleBusinessProfileTool"
+          ],
+          "description": "Managing advertising campaigns and online business listings."
+        },
+        "5.4.3": {
+          "name": "Data Warehousing & SQL",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleBigQuery",
+            "n8n-nodes-base.googleBigQueryTool",
+            "n8n-nodes-base.microsoftSql",
+            "n8n-nodes-base.microsoftSqlTool"
+          ],
+          "description": "Enterprise-grade database operations and data warehousing queries."
+        }
+      },
+      "5.5 Admin, Security & Utilities": {
+        "5.5.1": {
+          "name": "Identity & Access Management (IAM)",
+          "mapped_nodes": [
+            "n8n-nodes-base.gSuiteAdmin",
+            "n8n-nodes-base.gSuiteAdminTool",
+            "n8n-nodes-base.microsoftEntra",
+            "n8n-nodes-base.microsoftEntraTool"
+          ],
+          "description": "Administration of users, groups, and organizational units."
+        },
+        "5.5.2": {
+          "name": "Security & Compliance",
+          "mapped_nodes": [
+            "n8n-nodes-base.microsoftGraphSecurity",
+            "n8n-nodes-base.microsoftGraphSecurityTool"
+          ],
+          "description": "Monitoring security alerts and scores within the Microsoft ecosystem."
+        },
+        "5.5.3": {
+          "name": "Specialized Utilities",
+          "mapped_nodes": [
+            "n8n-nodes-base.googleTranslate",
+            "n8n-nodes-base.googleTranslateTool",
+            "n8n-nodes-base.googlePerspective",
+            "n8n-nodes-base.googlePerspectiveTool",
+            "n8n-nodes-base.googleBooks",
+            "n8n-nodes-base.googleBooksTool"
+          ],
+          "description": "APIs for translation, content moderation (toxicity analysis), and book data."
+        }
+      }
+    }
+  }
+}

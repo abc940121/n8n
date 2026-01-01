@@ -1,0 +1,2143 @@
+[
+  {
+    "filename": "airtable.json",
+    "name": "n8n-nodes-base.airtable",
+    "displayName": "Airtable",
+    "description": "Read, update, write and delete data from Airtable",
+    "category_tags": [],
+    "capabilities": [
+      "Append (Append the data to a table)",
+      "Delete (Delete data from a table)",
+      "List (List data from a table)",
+      "Read (Read data from a table)",
+      "Update (Update data in a table)"
+    ]
+  },
+  {
+    "filename": "airtableTool.json",
+    "name": "n8n-nodes-base.airtableTool",
+    "displayName": "Airtable Tool",
+    "description": "Read, update, write and delete data from Airtable",
+    "category_tags": [
+      "Record",
+      "Base"
+    ],
+    "capabilities": [
+      "Create (Create a new record in a table)",
+      "Create or Update (Create a new record, or update the current one if it already exists (upsert))",
+      "Delete (Delete a record from a table)",
+      "Get (Retrieve a record from a table)",
+      "Search (Search for specific records or list all)",
+      "Update (Update a record in a table)",
+      "Get Many (List all the bases)",
+      "Get Schema (Get the schema of the tables in a base)"
+    ]
+  },
+  {
+    "filename": "asana.json",
+    "name": "n8n-nodes-base.asana",
+    "displayName": "Asana",
+    "description": "Consume Asana REST API",
+    "category_tags": [
+      "Task",
+      "User",
+      "Task Tag",
+      "Task Project",
+      "Project",
+      "Subtask",
+      "Custom API Call",
+      "Task Comment"
+    ],
+    "capabilities": [
+      "Create (Create a subtask)",
+      "Get Many (Get many subtasks)",
+      "Custom API Call",
+      "Create (Create a task)",
+      "Delete (Delete a task)",
+      "Get (Get a task)",
+      "Get Many (Get many tasks)",
+      "Move (Move a task)",
+      "Search (Search for tasks)",
+      "Update (Update a task)",
+      "Custom API Call",
+      "Add (Add a comment to a task)",
+      "Remove (Remove a comment from a task)",
+      "Custom API Call",
+      "Add (Add a task to a project)",
+      "Remove (Remove a task from a project)",
+      "Custom API Call",
+      "Add (Add a tag to a task)",
+      "Remove (Remove a tag from a task)",
+      "Custom API Call",
+      "Get (Get a user)",
+      "Get Many (Get many users)",
+      "Custom API Call",
+      "Create (Create a new project)",
+      "Delete (Delete a project)",
+      "Get (Get a project)",
+      "Get Many (Get many projects)",
+      "Update (Update a project)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "asanaTool.json",
+    "name": "n8n-nodes-base.asanaTool",
+    "displayName": "Asana Tool",
+    "description": "Consume Asana REST API",
+    "category_tags": [
+      "Task",
+      "User",
+      "Task Tag",
+      "Task Project",
+      "Project",
+      "Subtask",
+      "Custom API Call",
+      "Task Comment"
+    ],
+    "capabilities": [
+      "Create (Create a subtask)",
+      "Get Many (Get many subtasks)",
+      "Custom API Call",
+      "Create (Create a task)",
+      "Delete (Delete a task)",
+      "Get (Get a task)",
+      "Get Many (Get many tasks)",
+      "Move (Move a task)",
+      "Search (Search for tasks)",
+      "Update (Update a task)",
+      "Custom API Call",
+      "Add (Add a comment to a task)",
+      "Remove (Remove a comment from a task)",
+      "Custom API Call",
+      "Add (Add a task to a project)",
+      "Remove (Remove a task from a project)",
+      "Custom API Call",
+      "Add (Add a tag to a task)",
+      "Remove (Remove a tag from a task)",
+      "Custom API Call",
+      "Get (Get a user)",
+      "Get Many (Get many users)",
+      "Custom API Call",
+      "Create (Create a new project)",
+      "Delete (Delete a project)",
+      "Get (Get a project)",
+      "Get Many (Get many projects)",
+      "Update (Update a project)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "clickUp.json",
+    "name": "n8n-nodes-base.clickUp",
+    "displayName": "ClickUp",
+    "description": "Consume ClickUp API (Beta)",
+    "category_tags": [
+      "Task",
+      "Checklist Item",
+      "Task List",
+      "Checklist",
+      "Time Entry",
+      "Goal",
+      "Task Tag",
+      "Space Tag",
+      "Custom API Call",
+      "Folder",
+      "Comment",
+      "List",
+      "Time Entry Tag",
+      "Goal Key Result",
+      "Task Dependency"
+    ],
+    "capabilities": [
+      "Create (Create a checklist)",
+      "Delete (Delete a checklist)",
+      "Update (Update a checklist)",
+      "Custom API Call",
+      "Create (Create a checklist item)",
+      "Delete (Delete a checklist item)",
+      "Update (Update a checklist item)",
+      "Custom API Call",
+      "Create (Create a comment)",
+      "Delete (Delete a comment)",
+      "Get Many (Get many comments)",
+      "Update (Update a comment)",
+      "Custom API Call",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get (Get a folder)",
+      "Get Many (Get many folders)",
+      "Update (Update a folder)",
+      "Custom API Call",
+      "Create (Create a goal)",
+      "Delete (Delete a goal)",
+      "Get (Get a goal)",
+      "Get Many (Get many goals)",
+      "Update (Update a goal)",
+      "Custom API Call",
+      "Create (Create a key result)",
+      "Delete (Delete a key result)",
+      "Update (Update a key result)",
+      "Custom API Call",
+      "Add (Add a tag to a task)",
+      "Remove (Remove a tag from a task)",
+      "Custom API Call",
+      "Add (Add a task to a list)",
+      "Remove (Remove a task from a list)",
+      "Custom API Call",
+      "Create (Create a space tag)",
+      "Delete (Delete a space tag)",
+      "Get Many (Get many space tags)",
+      "Update (Update a space tag)",
+      "Custom API Call",
+      "Create (Create a task)",
+      "Delete (Delete a task)",
+      "Get (Get a task)",
+      "Get Many (Get many tasks)",
+      "Member (Get task members)",
+      "Set Custom Field (Set a custom field)",
+      "Update (Update a task)",
+      "Custom API Call",
+      "Create (Create a task dependency)",
+      "Delete (Delete a task dependency)",
+      "Custom API Call",
+      "Create (Create a time entry)",
+      "Delete (Delete a time entry)",
+      "Get (Get a time entry)",
+      "Get Many (Get many time entries)",
+      "Start (Start a time entry)",
+      "Stop (Stop the current running timer)",
+      "Update (Update a time Entry)",
+      "Custom API Call",
+      "Add (Add tag to time entry)",
+      "Get Many (Get many time entry tags)",
+      "Remove (Remove tag from time entry)",
+      "Custom API Call",
+      "Create (Create a list)",
+      "Custom Fields (Retrieve list's custom fields)",
+      "Delete (Delete a list)",
+      "Get (Get a list)",
+      "Get Many (Get many lists)",
+      "Member (Get list members)",
+      "Update (Update a list)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "clickUpTool.json",
+    "name": "n8n-nodes-base.clickUpTool",
+    "displayName": "ClickUp Tool",
+    "description": "Consume ClickUp API (Beta)",
+    "category_tags": [
+      "Task",
+      "Checklist Item",
+      "Task List",
+      "Checklist",
+      "Time Entry",
+      "Goal",
+      "Task Tag",
+      "Space Tag",
+      "Custom API Call",
+      "Folder",
+      "Comment",
+      "List",
+      "Time Entry Tag",
+      "Goal Key Result",
+      "Task Dependency"
+    ],
+    "capabilities": [
+      "Create (Create a checklist)",
+      "Delete (Delete a checklist)",
+      "Update (Update a checklist)",
+      "Custom API Call",
+      "Create (Create a checklist item)",
+      "Delete (Delete a checklist item)",
+      "Update (Update a checklist item)",
+      "Custom API Call",
+      "Create (Create a comment)",
+      "Delete (Delete a comment)",
+      "Get Many (Get many comments)",
+      "Update (Update a comment)",
+      "Custom API Call",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get (Get a folder)",
+      "Get Many (Get many folders)",
+      "Update (Update a folder)",
+      "Custom API Call",
+      "Create (Create a goal)",
+      "Delete (Delete a goal)",
+      "Get (Get a goal)",
+      "Get Many (Get many goals)",
+      "Update (Update a goal)",
+      "Custom API Call",
+      "Create (Create a key result)",
+      "Delete (Delete a key result)",
+      "Update (Update a key result)",
+      "Custom API Call",
+      "Add (Add a tag to a task)",
+      "Remove (Remove a tag from a task)",
+      "Custom API Call",
+      "Add (Add a task to a list)",
+      "Remove (Remove a task from a list)",
+      "Custom API Call",
+      "Create (Create a space tag)",
+      "Delete (Delete a space tag)",
+      "Get Many (Get many space tags)",
+      "Update (Update a space tag)",
+      "Custom API Call",
+      "Create (Create a task)",
+      "Delete (Delete a task)",
+      "Get (Get a task)",
+      "Get Many (Get many tasks)",
+      "Member (Get task members)",
+      "Set Custom Field (Set a custom field)",
+      "Update (Update a task)",
+      "Custom API Call",
+      "Create (Create a task dependency)",
+      "Delete (Delete a task dependency)",
+      "Custom API Call",
+      "Create (Create a time entry)",
+      "Delete (Delete a time entry)",
+      "Get (Get a time entry)",
+      "Get Many (Get many time entries)",
+      "Start (Start a time entry)",
+      "Stop (Stop the current running timer)",
+      "Update (Update a time Entry)",
+      "Custom API Call",
+      "Add (Add tag to time entry)",
+      "Get Many (Get many time entry tags)",
+      "Remove (Remove tag from time entry)",
+      "Custom API Call",
+      "Create (Create a list)",
+      "Custom Fields (Retrieve list's custom fields)",
+      "Delete (Delete a list)",
+      "Get (Get a list)",
+      "Get Many (Get many lists)",
+      "Member (Get list members)",
+      "Update (Update a list)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "discord.json",
+    "name": "n8n-nodes-base.discord",
+    "displayName": "Discord",
+    "description": "Sends data to Discord",
+    "category_tags": [],
+    "capabilities": [
+      "Config: <strong>New node version available:</strong> get the latest version with added features from the nodes panel.",
+      "Config: Webhook URL",
+      "Config: Content"
+    ]
+  },
+  {
+    "filename": "discordTool.json",
+    "name": "n8n-nodes-base.discordTool",
+    "displayName": "Discord Tool",
+    "description": "Sends data to Discord",
+    "category_tags": [
+      "Custom API Call",
+      "Member",
+      "Channel",
+      "Message"
+    ],
+    "capabilities": [
+      "Delete (Delete a message in a channel)",
+      "Get (Get a message in a channel)",
+      "Get Many (Retrieve the latest messages in a channel)",
+      "React with Emoji (React to a message with an emoji)",
+      "Send (Send a message to a channel, thread, or member)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Custom API Call",
+      "Create (Create a new channel)",
+      "Delete (Delete a channel)",
+      "Get (Get a channel)",
+      "Get Many (Retrieve the channels of a server)",
+      "Update (Update a channel)",
+      "Custom API Call",
+      "Get Many (Retrieve the members of a server)",
+      "Role Add (Add a role to a member)",
+      "Role Remove (Remove a role from a member)",
+      "Custom API Call",
+      "Send a Message (Send a message to a channel using the webhook)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "gmail.json",
+    "name": "n8n-nodes-base.gmail",
+    "displayName": "Gmail",
+    "description": "Consume the Gmail API",
+    "category_tags": [
+      "Message Label",
+      "Draft",
+      "Label",
+      "Message"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Reply",
+      "Send",
+      "Add",
+      "Remove"
+    ]
+  },
+  {
+    "filename": "gmailTool.json",
+    "name": "n8n-nodes-base.gmailTool",
+    "displayName": "Gmail Tool",
+    "description": "Consume the Gmail API",
+    "category_tags": [
+      "Thread",
+      "Draft",
+      "Label",
+      "Message"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Add Label",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Mark as Read",
+      "Mark as Unread",
+      "Remove Label",
+      "Reply",
+      "Send",
+      "Send and Wait for Response",
+      "Add Label",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Remove Label",
+      "Reply",
+      "Trash",
+      "Untrash"
+    ]
+  },
+  {
+    "filename": "googleAds.json",
+    "name": "n8n-nodes-base.googleAds",
+    "displayName": "Google Ads",
+    "description": "Use the Google Ads API",
+    "category_tags": [
+      "Campaign",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Get Many (Get many campaigns linked to the specified account)",
+      "Get (Get a specific campaign)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleAdsTool.json",
+    "name": "n8n-nodes-base.googleAdsTool",
+    "displayName": "Google Ads Tool",
+    "description": "Use the Google Ads API",
+    "category_tags": [
+      "Campaign",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Get Many (Get many campaigns linked to the specified account)",
+      "Get (Get a specific campaign)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleBigQuery.json",
+    "name": "n8n-nodes-base.googleBigQuery",
+    "displayName": "Google BigQuery",
+    "description": "Consume Google BigQuery API",
+    "category_tags": [
+      "Record"
+    ],
+    "capabilities": [
+      "Create (Create a new record)",
+      "Get Many (Retrieve many records)"
+    ]
+  },
+  {
+    "filename": "googleBigQueryTool.json",
+    "name": "n8n-nodes-base.googleBigQueryTool",
+    "displayName": "Google BigQuery Tool",
+    "description": "Consume Google BigQuery API",
+    "category_tags": [
+      "Database"
+    ],
+    "capabilities": [
+      "Execute Query (Execute a SQL query)",
+      "Insert (Insert rows in a table)"
+    ]
+  },
+  {
+    "filename": "googleBooks.json",
+    "name": "n8n-nodes-base.googleBooks",
+    "displayName": "Google Books",
+    "description": "Read data from Google Books",
+    "category_tags": [
+      "Custom API Call",
+      "Bookshelf",
+      "Volume",
+      "Bookshelf Volume"
+    ],
+    "capabilities": [
+      "Get (Retrieve a specific bookshelf resource for the specified user)",
+      "Get Many (Get many public bookshelf resource for the specified user)",
+      "Custom API Call",
+      "Add (Add a volume to a bookshelf)",
+      "Clear (Clears all volumes from a bookshelf)",
+      "Get Many (Get many volumes in a specific bookshelf for the specified user)",
+      "Move (Moves a volume within a bookshelf)",
+      "Remove (Removes a volume from a bookshelf)",
+      "Custom API Call",
+      "Get (Get a volume resource based on ID)",
+      "Get Many (Get many volumes filtered by query)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleBooksTool.json",
+    "name": "n8n-nodes-base.googleBooksTool",
+    "displayName": "Google Books Tool",
+    "description": "Read data from Google Books",
+    "category_tags": [
+      "Custom API Call",
+      "Bookshelf",
+      "Volume",
+      "Bookshelf Volume"
+    ],
+    "capabilities": [
+      "Get (Retrieve a specific bookshelf resource for the specified user)",
+      "Get Many (Get many public bookshelf resource for the specified user)",
+      "Custom API Call",
+      "Add (Add a volume to a bookshelf)",
+      "Clear (Clears all volumes from a bookshelf)",
+      "Get Many (Get many volumes in a specific bookshelf for the specified user)",
+      "Move (Moves a volume within a bookshelf)",
+      "Remove (Removes a volume from a bookshelf)",
+      "Custom API Call",
+      "Get (Get a volume resource based on ID)",
+      "Get Many (Get many volumes filtered by query)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleBusinessProfile.json",
+    "name": "n8n-nodes-base.googleBusinessProfile",
+    "displayName": "Google Business Profile",
+    "description": "Consume Google Business Profile API",
+    "category_tags": [
+      "Custom API Call",
+      "Post",
+      "Review"
+    ],
+    "capabilities": [
+      "Create (Create a new post on Google Business Profile)",
+      "Delete (Delete an existing post)",
+      "Get (Retrieve details of a specific post)",
+      "Get Many (Retrieve multiple posts)",
+      "Update (Update an existing post)",
+      "Custom API Call",
+      "Delete Reply (Delete a reply to a review)",
+      "Get (Retrieve details of a specific review on Google Business Profile)",
+      "Get Many (Retrieve multiple reviews)",
+      "Reply (Reply to a review)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleBusinessProfileTool.json",
+    "name": "n8n-nodes-base.googleBusinessProfileTool",
+    "displayName": "Google Business Profile Tool",
+    "description": "Consume Google Business Profile API",
+    "category_tags": [
+      "Custom API Call",
+      "Post",
+      "Review"
+    ],
+    "capabilities": [
+      "Create (Create a new post on Google Business Profile)",
+      "Delete (Delete an existing post)",
+      "Get (Retrieve details of a specific post)",
+      "Get Many (Retrieve multiple posts)",
+      "Update (Update an existing post)",
+      "Custom API Call",
+      "Delete Reply (Delete a reply to a review)",
+      "Get (Retrieve details of a specific review on Google Business Profile)",
+      "Get Many (Retrieve multiple reviews)",
+      "Reply (Reply to a review)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleCalendar.json",
+    "name": "n8n-nodes-base.googleCalendar",
+    "displayName": "Google Calendar",
+    "description": "Consume Google Calendar API",
+    "category_tags": [
+      "Custom API Call",
+      "Event",
+      "Calendar"
+    ],
+    "capabilities": [
+      "Availability (If a time-slot is available in a calendar)",
+      "Custom API Call",
+      "Create (Add a event to calendar)",
+      "Delete (Delete an event)",
+      "Get (Retrieve an event)",
+      "Get Many (Retrieve many events from a calendar)",
+      "Update (Update an event)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleCalendarTool.json",
+    "name": "n8n-nodes-base.googleCalendarTool",
+    "displayName": "Google Calendar Tool",
+    "description": "Consume Google Calendar API",
+    "category_tags": [
+      "Custom API Call",
+      "Event",
+      "Calendar"
+    ],
+    "capabilities": [
+      "Availability (If a time-slot is available in a calendar)",
+      "Custom API Call",
+      "Create (Add a event to calendar)",
+      "Delete (Delete an event)",
+      "Get (Retrieve an event)",
+      "Get Many (Retrieve many events from a calendar)",
+      "Update (Update an event)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleContacts.json",
+    "name": "n8n-nodes-base.googleContacts",
+    "displayName": "Google Contacts",
+    "description": "Consume Google Contacts API",
+    "category_tags": [
+      "Contact",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Create (Create a contact)",
+      "Delete (Delete a contact)",
+      "Get (Get a contact)",
+      "Get Many (Retrieve many contacts)",
+      "Update (Update a contact)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleContactsTool.json",
+    "name": "n8n-nodes-base.googleContactsTool",
+    "displayName": "Google Contacts Tool",
+    "description": "Consume Google Contacts API",
+    "category_tags": [
+      "Contact",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Create (Create a contact)",
+      "Delete (Delete a contact)",
+      "Get (Get a contact)",
+      "Get Many (Retrieve many contacts)",
+      "Update (Update a contact)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleDocs.json",
+    "name": "n8n-nodes-base.googleDocs",
+    "displayName": "Google Docs",
+    "description": "Consume Google Docs API.",
+    "category_tags": [
+      "Custom API Call",
+      "Document"
+    ],
+    "capabilities": [
+      "Create",
+      "Get",
+      "Update",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleDocsTool.json",
+    "name": "n8n-nodes-base.googleDocsTool",
+    "displayName": "Google Docs Tool",
+    "description": "Consume Google Docs API.",
+    "category_tags": [
+      "Custom API Call",
+      "Document"
+    ],
+    "capabilities": [
+      "Create",
+      "Get",
+      "Update",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleDrive.json",
+    "name": "n8n-nodes-base.googleDrive",
+    "displayName": "Google Drive",
+    "description": "Access data on Google Drive",
+    "category_tags": [
+      "Drive",
+      "File",
+      "Folder"
+    ],
+    "capabilities": [
+      "Copy (Copy a file)",
+      "Delete (Delete a file)",
+      "Download (Download a file)",
+      "List (List files and folders)",
+      "Share (Share a file)",
+      "Update (Update a file)",
+      "Upload (Upload a file)",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Share (Share a folder)",
+      "Create (Create a drive)",
+      "Delete (Delete a drive)",
+      "Get (Get a drive)",
+      "List (List all drives)",
+      "Update (Update a drive)"
+    ]
+  },
+  {
+    "filename": "googleDriveTool.json",
+    "name": "n8n-nodes-base.googleDriveTool",
+    "displayName": "Google Drive Tool",
+    "description": "Access data on Google Drive",
+    "category_tags": [
+      "Shared Drive",
+      "File",
+      "Folder",
+      "Custom API Call",
+      "File/Folder"
+    ],
+    "capabilities": [
+      "Create (Create a shared drive)",
+      "Delete (Permanently delete a shared drive)",
+      "Get (Get a shared drive)",
+      "Get Many (Get the list of shared drives)",
+      "Update (Update a shared drive)",
+      "Custom API Call",
+      "Copy (Create a copy of an existing file)",
+      "Create From Text (Create a file from a provided text)",
+      "Delete (Permanently delete a file)",
+      "Download (Download a file)",
+      "Move (Move a file to another folder)",
+      "Share (Add sharing permissions to a file)",
+      "Update (Update a file)",
+      "Upload (Upload an existing file to Google Drive)",
+      "Custom API Call",
+      "Search (Search or list files and folders)",
+      "Custom API Call",
+      "Create (Create a folder)",
+      "Delete (Permanently delete a folder)",
+      "Share (Add sharing permissions to a folder)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googlePerspective.json",
+    "name": "n8n-nodes-base.googlePerspective",
+    "displayName": "Google Perspective",
+    "description": "Consume Google Perspective API",
+    "category_tags": [],
+    "capabilities": [
+      "Analyze Comment",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googlePerspectiveTool.json",
+    "name": "n8n-nodes-base.googlePerspectiveTool",
+    "displayName": "Google Perspective Tool",
+    "description": "Consume Google Perspective API",
+    "category_tags": [],
+    "capabilities": [
+      "Analyze Comment",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleSheets.json",
+    "name": "n8n-nodes-base.googleSheets",
+    "displayName": "Google Sheets ",
+    "description": "Read, update and write data to Google Sheets",
+    "category_tags": [
+      "Sheet",
+      "Spreadsheet"
+    ],
+    "capabilities": [
+      "Append (Append data to a sheet)",
+      "Clear (Clear data from a sheet)",
+      "Create (Create a new sheet)",
+      "Create or Update (Create a new record, or update the current one if it already exists (upsert))",
+      "Delete (Delete columns and rows from a sheet)",
+      "Lookup (Look up a specific column value and return the matching row)",
+      "Read (Read data from a sheet)",
+      "Remove (Remove a sheet)",
+      "Update (Update rows in a sheet)",
+      "Create (Create a spreadsheet)"
+    ]
+  },
+  {
+    "filename": "googleSheetsTool.json",
+    "name": "n8n-nodes-base.googleSheetsTool",
+    "displayName": "Google Sheets Tool",
+    "description": "Read, update and write data to Google Sheets",
+    "category_tags": [
+      "Sheet Within Document",
+      "Document"
+    ],
+    "capabilities": [
+      "Append or Update Row (Append a new row or update an existing one (upsert))",
+      "Append Row (Create a new row in a sheet)",
+      "Clear (Delete all the contents or a part of a sheet)",
+      "Create (Create a new sheet)",
+      "Delete (Permanently delete a sheet)",
+      "Delete Rows or Columns (Delete columns or rows from a sheet)",
+      "Get Row(s) (Retrieve one or more rows from a sheet)",
+      "Update Row (Update an existing row in a sheet)",
+      "Create (Create a spreadsheet)",
+      "Delete (Delete a spreadsheet)"
+    ]
+  },
+  {
+    "filename": "googleSlides.json",
+    "name": "n8n-nodes-base.googleSlides",
+    "displayName": "Google Slides",
+    "description": "Consume the Google Slides API",
+    "category_tags": [
+      "Custom API Call",
+      "Presentation",
+      "Page"
+    ],
+    "capabilities": [
+      "Create (Create a presentation)",
+      "Get (Get a presentation)",
+      "Get Slides (Get presentation slides)",
+      "Replace Text (Replace text in a presentation)",
+      "Custom API Call",
+      "Get (Get a page)",
+      "Get Thumbnail (Get a thumbnail)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleSlidesTool.json",
+    "name": "n8n-nodes-base.googleSlidesTool",
+    "displayName": "Google Slides Tool",
+    "description": "Consume the Google Slides API",
+    "category_tags": [
+      "Custom API Call",
+      "Presentation",
+      "Page"
+    ],
+    "capabilities": [
+      "Create (Create a presentation)",
+      "Get (Get a presentation)",
+      "Get Slides (Get presentation slides)",
+      "Replace Text (Replace text in a presentation)",
+      "Custom API Call",
+      "Get (Get a page)",
+      "Get Thumbnail (Get a thumbnail)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleTasks.json",
+    "name": "n8n-nodes-base.googleTasks",
+    "displayName": "Google Tasks",
+    "description": "Consume Google Tasks API",
+    "category_tags": [
+      "Task",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Create (Add a task to tasklist)",
+      "Delete (Delete a task)",
+      "Get (Retrieve a task)",
+      "Get Many (Retrieve many tasks from a tasklist)",
+      "Update (Update a task)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleTasksTool.json",
+    "name": "n8n-nodes-base.googleTasksTool",
+    "displayName": "Google Tasks Tool",
+    "description": "Consume Google Tasks API",
+    "category_tags": [
+      "Task",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Create (Add a task to tasklist)",
+      "Delete (Delete a task)",
+      "Get (Retrieve a task)",
+      "Get Many (Retrieve many tasks from a tasklist)",
+      "Update (Update a task)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleTranslate.json",
+    "name": "n8n-nodes-base.googleTranslate",
+    "displayName": "Google Translate",
+    "description": "Translate data using Google Translate",
+    "category_tags": [
+      "Custom API Call",
+      "Language"
+    ],
+    "capabilities": [
+      "Translate (Translate data)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "googleTranslateTool.json",
+    "name": "n8n-nodes-base.googleTranslateTool",
+    "displayName": "Google Translate Tool",
+    "description": "Translate data using Google Translate",
+    "category_tags": [
+      "Custom API Call",
+      "Language"
+    ],
+    "capabilities": [
+      "Translate (Translate data)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "gSuiteAdmin.json",
+    "name": "n8n-nodes-base.gSuiteAdmin",
+    "displayName": "Google Workspace Admin",
+    "description": "Consume Google Workspace Admin API",
+    "category_tags": [
+      "User",
+      "ChromeOS Device",
+      "Group",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Get (Get a ChromeOS device)",
+      "Get Many (Get many ChromeOS devices)",
+      "Update (Update a ChromeOS device)",
+      "Change Status (Change the status of a ChromeOS device)",
+      "Custom API Call",
+      "Create (Create a group)",
+      "Delete (Delete a group)",
+      "Get (Get a group)",
+      "Get Many (Get many groups)",
+      "Update (Update a group)",
+      "Custom API Call",
+      "Add to Group (Add an existing user to a group)",
+      "Create (Create a user)",
+      "Delete (Delete a user)",
+      "Get (Get a user)",
+      "Get Many (Get many users)",
+      "Remove From Group (Remove a user from a group)",
+      "Update (Update a user)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "gSuiteAdminTool.json",
+    "name": "n8n-nodes-base.gSuiteAdminTool",
+    "displayName": "Google Workspace Admin Tool",
+    "description": "Consume Google Workspace Admin API",
+    "category_tags": [
+      "User",
+      "ChromeOS Device",
+      "Group",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Get (Get a ChromeOS device)",
+      "Get Many (Get many ChromeOS devices)",
+      "Update (Update a ChromeOS device)",
+      "Change Status (Change the status of a ChromeOS device)",
+      "Custom API Call",
+      "Create (Create a group)",
+      "Delete (Delete a group)",
+      "Get (Get a group)",
+      "Get Many (Get many groups)",
+      "Update (Update a group)",
+      "Custom API Call",
+      "Add to Group (Add an existing user to a group)",
+      "Create (Create a user)",
+      "Delete (Delete a user)",
+      "Get (Get a user)",
+      "Get Many (Get many users)",
+      "Remove From Group (Remove a user from a group)",
+      "Update (Update a user)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "iCal.json",
+    "name": "n8n-nodes-base.iCal",
+    "displayName": "iCalendar",
+    "description": "Create iCalendar file",
+    "category_tags": [],
+    "capabilities": [
+      "Create Event File"
+    ]
+  },
+  {
+    "filename": "jira.json",
+    "name": "n8n-nodes-base.jira",
+    "displayName": "Jira Software",
+    "description": "Consume Jira Software API",
+    "category_tags": [
+      "Issue",
+      "User",
+      "Issue Comment",
+      "Issue Attachment",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Changelog (Get issue changelog)",
+      "Create (Create a new issue)",
+      "Delete (Delete an issue)",
+      "Get (Get an issue)",
+      "Get Many (Get many issues)",
+      "Notify (Create an email notification for an issue and add it to the mail queue)",
+      "Status (Return either all transitions or a transition that can be performed by the user on an issue, based on the issue's status)",
+      "Update (Update an issue)",
+      "Custom API Call",
+      "Add (Add attachment to issue)",
+      "Get (Get an attachment)",
+      "Get Many (Get many attachments)",
+      "Remove (Remove an attachment)",
+      "Custom API Call",
+      "Add (Add comment to issue)",
+      "Get (Get a comment)",
+      "Get Many (Get many comments)",
+      "Remove (Remove a comment)",
+      "Update (Update a comment)",
+      "Custom API Call",
+      "Create (Create a new user)",
+      "Delete (Delete a user)",
+      "Get (Retrieve a user)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "jiraTool.json",
+    "name": "n8n-nodes-base.jiraTool",
+    "displayName": "Jira Software Tool",
+    "description": "Consume Jira Software API",
+    "category_tags": [
+      "Issue",
+      "User",
+      "Issue Comment",
+      "Issue Attachment",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Changelog (Get issue changelog)",
+      "Create (Create a new issue)",
+      "Delete (Delete an issue)",
+      "Get (Get an issue)",
+      "Get Many (Get many issues)",
+      "Notify (Create an email notification for an issue and add it to the mail queue)",
+      "Status (Return either all transitions or a transition that can be performed by the user on an issue, based on the issue's status)",
+      "Update (Update an issue)",
+      "Custom API Call",
+      "Add (Add attachment to issue)",
+      "Get (Get an attachment)",
+      "Get Many (Get many attachments)",
+      "Remove (Remove an attachment)",
+      "Custom API Call",
+      "Add (Add comment to issue)",
+      "Get (Get a comment)",
+      "Get Many (Get many comments)",
+      "Remove (Remove a comment)",
+      "Update (Update a comment)",
+      "Custom API Call",
+      "Create (Create a new user)",
+      "Delete (Delete a user)",
+      "Get (Retrieve a user)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "mattermost.json",
+    "name": "n8n-nodes-base.mattermost",
+    "displayName": "Mattermost",
+    "description": "Sends data to Mattermost",
+    "category_tags": [
+      "User",
+      "Channel",
+      "Message",
+      "Custom API Call",
+      "Reaction"
+    ],
+    "capabilities": [
+      "Add User (Add a user to a channel)",
+      "Create (Create a new channel)",
+      "Delete (Soft delete a channel)",
+      "Member (Get a page of members for a channel)",
+      "Restore (Restores a soft deleted channel)",
+      "Search (Search for a channel)",
+      "Statistics (Get statistics for a channel)",
+      "Custom API Call",
+      "Delete (Soft delete a post, by marking the post as deleted in the database)",
+      "Post (Post a message into a channel)",
+      "Post Ephemeral (Post an ephemeral message into a channel)",
+      "Custom API Call",
+      "Create (Add a reaction to a post)",
+      "Delete (Remove a reaction from a post)",
+      "Get Many (Get many reactions to one or more posts)",
+      "Custom API Call",
+      "Create (Create a new user)",
+      "Deactive (Deactivates the user and revokes all its sessions by archiving its user object)",
+      "Get By Email (Get a user by email)",
+      "Get By ID (Get a user by ID)",
+      "Get Many (Retrieve many users)",
+      "Invite (Invite user to team)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "mattermostTool.json",
+    "name": "n8n-nodes-base.mattermostTool",
+    "displayName": "Mattermost Tool",
+    "description": "Sends data to Mattermost",
+    "category_tags": [
+      "User",
+      "Channel",
+      "Message",
+      "Custom API Call",
+      "Reaction"
+    ],
+    "capabilities": [
+      "Add User (Add a user to a channel)",
+      "Create (Create a new channel)",
+      "Delete (Soft delete a channel)",
+      "Member (Get a page of members for a channel)",
+      "Restore (Restores a soft deleted channel)",
+      "Search (Search for a channel)",
+      "Statistics (Get statistics for a channel)",
+      "Custom API Call",
+      "Delete (Soft delete a post, by marking the post as deleted in the database)",
+      "Post (Post a message into a channel)",
+      "Post Ephemeral (Post an ephemeral message into a channel)",
+      "Custom API Call",
+      "Create (Add a reaction to a post)",
+      "Delete (Remove a reaction from a post)",
+      "Get Many (Get many reactions to one or more posts)",
+      "Custom API Call",
+      "Create (Create a new user)",
+      "Deactive (Deactivates the user and revokes all its sessions by archiving its user object)",
+      "Get By Email (Get a user by email)",
+      "Get By ID (Get a user by ID)",
+      "Get Many (Retrieve many users)",
+      "Invite (Invite user to team)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "microsoftDynamicsCrm.json",
+    "name": "n8n-nodes-base.microsoftDynamicsCrm",
+    "displayName": "Microsoft Dynamics CRM",
+    "description": "Consume Microsoft Dynamics CRM API",
+    "category_tags": [
+      "Account"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "microsoftDynamicsCrmTool.json",
+    "name": "n8n-nodes-base.microsoftDynamicsCrmTool",
+    "displayName": "Microsoft Dynamics CRM Tool",
+    "description": "Consume Microsoft Dynamics CRM API",
+    "category_tags": [
+      "Account"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "microsoftEntra.json",
+    "name": "n8n-nodes-base.microsoftEntra",
+    "displayName": "Microsoft Entra ID",
+    "description": "Interact with Microsoft Entra ID API",
+    "category_tags": [
+      "User",
+      "Group"
+    ],
+    "capabilities": [
+      "Create (Create a group)",
+      "Delete (Delete a group)",
+      "Get (Retrieve data for a specific group)",
+      "Get Many (Retrieve a list of groups)",
+      "Update (Update a group)",
+      "Add to Group (Add user to group)",
+      "Create (Create a user)",
+      "Delete (Delete a user)",
+      "Get (Retrieve data for a specific user)",
+      "Get Many (Retrieve a list of users)",
+      "Remove from Group (Remove user from group)",
+      "Update (Update a user)"
+    ]
+  },
+  {
+    "filename": "microsoftEntraTool.json",
+    "name": "n8n-nodes-base.microsoftEntraTool",
+    "displayName": "Microsoft Entra ID Tool",
+    "description": "Interact with Microsoft Entra ID API",
+    "category_tags": [
+      "User",
+      "Group"
+    ],
+    "capabilities": [
+      "Create (Create a group)",
+      "Delete (Delete a group)",
+      "Get (Retrieve data for a specific group)",
+      "Get Many (Retrieve a list of groups)",
+      "Update (Update a group)",
+      "Add to Group (Add user to group)",
+      "Create (Create a user)",
+      "Delete (Delete a user)",
+      "Get (Retrieve data for a specific user)",
+      "Get Many (Retrieve a list of users)",
+      "Remove from Group (Remove user from group)",
+      "Update (Update a user)"
+    ]
+  },
+  {
+    "filename": "microsoftGraphSecurity.json",
+    "name": "n8n-nodes-base.microsoftGraphSecurity",
+    "displayName": "Microsoft Graph Security",
+    "description": "Consume the Microsoft Graph Security API",
+    "category_tags": [
+      "Secure Score",
+      "Secure Score Control Profile"
+    ],
+    "capabilities": [
+      "Get",
+      "Get Many",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "microsoftGraphSecurityTool.json",
+    "name": "n8n-nodes-base.microsoftGraphSecurityTool",
+    "displayName": "Microsoft Graph Security Tool",
+    "description": "Consume the Microsoft Graph Security API",
+    "category_tags": [
+      "Secure Score",
+      "Secure Score Control Profile"
+    ],
+    "capabilities": [
+      "Get",
+      "Get Many",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "microsoftOneDrive.json",
+    "name": "n8n-nodes-base.microsoftOneDrive",
+    "displayName": "Microsoft OneDrive",
+    "description": "Consume Microsoft OneDrive API",
+    "category_tags": [
+      "File",
+      "Folder"
+    ],
+    "capabilities": [
+      "Copy (Copy a file)",
+      "Delete (Delete a file)",
+      "Download (Download a file)",
+      "Get (Get a file)",
+      "Rename (Rename a file)",
+      "Search (Search a file)",
+      "Share (Share a file)",
+      "Upload (Upload a file up to 4MB in size)",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get Children (Get items inside a folder)",
+      "Rename (Rename a folder)",
+      "Search (Search a folder)",
+      "Share (Share a folder)"
+    ]
+  },
+  {
+    "filename": "microsoftOneDriveTool.json",
+    "name": "n8n-nodes-base.microsoftOneDriveTool",
+    "displayName": "Microsoft OneDrive Tool",
+    "description": "Consume Microsoft OneDrive API",
+    "category_tags": [
+      "File",
+      "Folder"
+    ],
+    "capabilities": [
+      "Copy (Copy a file)",
+      "Delete (Delete a file)",
+      "Download (Download a file)",
+      "Get (Get a file)",
+      "Rename (Rename a file)",
+      "Search (Search a file)",
+      "Share (Share a file)",
+      "Upload (Upload a file up to 4MB in size)",
+      "Create (Create a folder)",
+      "Delete (Delete a folder)",
+      "Get Children (Get items inside a folder)",
+      "Rename (Rename a folder)",
+      "Search (Search a folder)",
+      "Share (Share a folder)"
+    ]
+  },
+  {
+    "filename": "microsoftOutlook.json",
+    "name": "n8n-nodes-base.microsoftOutlook",
+    "displayName": "Microsoft Outlook",
+    "description": "Consume Microsoft Outlook API",
+    "category_tags": [
+      "Message",
+      "Folder Message",
+      "Draft",
+      "Folder",
+      "Message Attachment"
+    ],
+    "capabilities": [
+      "Create (Create a new email draft)",
+      "Delete (Delete a draft)",
+      "Get (Get a single draft)",
+      "Send (Send an existing draft message)",
+      "Update (Update a draft)",
+      "Delete (Delete a message)",
+      "Get (Get a single message)",
+      "Get Many (Get many messages in the signed-in user's mailbox)",
+      "Get MIME Content (Get MIME content of a message)",
+      "Move (Move a message)",
+      "Reply (Create reply to a message)",
+      "Send (Send a message)",
+      "Update (Update a message)",
+      "Add (Add an attachment to a message)",
+      "Download (Download attachment content)",
+      "Get (Get an attachment from a message)",
+      "Get Many (Get many message's attachments)",
+      "Create (Create a new mail folder in the root folder of the user's mailbox)",
+      "Delete (Delete a folder)",
+      "Get (Get a single folder details)",
+      "Get Children (Lists all child folders under the folder)",
+      "Get Many (Get many folders under the root folder of the signed-in user)",
+      "Get Many (Get many messages in a folder)"
+    ]
+  },
+  {
+    "filename": "microsoftOutlookTool.json",
+    "name": "n8n-nodes-base.microsoftOutlookTool",
+    "displayName": "Microsoft Outlook Tool",
+    "description": "Consume Microsoft Outlook API",
+    "category_tags": [
+      "Message Attachment",
+      "Folder Message",
+      "Calendar",
+      "Draft",
+      "Contact",
+      "Event",
+      "Folder",
+      "Message"
+    ],
+    "capabilities": [
+      "Create (Create a new calendar)",
+      "Delete (Delete a calendar)",
+      "Get (Retrieve a calendar)",
+      "Get Many (List and search calendars)",
+      "Update (Update a calendar)",
+      "Create (Create a new contact)",
+      "Delete (Delete a contact)",
+      "Get (Retrieve a contact)",
+      "Get Many (List and search contacts)",
+      "Update (Update a contact)",
+      "Create (Create a new email draft)",
+      "Delete (Delete an email draft)",
+      "Get (Retrieve an email draft)",
+      "Send (Send an existing email draft)",
+      "Update (Update an email draft)",
+      "Create (Create a new event)",
+      "Delete (Delete an event)",
+      "Get (Retrieve an event)",
+      "Get Many (List and search events)",
+      "Update (Update an event)",
+      "Create (Create a mail folder in the root folder of the user's mailbox)",
+      "Delete (Delete a folder)",
+      "Get (Retrieve a folder)",
+      "Get Many (Get many folders)",
+      "Update (Update a folder)",
+      "Get Many (Retrieves the messages in a folder)",
+      "Delete (Delete a message)",
+      "Get (Retrieve a single message)",
+      "Get Many (List and search messages)",
+      "Move (Move a message to a folder)",
+      "Reply (Create a reply to a message)",
+      "Send (Send a message)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Update (Update a message)",
+      "Add (Add an attachment to a message)",
+      "Download (Download an attachment from a message)",
+      "Get (Retrieve information about an attachment of a message)",
+      "Get Many (Retrieve information about the attachments of a message)"
+    ]
+  },
+  {
+    "filename": "microsoftSharePoint.json",
+    "name": "n8n-nodes-base.microsoftSharePoint",
+    "displayName": "Microsoft SharePoint",
+    "description": "Interact with Microsoft SharePoint API",
+    "category_tags": [
+      "Item",
+      "File",
+      "List"
+    ],
+    "capabilities": [
+      "Download (Download a file)",
+      "Update (Update a file)",
+      "Upload (Upload an existing file)",
+      "Create (Create an item in an existing list)",
+      "Create or Update (Create a new item, or update the current one if it already exists (upsert))",
+      "Delete (Delete an item from a list)",
+      "Get (Retrieve an item from a list)",
+      "Get Many (Get specific items in a list or list many items)",
+      "Update (Update an item in an existing list)",
+      "Get (Retrieve details of a single list)",
+      "Get Many (Retrieve a list of lists)"
+    ]
+  },
+  {
+    "filename": "microsoftSharePointTool.json",
+    "name": "n8n-nodes-base.microsoftSharePointTool",
+    "displayName": "Microsoft SharePoint Tool",
+    "description": "Interact with Microsoft SharePoint API",
+    "category_tags": [
+      "Item",
+      "File",
+      "List"
+    ],
+    "capabilities": [
+      "Download (Download a file)",
+      "Update (Update a file)",
+      "Upload (Upload an existing file)",
+      "Create (Create an item in an existing list)",
+      "Create or Update (Create a new item, or update the current one if it already exists (upsert))",
+      "Delete (Delete an item from a list)",
+      "Get (Retrieve an item from a list)",
+      "Get Many (Get specific items in a list or list many items)",
+      "Update (Update an item in an existing list)",
+      "Get (Retrieve details of a single list)",
+      "Get Many (Retrieve a list of lists)"
+    ]
+  },
+  {
+    "filename": "microsoftSql.json",
+    "name": "n8n-nodes-base.microsoftSql",
+    "displayName": "Microsoft SQL",
+    "description": "Get, add and update data in Microsoft SQL",
+    "category_tags": [],
+    "capabilities": [
+      "Execute Query (Execute an SQL query)",
+      "Insert (Insert rows in database)",
+      "Update (Update rows in database)",
+      "Delete (Delete rows in database)"
+    ]
+  },
+  {
+    "filename": "microsoftSqlTool.json",
+    "name": "n8n-nodes-base.microsoftSqlTool",
+    "displayName": "Microsoft SQL Tool",
+    "description": "Get, add and update data in Microsoft SQL",
+    "category_tags": [],
+    "capabilities": [
+      "Execute Query (Execute an SQL query)",
+      "Insert (Insert rows in database)",
+      "Update (Update rows in database)",
+      "Delete (Delete rows in database)"
+    ]
+  },
+  {
+    "filename": "microsoftTeams.json",
+    "name": "n8n-nodes-base.microsoftTeams",
+    "displayName": "Microsoft Teams",
+    "description": "Consume Microsoft Teams API",
+    "category_tags": [
+      "Task",
+      "Channel",
+      "Chat Message",
+      "Channel Message"
+    ],
+    "capabilities": [
+      "Create (Create a channel)",
+      "Delete (Delete a channel)",
+      "Get (Get a channel)",
+      "Get Many (Get many channels)",
+      "Update (Update a channel)",
+      "Create (Create a message in a channel)",
+      "Get Many (Get many messages from a channel)",
+      "Create (Create a message in a chat)",
+      "Get (Get a message from a chat)",
+      "Get Many (Get many messages from a chat)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Create (Create a task)",
+      "Delete (Delete a task)",
+      "Get (Get a task)",
+      "Get Many (Get many tasks)",
+      "Update (Update a task)"
+    ]
+  },
+  {
+    "filename": "microsoftTeamsTool.json",
+    "name": "n8n-nodes-base.microsoftTeamsTool",
+    "displayName": "Microsoft Teams Tool",
+    "description": "Consume Microsoft Teams API",
+    "category_tags": [
+      "Task",
+      "Channel",
+      "Chat Message",
+      "Channel Message"
+    ],
+    "capabilities": [
+      "Create (Create a channel)",
+      "Delete (Delete a channel)",
+      "Get (Get a channel)",
+      "Get Many (Get many channels)",
+      "Update (Update a channel)",
+      "Create (Create a message in a channel)",
+      "Get Many (Get many messages from a channel)",
+      "Create (Create a message in a chat)",
+      "Get (Get a message from a chat)",
+      "Get Many (Get many messages from a chat)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Create (Create a task)",
+      "Delete (Delete a task)",
+      "Get (Get a task)",
+      "Get Many (Get many tasks)",
+      "Update (Update a task)"
+    ]
+  },
+  {
+    "filename": "microsoftToDo.json",
+    "name": "n8n-nodes-base.microsoftToDo",
+    "displayName": "Microsoft To Do",
+    "description": "Consume Microsoft To Do API.",
+    "category_tags": [
+      "Task",
+      "Linked Resource",
+      "List"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "microsoftToDoTool.json",
+    "name": "n8n-nodes-base.microsoftToDoTool",
+    "displayName": "Microsoft To Do Tool",
+    "description": "Consume Microsoft To Do API.",
+    "category_tags": [
+      "Task",
+      "Linked Resource",
+      "List"
+    ],
+    "capabilities": [
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update",
+      "Create",
+      "Delete",
+      "Get",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "mondayCom.json",
+    "name": "n8n-nodes-base.mondayCom",
+    "displayName": "Monday.com",
+    "description": "Consume Monday.com API",
+    "category_tags": [
+      "Board Column",
+      "Board",
+      "Board Group",
+      "Board Item",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Archive (Archive a board)",
+      "Create (Create a new board)",
+      "Get (Get a board)",
+      "Get Many (Get many boards)",
+      "Custom API Call",
+      "Create (Create a new column)",
+      "Get Many (Get many columns)",
+      "Custom API Call",
+      "Delete (Delete a group in a board)",
+      "Create (Create a group in a board)",
+      "Get Many (Get list of groups in a board)",
+      "Custom API Call",
+      "Add Update (Add an update to an item)",
+      "Change Column Value (Change a column value for a board item)",
+      "Change Multiple Column Values (Change multiple column values for a board item)",
+      "Create (Create an item in a board's group)",
+      "Delete (Delete an item)",
+      "Get (Get an item)",
+      "Get By Column Value (Get items by column value)",
+      "Get Many (Get many items)",
+      "Move (Move item to group)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "mondayComTool.json",
+    "name": "n8n-nodes-base.mondayComTool",
+    "displayName": "Monday.com Tool",
+    "description": "Consume Monday.com API",
+    "category_tags": [
+      "Board Column",
+      "Board",
+      "Board Group",
+      "Board Item",
+      "Custom API Call"
+    ],
+    "capabilities": [
+      "Archive (Archive a board)",
+      "Create (Create a new board)",
+      "Get (Get a board)",
+      "Get Many (Get many boards)",
+      "Custom API Call",
+      "Create (Create a new column)",
+      "Get Many (Get many columns)",
+      "Custom API Call",
+      "Delete (Delete a group in a board)",
+      "Create (Create a group in a board)",
+      "Get Many (Get list of groups in a board)",
+      "Custom API Call",
+      "Add Update (Add an update to an item)",
+      "Change Column Value (Change a column value for a board item)",
+      "Change Multiple Column Values (Change multiple column values for a board item)",
+      "Create (Create an item in a board's group)",
+      "Delete (Delete an item)",
+      "Get (Get an item)",
+      "Get By Column Value (Get items by column value)",
+      "Get Many (Get many items)",
+      "Move (Move item to group)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "notion.json",
+    "name": "n8n-nodes-base.notion",
+    "displayName": "Notion",
+    "description": "Consume Notion API",
+    "category_tags": [
+      "User",
+      "Block",
+      "Database Page",
+      "Database",
+      "Page"
+    ],
+    "capabilities": [
+      "Append After (Append a block)",
+      "Get Child Blocks (Get many child blocks)",
+      "Get (Get a database)",
+      "Get Many (Get many databases)",
+      "Search (Search databases using text search)",
+      "Get (Get a database)",
+      "Get Many (Get many databases)",
+      "Create (Create a pages in a database)",
+      "Get (Get a page in a database)",
+      "Get Many (Get many pages in a database)",
+      "Update (Update pages in a database)",
+      "Create (Create a pages in a database)",
+      "Get Many (Get many pages in a database)",
+      "Update (Update pages in a database)",
+      "Create (Create a page)",
+      "Get (Get a page)",
+      "Search (Text search of pages)",
+      "Archive (Archive a page)",
+      "Create (Create a page)",
+      "Search (Text search of pages)",
+      "Get (Get a user)",
+      "Get Many (Get many users)"
+    ]
+  },
+  {
+    "filename": "notionTool.json",
+    "name": "n8n-nodes-base.notionTool",
+    "displayName": "Notion Tool",
+    "description": "Consume Notion API",
+    "category_tags": [
+      "User",
+      "Block",
+      "Database Page",
+      "Database",
+      "Page"
+    ],
+    "capabilities": [
+      "Append After (Append a block)",
+      "Get Child Blocks (Get many child blocks)",
+      "Get (Get a database)",
+      "Get Many (Get many databases)",
+      "Search (Search databases using text search)",
+      "Get (Get a database)",
+      "Get Many (Get many databases)",
+      "Create (Create a pages in a database)",
+      "Get (Get a page in a database)",
+      "Get Many (Get many pages in a database)",
+      "Update (Update pages in a database)",
+      "Create (Create a pages in a database)",
+      "Get Many (Get many pages in a database)",
+      "Update (Update pages in a database)",
+      "Create (Create a page)",
+      "Get (Get a page)",
+      "Search (Text search of pages)",
+      "Archive (Archive a page)",
+      "Create (Create a page)",
+      "Search (Text search of pages)",
+      "Get (Get a user)",
+      "Get Many (Get many users)"
+    ]
+  },
+  {
+    "filename": "slack.json",
+    "name": "n8n-nodes-base.slack",
+    "displayName": "Slack",
+    "description": "Consume Slack API",
+    "category_tags": [
+      "User",
+      "User Group",
+      "Channel",
+      "User Profile",
+      "File",
+      "Star",
+      "Message",
+      "Reaction"
+    ],
+    "capabilities": [
+      "Archive (Archives a conversation)",
+      "Close (Closes a direct message or multi-person direct message)",
+      "Create (Initiates a public or private channel-based conversation)",
+      "Get (Get information about a channel)",
+      "Get Many (Get many channels in a Slack team)",
+      "History (Get a conversation's history of messages and events)",
+      "Invite (Invite a user to a channel)",
+      "Join (Joins an existing conversation)",
+      "Kick (Removes a user from a channel)",
+      "Leave (Leaves a conversation)",
+      "Member (List members of a conversation)",
+      "Open (Opens or resumes a direct message or multi-person direct message)",
+      "Rename (Renames a conversation)",
+      "Replies (Get a thread of messages posted to a channel)",
+      "Set Purpose (Sets the purpose for a conversation)",
+      "Set Topic (Sets the topic for a conversation)",
+      "Unarchive (Unarchives a conversation)",
+      "Delete (Deletes a message)",
+      "Get Permalink (Get Permanent Link of a message)",
+      "Post (Post a message into a channel)",
+      "Post (Ephemeral) (Post an ephemeral message to a user in channel)",
+      "Update (Updates a message)",
+      "Add (Add a star to an item)",
+      "Delete (Delete a star from an item)",
+      "Get Many (Get many stars of autenticated user)",
+      "Get (Get a file info)",
+      "Get Many (Get & filters team files)",
+      "Upload (Create or upload an existing file)",
+      "Add (Adds a reaction to a message)",
+      "Get (Get the reactions of a message)",
+      "Remove (Remove a reaction of a message)",
+      "Info (Get information about a user)",
+      "Get Many (Get a list of many users)",
+      "Get Presence (Get online status of a user)",
+      "Create (Create a user group)",
+      "Disable (Disable a user group)",
+      "Enable (Enable a user group)",
+      "Get Many (Get many user groups)",
+      "Update (Update a user group)",
+      "Get (Get your user's profile)",
+      "Update (Update user's profile)"
+    ]
+  },
+  {
+    "filename": "slackTool.json",
+    "name": "n8n-nodes-base.slackTool",
+    "displayName": "Slack Tool",
+    "description": "Consume Slack API",
+    "category_tags": [
+      "User",
+      "User Group",
+      "Channel",
+      "File",
+      "Star",
+      "Message",
+      "Reaction"
+    ],
+    "capabilities": [
+      "Archive (Archives a conversation)",
+      "Close (Closes a direct message or multi-person direct message)",
+      "Create (Initiates a public or private channel-based conversation)",
+      "Get (Get information about a channel)",
+      "Get Many (Get many channels in a Slack team)",
+      "History (Get a conversation's history of messages and events)",
+      "Invite (Invite a user to a channel)",
+      "Join (Joins an existing conversation)",
+      "Kick (Removes a user from a channel)",
+      "Leave (Leaves a conversation)",
+      "Member (List members of a conversation)",
+      "Open (Opens or resumes a direct message or multi-person direct message)",
+      "Rename (Renames a conversation)",
+      "Replies (Get a thread of messages posted to a channel)",
+      "Set Purpose (Sets the purpose for a conversation)",
+      "Set Topic (Sets the topic for a conversation)",
+      "Unarchive (Unarchives a conversation)",
+      "Delete",
+      "Get Permalink",
+      "Search",
+      "Send",
+      "Send and Wait for Response",
+      "Update",
+      "Add (Add a star to an item)",
+      "Delete (Delete a star from an item)",
+      "Get Many (Get many stars of autenticated user)",
+      "Get",
+      "Get Many (Get & filters team files)",
+      "Upload (Create or upload an existing file)",
+      "Add (Adds a reaction to a message)",
+      "Get (Get the reactions of a message)",
+      "Remove (Remove a reaction of a message)",
+      "Get (Get information about a user)",
+      "Get Many (Get a list of many users)",
+      "Get User's Profile (Get a user's profile)",
+      "Get User's Status (Get online status of a user)",
+      "Update User's Profile (Update a user's profile)",
+      "Create",
+      "Disable",
+      "Enable",
+      "Get Many",
+      "Update"
+    ]
+  },
+  {
+    "filename": "spreadsheetFile.json",
+    "name": "n8n-nodes-base.spreadsheetFile",
+    "displayName": "Spreadsheet File",
+    "description": "Reads and writes data from a spreadsheet file like CSV, XLS, ODS, etc",
+    "category_tags": [],
+    "capabilities": [
+      "Read From File (Reads data from a spreadsheet file)",
+      "Write to File (Writes the workflow data to a spreadsheet file)"
+    ]
+  },
+  {
+    "filename": "telegram.json",
+    "name": "n8n-nodes-base.telegram",
+    "displayName": "Telegram",
+    "description": "Sends data to Telegram",
+    "category_tags": [
+      "Callback",
+      "File",
+      "Chat",
+      "Message"
+    ],
+    "capabilities": [
+      "Get (Get up to date information about a chat)",
+      "Get Administrators (Get the Administrators of a chat)",
+      "Get Member (Get the member of a chat)",
+      "Leave (Leave a group, supergroup or channel)",
+      "Set Description (Set the description of a chat)",
+      "Set Title (Set the title of a chat)",
+      "Answer Query (Send answer to callback query sent from inline keyboard)",
+      "Answer Inline Query (Send answer to callback query sent from inline bot)",
+      "Get (Get a file)",
+      "Delete Chat Message (Delete a chat message)",
+      "Edit Message Text (Edit a text message)",
+      "Pin Chat Message (Pin a chat message)",
+      "Send Animation (Send an animated file)",
+      "Send Audio (Send a audio file)",
+      "Send Chat Action (Send a chat action)",
+      "Send Document (Send a document)",
+      "Send Location (Send a location)",
+      "Send Media Group (Send group of photos or videos to album)",
+      "Send Message (Send a text message)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Send Photo (Send a photo)",
+      "Send Sticker (Send a sticker)",
+      "Send Video (Send a video)",
+      "Unpin Chat Message (Unpin a chat message)"
+    ]
+  },
+  {
+    "filename": "telegramTool.json",
+    "name": "n8n-nodes-base.telegramTool",
+    "displayName": "Telegram Tool",
+    "description": "Sends data to Telegram",
+    "category_tags": [
+      "Callback",
+      "File",
+      "Chat",
+      "Message"
+    ],
+    "capabilities": [
+      "Get (Get up to date information about a chat)",
+      "Get Administrators (Get the Administrators of a chat)",
+      "Get Member (Get the member of a chat)",
+      "Leave (Leave a group, supergroup or channel)",
+      "Set Description (Set the description of a chat)",
+      "Set Title (Set the title of a chat)",
+      "Answer Query (Send answer to callback query sent from inline keyboard)",
+      "Answer Inline Query (Send answer to callback query sent from inline bot)",
+      "Get (Get a file)",
+      "Delete Chat Message (Delete a chat message)",
+      "Edit Message Text (Edit a text message)",
+      "Pin Chat Message (Pin a chat message)",
+      "Send Animation (Send an animated file)",
+      "Send Audio (Send a audio file)",
+      "Send Chat Action (Send a chat action)",
+      "Send Document (Send a document)",
+      "Send Location (Send a location)",
+      "Send Media Group (Send group of photos or videos to album)",
+      "Send Message (Send a text message)",
+      "Send and Wait for Response (Send a message and wait for response)",
+      "Send Photo (Send a photo)",
+      "Send Sticker (Send a sticker)",
+      "Send Video (Send a video)",
+      "Unpin Chat Message (Unpin a chat message)"
+    ]
+  },
+  {
+    "filename": "trello.json",
+    "name": "n8n-nodes-base.trello",
+    "displayName": "Trello",
+    "description": "Create, change and delete boards and cards",
+    "category_tags": [
+      "Card",
+      "Checklist",
+      "Label",
+      "Board Member",
+      "Board",
+      "Custom API Call",
+      "Card Comment",
+      "List",
+      "Attachment"
+    ],
+    "capabilities": [
+      "Create (Create a new attachment for a card)",
+      "Delete (Delete an attachment)",
+      "Get (Get the data of an attachment)",
+      "Get Many (Returns many attachments for the card)",
+      "Custom API Call",
+      "Create (Create a new board)",
+      "Delete (Delete a board)",
+      "Get (Get the data of a board)",
+      "Update (Update a board)",
+      "Custom API Call",
+      "Add (Add member to board using member ID)",
+      "Get Many (Get many members of a board)",
+      "Invite (Invite a new member to a board via email)",
+      "Remove (Remove member from board using member ID)",
+      "Custom API Call",
+      "Create (Create a new card)",
+      "Delete (Delete a card)",
+      "Get (Get the data of a card)",
+      "Update (Update a card)",
+      "Custom API Call",
+      "Create (Create a comment on a card)",
+      "Delete (Delete a comment from a card)",
+      "Update (Update a comment on a card)",
+      "Custom API Call",
+      "Create (Create a new checklist)",
+      "Create Checklist Item (Create a checklist item)",
+      "Delete (Delete a checklist)",
+      "Delete Checklist Item (Delete a checklist item)",
+      "Get (Get the data of a checklist)",
+      "Get Checklist Items (Get a specific checklist on a card)",
+      "Get Completed Checklist Items (Get the completed checklist items on a card)",
+      "Get Many (Returns many checklists for the card)",
+      "Update Checklist Item (Update an item in a checklist on a card)",
+      "Custom API Call",
+      "Add to Card (Add a label to a card)",
+      "Create (Create a new label)",
+      "Delete (Delete a label)",
+      "Get (Get the data of a label)",
+      "Get Many (Returns many labels for the board)",
+      "Remove From Card (Remove a label from a card)",
+      "Update (Update a label)",
+      "Custom API Call",
+      "Archive (Archive/Unarchive a list)",
+      "Create (Create a new list)",
+      "Get (Get the data of a list)",
+      "Get Cards (Get all the cards in a list)",
+      "Get Many (Get many lists)",
+      "Update (Update a list)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "trelloTool.json",
+    "name": "n8n-nodes-base.trelloTool",
+    "displayName": "Trello Tool",
+    "description": "Create, change and delete boards and cards",
+    "category_tags": [
+      "Card",
+      "Checklist",
+      "Label",
+      "Board Member",
+      "Board",
+      "Custom API Call",
+      "Card Comment",
+      "List",
+      "Attachment"
+    ],
+    "capabilities": [
+      "Create (Create a new attachment for a card)",
+      "Delete (Delete an attachment)",
+      "Get (Get the data of an attachment)",
+      "Get Many (Returns many attachments for the card)",
+      "Custom API Call",
+      "Create (Create a new board)",
+      "Delete (Delete a board)",
+      "Get (Get the data of a board)",
+      "Update (Update a board)",
+      "Custom API Call",
+      "Add (Add member to board using member ID)",
+      "Get Many (Get many members of a board)",
+      "Invite (Invite a new member to a board via email)",
+      "Remove (Remove member from board using member ID)",
+      "Custom API Call",
+      "Create (Create a new card)",
+      "Delete (Delete a card)",
+      "Get (Get the data of a card)",
+      "Update (Update a card)",
+      "Custom API Call",
+      "Create (Create a comment on a card)",
+      "Delete (Delete a comment from a card)",
+      "Update (Update a comment on a card)",
+      "Custom API Call",
+      "Create (Create a new checklist)",
+      "Create Checklist Item (Create a checklist item)",
+      "Delete (Delete a checklist)",
+      "Delete Checklist Item (Delete a checklist item)",
+      "Get (Get the data of a checklist)",
+      "Get Checklist Items (Get a specific checklist on a card)",
+      "Get Completed Checklist Items (Get the completed checklist items on a card)",
+      "Get Many (Returns many checklists for the card)",
+      "Update Checklist Item (Update an item in a checklist on a card)",
+      "Custom API Call",
+      "Add to Card (Add a label to a card)",
+      "Create (Create a new label)",
+      "Delete (Delete a label)",
+      "Get (Get the data of a label)",
+      "Get Many (Returns many labels for the board)",
+      "Remove From Card (Remove a label from a card)",
+      "Update (Update a label)",
+      "Custom API Call",
+      "Archive (Archive/Unarchive a list)",
+      "Create (Create a new list)",
+      "Get (Get the data of a list)",
+      "Get Cards (Get all the cards in a list)",
+      "Get Many (Get many lists)",
+      "Update (Update a list)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "zoom.json",
+    "name": "n8n-nodes-base.zoom",
+    "displayName": "Zoom",
+    "description": "Consume Zoom API",
+    "category_tags": [
+      "Custom API Call",
+      "Meeting"
+    ],
+    "capabilities": [
+      "Create (Create a meeting)",
+      "Delete (Delete a meeting)",
+      "Get (Retrieve a meeting)",
+      "Get Many (Retrieve many meetings)",
+      "Update (Update a meeting)",
+      "Custom API Call"
+    ]
+  },
+  {
+    "filename": "zoomTool.json",
+    "name": "n8n-nodes-base.zoomTool",
+    "displayName": "Zoom Tool",
+    "description": "Consume Zoom API",
+    "category_tags": [
+      "Custom API Call",
+      "Meeting"
+    ],
+    "capabilities": [
+      "Create (Create a meeting)",
+      "Delete (Delete a meeting)",
+      "Get (Retrieve a meeting)",
+      "Get Many (Retrieve many meetings)",
+      "Update (Update a meeting)",
+      "Custom API Call"
+    ]
+  }
+]
