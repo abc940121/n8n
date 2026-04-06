@@ -1,0 +1,694 @@
+{
+  "name": "Model2 Generated - I need a workflow that **Automate your email management** wi",
+  "nodes": [
+    {
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "outlook-credentials",
+          "name": "Microsoft Outlook Account"
+        }
+      },
+      "id": "get-emails",
+      "name": "Get New Emails",
+      "parameters": {
+        "filters": {
+          "receivedAfter": "={{ $now.minus({ hours: 1 }) }}"
+        },
+        "limit": 50,
+        "operation": "getAll",
+        "options": {}
+      },
+      "position": [
+        200,
+        300
+      ],
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2
+    },
+    {
+      "id": "filter-processed",
+      "name": "Filter Processed Emails",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "leftValue": "={{ $json.categories }}",
+              "operator": {
+                "operation": "empty",
+                "type": "array"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        420,
+        300
+      ],
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2
+    },
+    {
+      "id": "filter-flagged",
+      "name": "Filter Flagged Emails",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "leftValue": "={{ $json.flag }}",
+              "operator": {
+                "operation": "false",
+                "type": "boolean"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        640,
+        300
+      ],
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2
+    },
+    {
+      "id": "check-unread",
+      "name": "Check if Unread",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "leftValue": "={{ $json.isRead }}",
+              "operator": {
+                "operation": "false",
+                "type": "boolean"
+              },
+              "rightValue": ""
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        860,
+        300
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2
+    },
+    {
+      "id": "convert-markdown",
+      "name": "Convert to Markdown",
+      "parameters": {
+        "html": "={{ $json.bodyPreview || $json.body }}",
+        "options": {
+          "keepLists": true,
+          "removeLinks": true,
+          "removeStyles": true
+        }
+      },
+      "position": [
+        1080,
+        200
+      ],
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1
+    },
+    {
+      "id": "clean-content",
+      "name": "Clean Email Content",
+      "parameters": {
+        "jsCode": "// Remove common email signatures and headers\nlet content = $input.first().json.data;\n\n// Remove empty lines\ncontent = content.replace(/\\n{3,}/g, '\\n\\n');\n\n// Remove common email patterns\ncontent = content.replace(/[<>]/g, '');\n\n// Trim whitespace\ncontent = content.trim();\n\nreturn {\n  json: {\n    content: content,\n    subject: $json.subject,\n    from: $json.from.emailAddress.address,\n    date: $json.receivedDateTime\n  }\n};"
+      },
+      "position": [
+        1300,
+        200
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "prepare-ai",
+      "name": "Prepare for AI",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "prompt",
+              "name": "prompt",
+              "type": "string",
+              "value": "=You are an email categorization assistant. Analyze the following email and categorize it into one of these categories:\n\nCategories:\n- \"action\" - Requires immediate action or response\n- \"junk\" - Spam, promotional, or irrelevant content\n- \"business\" - Work-related communications\n- \"saas\" - Software service notifications\n- \"receipt\" - Purchase confirmations or invoices\n- \"newsletter\" - Regular updates or newsletters\n- \"personal\" - Personal communications\n\nEmail Details:\nSubject: {{ $json.subject }}\nFrom: {{ $json.from }}\nDate: {{ $json.date }}\nContent: {{ $json.content }}\n\nReturn ONLY the category name in lowercase without any explanation."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1520,
+        200
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "ai-agent",
+      "name": "AI Agent",
+      "parameters": {
+        "options": {
+          "systemMessage": "=You are an intelligent email categorization system. Your task is to analyze emails and assign them to the most appropriate category.\n\nAvailable Categories:\n1. \"action\" - Emails requiring immediate attention or response\n2. \"junk\" - Spam, promotional content, or irrelevant messages\n3. \"business\" - Professional work-related communications\n4. \"saas\" - Software-as-a-Service notifications and updates\n5. \"receipt\" - Purchase confirmations, invoices, or payment receipts\n6. \"newsletter\" - Periodic updates, magazines, or subscription content\n7. \"personal\" - Non-work related personal communications\n\nAnalysis Guidelines:\n- Consider the sender, subject line, and content\n- Look for keywords indicating urgency or action items\n- Identify promotional language or spam indicators\n- Recognize transactional emails (receipts, confirmations)\n- Distinguish between automated and human-written messages\n\nReturn ONLY the category name in lowercase without any additional text or explanation."
+        }
+      },
+      "position": [
+        1740,
+        200
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9
+    },
+    {
+      "id": "categorize-email",
+      "name": "Categorize Email",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "category",
+              "name": "category",
+              "type": "string",
+              "value": "={{ $json.output.toLowerCase() }}"
+            },
+            {
+              "id": "confidence",
+              "name": "confidence",
+              "type": "number",
+              "value": "100"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "position": [
+        1960,
+        200
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "update-category",
+      "name": "Update Email Category",
+      "parameters": {
+        "additionalFields": {
+          "categories": [
+            "={{ $json.category }}"
+          ]
+        },
+        "emailId": "={{ $('Get New Emails').item.json.id }}",
+        "operation": "update"
+      },
+      "position": [
+        2180,
+        200
+      ],
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2
+    },
+    {
+      "id": "route-category",
+      "name": "Route by Category",
+      "parameters": {
+        "options": {},
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.category }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "junk"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                }
+              },
+              "outputKey": "junk",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.category }}",
+                    "operator": {
+                      "operation": "equals",
+                      "type": "string"
+                    },
+                    "rightValue": "receipt"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                }
+              },
+              "outputKey": "receipt",
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.category }}",
+                    "operator": {
+                      "operation": "notEquals",
+                      "type": "string"
+                    },
+                    "rightValue": "junk"
+                  },
+                  {
+                    "leftValue": "={{ $json.category }}",
+                    "operator": {
+                      "operation": "notEquals",
+                      "type": "string"
+                    },
+                    "rightValue": "receipt"
+                  }
+                ],
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                }
+              },
+              "outputKey": "other",
+              "renameOutput": true
+            }
+          ]
+        }
+      },
+      "position": [
+        2400,
+        200
+      ],
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2
+    },
+    {
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "outlook-credentials",
+          "name": "Microsoft Outlook Account"
+        }
+      },
+      "id": "move-junk",
+      "name": "Move to Junk",
+      "parameters": {
+        "emailId": "={{ $('Get New Emails').item.json.id }}",
+        "operation": "move",
+        "resource": "message",
+        "targetFolderId": "={{ $credentials.microsoftOutlookOAuth2Api.junkFolderId }}"
+      },
+      "position": [
+        2620,
+        100
+      ],
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "outlook-credentials",
+          "name": "Microsoft Outlook Account"
+        }
+      },
+      "id": "move-receipts",
+      "name": "Move to Receipts",
+      "parameters": {
+        "emailId": "={{ $('Get New Emails').item.json.id }}",
+        "operation": "move",
+        "resource": "message",
+        "targetFolderId": "={{ $credentials.microsoftOutlookOAuth2Api.receiptsFolderId }}"
+      },
+      "position": [
+        2620,
+        300
+      ],
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "outlook-credentials",
+          "name": "Microsoft Outlook Account"
+        }
+      },
+      "id": "mark-read",
+      "name": "Mark as Read",
+      "parameters": {
+        "additionalFields": {
+          "isRead": true
+        },
+        "emailId": "={{ $('Get New Emails').item.json.id }}",
+        "operation": "update"
+      },
+      "position": [
+        2840,
+        200
+      ],
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2
+    },
+    {
+      "id": "schedule-trigger",
+      "name": "Schedule Trigger",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "position": [
+        -200,
+        300
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "test-trigger",
+      "name": "When clicking 'Test workflow'",
+      "parameters": {},
+      "position": [
+        -200,
+        500
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "no-op",
+      "name": "No Operation",
+      "parameters": {},
+      "position": [
+        860,
+        500
+      ],
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1
+    },
+    {
+      "id": "error-handler",
+      "name": "Error Handler",
+      "parameters": {
+        "errorMessage": "Email processing error: {{ $error.message }}",
+        "options": {}
+      },
+      "position": [
+        1080,
+        500
+      ],
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1
+    },
+    {
+      "id": "openai-model",
+      "name": "OpenAI Chat Model",
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "position": [
+        1740,
+        400
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2
+    },
+    {
+      "id": "info-note",
+      "name": "Workflow Info",
+      "parameters": {
+        "color": 4,
+        "content": "# 📧 Automated Email Management System\n\n## Overview\nThis workflow automatically processes incoming emails using AI to categorize and organize them efficiently.\n\n## Features\n✅ Auto-categorizes emails into 7 categories\n✅ Moves junk/spam to Junk folder\n✅ Organizes receipts separately\n✅ Marks processed emails as read\n✅ Runs every 15 minutes automatically\n\n## Categories\n• Action - Requires immediate attention\n• Junk - Spam/promotional content\n• Business - Work communications\n• SaaS - Software notifications\n• Receipt - Purchase confirmations\n• Newsletter - Periodic updates\n• Personal - Non-work emails\n\n## Setup Required\n1. Connect Microsoft Outlook account\n2. Configure AI model (Ollama/OpenAI)\n3. Set up target folders in Outlook\n4. Test with sample emails first",
+        "height": 480,
+        "width": 400
+      },
+      "position": [
+        -600,
+        100
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "setup-note",
+      "name": "Setup Instructions",
+      "parameters": {
+        "color": 5,
+        "content": "# ⚙️ Setup Instructions\n\n## Step 1: Microsoft Outlook Connection\n1. Click on any Outlook node\n2. Create new credentials\n3. Authorize your Outlook account\n4. Note down folder IDs for Junk and Receipts\n\n## Step 2: AI Model Configuration\n1. Set up Ollama server locally or use OpenAI\n2. Configure the AI model connection\n3. Test with a sample prompt\n\n## Step 3: Folder Setup\n1. Create \"Receipts\" folder in Outlook\n2. Get folder ID (use Outlook REST API)\n3. Update folder IDs in move nodes\n\n## Step 4: Testing\n1. Use manual trigger first\n2. Send test emails to each category\n3. Verify categorization accuracy\n4. Adjust prompts if needed\n\n## Tips\n• Start with conservative AI settings\n• Monitor first few runs closely\n• Fine-tune categories based on results\n• Consider adding more specific categories",
+        "height": 520,
+        "width": 400
+      },
+      "position": [
+        -600,
+        600
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Categorize Email",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Clean Email Content": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Prepare for AI",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Convert to Markdown": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Clean Email Content",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Categorize Email": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update Email Category",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Check if Unread": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Convert to Markdown",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Error Handler",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Filter Flagged Emails": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Check if Unread",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "No Operation",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Filter Processed Emails": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter Flagged Emails",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "No Operation",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Get New Emails": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Filter Processed Emails",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Move to Junk": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Mark as Read",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Move to Receipts": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Mark as Read",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Prepare for AI": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get New Emails",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update Email Category": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Route by Category",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Get New Emails",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "id": "2454"
+}

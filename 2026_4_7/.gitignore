@@ -43,5 +43,10 @@ logs/
 *.err
 *.out
 
+# === 項目特定排除 (你不想推上的資料夾) ===
+my_qwen_test/
+n8n_workflow_generator/
+original_qwen_train_result/
+
 # === Jupyter Notebook 暫存 ===
 .ipynb_checkpoints
