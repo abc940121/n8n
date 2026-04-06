@@ -1,0 +1,47 @@
+# === 模型權重與大型檔案 (最重要的排除項) ===
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.h5
+*.onnx
+
+# === Python 暫存與環境 ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv
+.env
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# === 系統與編輯器暫存 ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+.history/
+
+# === 日誌檔 ===
+logs/
+*.log
+*.err
+*.out
+
+# === Jupyter Notebook 暫存 ===
+.ipynb_checkpoints
